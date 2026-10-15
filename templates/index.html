@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard &mdash; SovereigntyAI{% endblock %}
+
+{% block content %}
+<div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <h1 class="page-title">Sovereignty Compliance Dashboard</h1>
+    <p class="page-subtitle">
+      Automated governance, statutory policy verification, and explainable risk scoring for cross-border cloud deployments.
+    </p>
+  </div>
+  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+    <a href="{{ url_for('new_assessment') }}" class="btn btn-primary">+ Run New Assessment</a>
+    <a href="{{ url_for('sample_scenarios_page') }}" class="btn btn-secondary">Load Scenarios</a>
+  </div>
+</div>
+
+<!-- Primary Stats Grid -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-label">Total Assessments</div>
+    <div class="stat-value">{{ stats.total_assessments }}</div>
+    <div class="stat-sub">Evaluated in audit database</div>
+  </div>
+
+  <div class="stat-card" style="border-top: 3px solid var(--success);">
+    <div class="stat-label">Compliant</div>
+    <div class="stat-value text-success">{{ stats.compliant_count }}</div>
+    <div class="stat-sub">Zero critical policy breaches</div>
+  </div>
+
+  <div class="stat-card" style="border-top: 3px solid var(--danger);">
+    <div class="stat-label">Non-Compliant</div>
+    <div class="stat-value text-danger">{{ stats.non_compliant_count }}</div>
+    <div class="stat-sub">Failed statutory transfer rules</div>
+  </div>
+
+  <div class="stat-card" style="border-top: 3px solid var(--warning);">
+    <div class="stat-label">Needs Review</div>
+    <div class="stat-value text-warning">{{ stats.needs_review_count }}</div>
+    <div class="stat-sub">Ambiguous / missing authorizations</div>
+  </div>
+
+  <div class="stat-card" style="border-top: 3px solid var(--accent);">
+    <div class="stat-label">Average Risk Score</div>
+    <div class="stat-value">{{ stats.average_risk_score }}<span style="font-size: 1rem; color: var(--text-muted);">/100</span></div>
+    <div class="stat-sub">Fleet-wide exposure metric</div>
+  </div>
+</div>
+
+<!-- Risk Distribution Card -->
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Fleet Risk Profile Distribution</h2>
+    <span class="stat-sub font-mono">0 (Min Risk) &mdash; 100 (Max Exposure)</span>
+  </div>
+
+  {% set total = stats.total_assessments if stats.total_assessments > 0 else 1 %}
+  {% set p_low = (stats.risk_distribution.Low / total * 100)|round|int %}
+  {% set p_mod = (stats.risk_distribution.Moderate / total * 100)|round|int %}
+  {% set p_high = (stats.risk_distribution.High / total * 100)|round|int %}
+  {% set p_crit = (stats.risk_distribution.Critical / total * 100)|round|int %}
+
+  <div class="distribution-bar">
+    <div class="dist-segment dist-low" style="width: {{ p_low }}%;" title="Low: {{ stats.risk_distribution.Low }}"></div>
+    <div class="dist-segment dist-mod" style="width: {{ p_mod }}%;" title="Moderate: {{ stats.risk_distribution.Moderate }}"></div>
+    <div class="dist-segment dist-high" style="width: {{ p_high }}%;" title="High: {{ stats.risk_distribution.High }}"></div>
+    <div class="dist-segment dist-crit" style="width: {{ p_crit }}%;" title="Critical: {{ stats.risk_distribution.Critical }}"></div>
+  </div>
+
+  <div class="dist-legend">
+    <span><strong class="text-success">&bull; Low (0-25):</strong> {{ stats.risk_distribution.Low }} ({{ p_low }}%)</span>
+    <span><strong class="text-warning" style="color: #0284c7;">&bull; Moderate (26-50):</strong> {{ stats.risk_distribution.Moderate }} ({{ p_mod }}%)</span>
+    <span><strong class="text-warning">&bull; High (51-75):</strong> {{ stats.risk_distribution.High }} ({{ p_high }}%)</span>
+    <span><strong class="text-danger">&bull; Critical (76-100):</strong> {{ stats.risk_distribution.Critical }} ({{ p_crit }}%)</span>
+  </div>
+</div>
+
+<!-- Recent Assessment History -->
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Recent Cloud Assessments</h2>
+    <a href="{{ url_for('assessment_history') }}" class="btn btn-secondary btn-sm">View Full Audit Log &rarr;</a>
+  </div>
+
+  {% if stats.recent_assessments %}
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Assessment ID</th>
+            <th>Timestamp</th>
+            <th>Organization</th>
+            <th>Data Category</th>
+            <th>Storage Region</th>
+            <th>Status</th>
+            <th>Risk Score</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for a in stats.recent_assessments %}
+            <tr>
+              <td class="font-mono">
+                <a href="{{ url_for('assessment_detail', assessment_id=a.id) }}" style="color: var(--accent); font-weight: 600;">
+                  {{ a.id }}
+                </a>
+              </td>
+              <td>{{ a.timestamp }}</td>
+              <td>{{ a.source_org }}</td>
+              <td>
+                <span class="badge badge-neutral">{{ a.data_category }}</span>
+              </td>
+              <td class="font-mono">{{ a.storage_region }}</td>
+              <td>
+                {% if a.compliance_status == 'COMPLIANT' %}
+                  <span class="badge badge-compliant">Compliant</span>
+                {% elif a.compliance_status == 'NON_COMPLIANT' %}
+                  <span class="badge badge-noncompliant">Non-Compliant</span>
+                {% else %}
+                  <span class="badge badge-review">Needs Review</span>
+                {% endif %}
+              </td>
+              <td>
+                <span style="font-weight: 700;">{{ a.risk_score }}</span>/100
+                <small class="text-muted">({{ a.risk_category }})</small>
+              </td>
+              <td>
+                <a href="{{ url_for('assessment_detail', assessment_id=a.id) }}" class="btn btn-secondary btn-sm">Audit Report</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div style="text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+      <p style="font-size: 1.1rem; margin-bottom: 1rem;">No compliance assessments recorded yet.</p>
+      <a href="{{ url_for('new_assessment') }}" class="btn btn-primary">Start First Assessment</a>
+      <span style="margin: 0 0.5rem;">or</span>
+      <a href="{{ url_for('sample_scenarios_page') }}" class="btn btn-secondary">Load a Sample Scenario</a>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

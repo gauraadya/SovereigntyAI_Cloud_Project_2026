@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Demonstration Scenarios &mdash; SovereigntyAI{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1 class="page-title">Pre-Configured Compliance Scenarios</h1>
+  <p class="page-subtitle">
+    Six documented scenarios designed for live viva demonstrations, illustrating diverse cross-border regulatory conditions.
+  </p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem;">
+  {% for sc in scenarios %}
+    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+          <span class="font-mono" style="font-weight: 700; color: var(--accent); font-size: 0.85rem;">{{ sc.scenario_id }}</span>
+          {% if sc.expected_status == 'COMPLIANT' %}
+            <span class="badge badge-compliant">Expected: Compliant</span>
+          {% elif sc.expected_status == 'NON_COMPLIANT' %}
+            <span class="badge badge-noncompliant">Expected: Non-Compliant</span>
+          {% else %}
+            <span class="badge badge-review">Expected: Needs Review</span>
+          {% endif %}
+        </div>
+
+        <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: #0f172a;">
+          {{ sc.title }}
+        </h2>
+
+        <p style="font-size: 0.875rem; color: var(--secondary); margin-bottom: 1rem;">
+          {{ sc.description }}
+        </p>
+
+        <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem; font-size: 0.8rem; margin-bottom: 1rem;">
+          <div><strong>Origin:</strong> {{ sc.origin_jurisdiction }} &bull; <strong>Target:</strong> <span class="font-mono">{{ sc.storage_region }}</span></div>
+          <div><strong>Category:</strong> {{ sc.data_category }} &bull; <strong>Framework:</strong> {{ sc.framework }}</div>
+          <div><strong>Transfer Mech:</strong> {{ sc.transfer_mechanism }}</div>
+          <div><strong>Security:</strong> Encrypt: {{ sc.encryption_at_rest }} | RBAC: {{ sc.access_control }} | Logs: {{ sc.audit_logging }}</div>
+        </div>
+
+        <p style="font-size: 0.8rem; color: var(--text-muted); font-style: italic; margin-bottom: 1rem;">
+          <strong>Viva Note:</strong> {{ sc.notes }}
+        </p>
+      </div>
+
+      <div>
+        <a href="{{ url_for('new_assessment') }}?scenario={{ sc.scenario_id }}" class="btn btn-primary" style="width: 100%;">
+          ⚡ Load &amp; Test This Scenario &rarr;
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

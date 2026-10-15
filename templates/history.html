@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}Assessment History &amp; Audit Trail &mdash; SovereigntyAI{% endblock %}
+
+{% block content %}
+<div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <h1 class="page-title">Compliance Audit History</h1>
+    <p class="page-subtitle">
+      Immutable SQLite audit records of cloud sovereignty evaluations, risk scores, and architectural findings.
+    </p>
+  </div>
+  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+    <a href="{{ url_for('export_csv') }}" class="btn btn-secondary btn-sm">Export CSV &darr;</a>
+    <a href="{{ url_for('export_json') }}" class="btn btn-secondary btn-sm" target="_blank">Export JSON &darr;</a>
+    <a href="{{ url_for('new_assessment') }}" class="btn btn-primary btn-sm">+ New Assessment</a>
+  </div>
+</div>
+
+<!-- Search & Filter Controls -->
+<div class="card" style="padding: 1.25rem;">
+  <form method="GET" action="{{ url_for('assessment_history') }}">
+    <div class="form-grid" style="margin-bottom: 0;">
+      <div class="form-group">
+        <label for="search">Search Organization, ID or Notes</label>
+        <input type="text" id="search" name="search" placeholder="e.g., EuroHealth or SOV-2026..." value="{{ current_search }}">
+      </div>
+
+      <div class="form-group">
+        <label for="status">Filter by Compliance Status</label>
+        <select id="status" name="status">
+          <option value="">All Statuses</option>
+          <option value="COMPLIANT" {% if current_status == 'COMPLIANT' %}selected{% endif %}>Compliant</option>
+          <option value="NON_COMPLIANT" {% if current_status == 'NON_COMPLIANT' %}selected{% endif %}>Non-Compliant</option>
+          <option value="NEEDS_REVIEW" {% if current_status == 'NEEDS_REVIEW' %}selected{% endif %}>Needs Review</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="jurisdiction">Filter by Origin Jurisdiction</label>
+        <select id="jurisdiction" name="jurisdiction">
+          <option value="">All Jurisdictions</option>
+          {% for code, meta in jurisdictions.items() %}
+            <option value="{{ code }}" {% if current_jurisdiction == code %}selected{% endif %}>{{ meta.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+      <button type="submit" class="btn btn-primary btn-sm">Apply Filters</button>
+      <a href="{{ url_for('assessment_history') }}" class="btn btn-secondary btn-sm">Clear</a>
+    </div>
+  </form>
+</div>
+
+<!-- History Table -->
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Recorded Assessment Logs ({{ assessments|length }})</h2>
+  </div>
+
+  {% if assessments %}
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Audit ID</th>
+            <th>Timestamp</th>
+            <th>Organization</th>
+            <th>Origin</th>
+            <th>Category</th>
+            <th>Storage Region</th>
+            <th>Cross-Border</th>
+            <th>Status</th>
+            <th>Risk</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for a in assessments %}
+            <tr>
+              <td class="font-mono" style="font-weight: 600;">
+                <a href="{{ url_for('assessment_detail', assessment_id=a.id) }}" style="color: var(--accent);">
+                  {{ a.id }}
+                </a>
+              </td>
+              <td style="font-size: 0.8rem; color: var(--secondary);">{{ a.timestamp }}</td>
+              <td><strong>{{ a.source_org }}</strong></td>
+              <td><span class="badge badge-neutral">{{ a.origin_jurisdiction }}</span></td>
+              <td>{{ a.data_category }}</td>
+              <td class="font-mono">{{ a.storage_region }}</td>
+              <td>
+                {% if a.cross_border %}
+                  <span class="text-danger" style="font-weight: 600;">Yes</span>
+                {% else %}
+                  <span class="text-muted">No</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if a.compliance_status == 'COMPLIANT' %}
+                  <span class="badge badge-compliant">Compliant</span>
+                {% elif a.compliance_status == 'NON_COMPLIANT' %}
+                  <span class="badge badge-noncompliant">Non-Compliant</span>
+                {% else %}
+                  <span class="badge badge-review">Needs Review</span>
+                {% endif %}
+              </td>
+              <td>
+                <span style="font-weight: 700;">{{ a.risk_score }}</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">({{ a.risk_category }})</span>
+              </td>
+              <td>
+                <a href="{{ url_for('assessment_detail', assessment_id=a.id) }}" class="btn btn-secondary btn-sm">
+                  View Detail &rarr;
+                </a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div style="text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+      <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">No assessments match your filter criteria.</p>
+      <a href="{{ url_for('assessment_history') }}" class="btn btn-secondary btn-sm">Reset Filters</a>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

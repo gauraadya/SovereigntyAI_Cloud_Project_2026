@@ -1,0 +1,382 @@
+{% extends "base.html" %}
+
+{% block title %}New Compliance Assessment &mdash; SovereigntyAI{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1 class="page-title">Cloud Data Sovereignty Compliance Assessment</h1>
+  <p class="page-subtitle">
+    Evaluate cross-border data storage configurations against GDPR, India DPDP Act 2023, HIPAA, and cloud data residency principles.
+  </p>
+</div>
+
+<!-- Quick Load Scenario Bar -->
+<div class="card" style="background: #f1f5f9; padding: 1rem 1.25rem;">
+  <div style="font-size: 0.825rem; font-weight: 700; text-transform: uppercase; color: var(--secondary); margin-bottom: 0.5rem;">
+    ⚡ Quick Load Pre-configured Demonstration Scenarios:
+  </div>
+  <div class="scenario-bar" style="margin-bottom: 0;">
+    {% for sc in sample_scenarios %}
+      <button type="button" class="scenario-pill" data-scenario-id="{{ sc.scenario_id }}">
+        {{ sc.title }}
+      </button>
+    {% endfor %}
+  </div>
+  <div id="scenario-loaded-alert" style="display: none; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: var(--info-bg); border-left: 3px solid var(--info); border-radius: 4px; font-size: 0.85rem;"></div>
+</div>
+
+<!-- Assessment Form Card -->
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">1. Cloud Deployment Configuration</h2>
+    <span class="stat-sub">All inputs are evaluated by deterministic policy rules &amp; ML baseline</span>
+  </div>
+
+  <form id="assessment-form" method="POST" action="{{ url_for('new_assessment') }}">
+    <div class="form-grid">
+      <!-- 1. Origin Jurisdiction -->
+      <div class="form-group">
+        <label for="origin_jurisdiction">1. Data Origin Jurisdiction *</label>
+        <select id="origin_jurisdiction" name="origin_jurisdiction" required>
+          <option value="">-- Select Origin Territory --</option>
+          {% for code, meta in jurisdictions.items() %}
+            <option value="{{ code }}" {% if form_data and form_data.origin_jurisdiction == code %}selected{% endif %}>
+              {{ meta.name }} ({{ meta.primary_law }})
+            </option>
+          {% endfor %}
+        </select>
+        <span class="form-hint">Governing law where the data subject or origin entity resides.</span>
+      </div>
+
+      <!-- 2. Organization Name -->
+      <div class="form-group">
+        <label for="source_org">2. Source Application / Organization</label>
+        <input type="text" id="source_org" name="source_org" placeholder="e.g., Global Health Labs Ltd" 
+               value="{{ form_data.source_org if form_data else 'University Research Lab' }}">
+        <span class="form-hint">Identifier for the deploying workload or data fiduciary.</span>
+      </div>
+
+      <!-- 3. Data Category -->
+      <div class="form-group">
+        <label for="data_category">3. Regulated Data Category *</label>
+        <select id="data_category" name="data_category" required>
+          <option value="">-- Select Data Sensitivity --</option>
+          {% for code, meta in data_categories.items() %}
+            <option value="{{ code }}" {% if form_data and form_data.data_category == code %}selected{% endif %}>
+              {{ meta.label }}
+            </option>
+          {% endfor %}
+        </select>
+        <span class="form-hint">Drives sensitivity baseline and triggers special protection rules.</span>
+      </div>
+
+      <!-- 4. Proposed Storage Region -->
+      <div class="form-group">
+        <label for="storage_region">4. Proposed AWS Storage Region *</label>
+        <select id="storage_region" name="storage_region" required>
+          <option value="">-- Select Target AWS Region --</option>
+          {% for reg, meta in aws_regions.items() %}
+            <option value="{{ reg }}" {% if form_data and form_data.storage_region == reg %}selected{% endif %}>
+              {{ reg }} &mdash; {{ meta.location }} ({{ meta.jurisdiction }})
+            </option>
+          {% endfor %}
+        </select>
+        <span class="form-hint">Primary AWS S3, EBS, or RDS deployment location.</span>
+      </div>
+
+      <!-- 5. Backup Region -->
+      <div class="form-group">
+        <label for="backup_region">5. Secondary / DR Backup Region</label>
+        <select id="backup_region" name="backup_region">
+          <option value="">-- None (Single-Region Deployment) --</option>
+          {% for reg, meta in aws_regions.items() %}
+            <option value="{{ reg }}" {% if form_data and form_data.backup_region == reg %}selected{% endif %}>
+              {{ reg }} &mdash; {{ meta.location }}
+            </option>
+          {% endfor %}
+        </select>
+        <span class="form-hint">Secondary target for cross-region replication or disaster recovery.</span>
+      </div>
+
+      <!-- 6. Cross-Border Transfer Involved -->
+      <div class="form-group">
+        <label for="cross_border">6. Cross-Border Transfer Involved?</label>
+        <select id="cross_border" name="cross_border">
+          <option value="false" {% if form_data and not form_data.cross_border %}selected{% endif %}>No (Intra-Jurisdiction Processing)</option>
+          <option value="true" {% if form_data and form_data.cross_border %}selected{% endif %}>Yes (Data Leaves Domestic Borders)</option>
+        </select>
+        <span class="form-hint">Auto-inferred if selected AWS region is outside the origin territory.</span>
+      </div>
+
+      <!-- 7. Transfer Mechanism -->
+      <div class="form-group">
+        <label for="transfer_mechanism">7. Transfer Safeguard / Legal Mechanism</label>
+        <select id="transfer_mechanism" name="transfer_mechanism">
+          {% for code, label in transfer_mechanisms.items() %}
+            <option value="{{ code }}" {% if form_data and form_data.transfer_mechanism == code %}selected{% endif %}>
+              {{ label }}
+            </option>
+          {% endfor %}
+        </select>
+        <span class="form-hint">Legal basis justifying international data transfer (e.g. SCCs under GDPR Art 46).</span>
+      </div>
+
+      <!-- 8. Regulatory Framework Focus -->
+      <div class="form-group">
+        <label for="framework">8. Regulatory Framework Focus</label>
+        <select id="framework" name="framework">
+          <option value="GDPR" {% if form_data and form_data.framework == 'GDPR' %}selected{% endif %}>EU GDPR (General Data Protection Regulation)</option>
+          <option value="DPDP Act 2023" {% if form_data and form_data.framework == 'DPDP Act 2023' %}selected{% endif %}>India DPDP Act 2023 (Digital Personal Data Protection)</option>
+          <option value="HIPAA" {% if form_data and form_data.framework == 'HIPAA' %}selected{% endif %}>US HIPAA Security Rule (Healthcare PHI)</option>
+          <option value="PCI-DSS / ISO 27001" {% if form_data and form_data.framework == 'PCI-DSS / ISO 27001' %}selected{% endif %}>PCI-DSS / ISO 27001 (Financial Security)</option>
+          <option value="Cross-Border Standard" {% if form_data and form_data.framework == 'Cross-Border Standard' %}selected{% endif %}>Global Multi-Jurisdiction Standard</option>
+        </select>
+        <span class="form-hint">Select the primary audit framework benchmark.</span>
+      </div>
+    </div>
+
+    <!-- Security Safeguards Group (Inputs 9, 10, 11) -->
+    <div style="margin-bottom: 1.5rem;">
+      <label style="margin-bottom: 0.75rem; display: block;">9-11. Operational Security &amp; Technical Safeguards</label>
+      <div class="form-grid" style="margin-bottom: 0;">
+        <label class="checkbox-card">
+          <input type="checkbox" id="encryption_at_rest" name="encryption_at_rest" value="true"
+                 {% if not form_data or form_data.encryption_at_rest %}checked{% endif %}>
+          <div class="checkbox-card-content">
+            <div class="checkbox-card-title">9. Encryption at Rest</div>
+            <div class="checkbox-card-desc">AWS KMS Customer Managed Keys (SSE-KMS) or hardware security module encryption.</div>
+          </div>
+        </label>
+
+        <label class="checkbox-card">
+          <input type="checkbox" id="access_control" name="access_control" value="true"
+                 {% if not form_data or form_data.access_control %}checked{% endif %}>
+          <div class="checkbox-card-content">
+            <div class="checkbox-card-title">10. Least-Privilege Access Controls</div>
+            <div class="checkbox-card-desc">AWS IAM Role-Based Access (RBAC), MFA enforcement, zero public access.</div>
+          </div>
+        </label>
+
+        <label class="checkbox-card">
+          <input type="checkbox" id="audit_logging" name="audit_logging" value="true"
+                 {% if not form_data or form_data.audit_logging %}checked{% endif %}>
+          <div class="checkbox-card-content">
+            <div class="checkbox-card-title">11. Immutable Audit Logging</div>
+            <div class="checkbox-card-desc">Multi-region AWS CloudTrail, S3 object-level logging, and CloudWatch alarms.</div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- 12. Deployment Notes -->
+    <div class="form-group full-width" style="margin-bottom: 1.5rem;">
+      <label for="notes">12. Architectural Context &amp; Deployment Notes (Optional)</label>
+      <textarea id="notes" name="notes" rows="2" placeholder="e.g., Disaster recovery pilot migrating off-prem workloads to AWS Frankfurt.">{{ form_data.notes if form_data else '' }}</textarea>
+    </div>
+
+    <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+      <button type="submit" id="submit-assessment-btn" class="btn btn-primary" style="padding: 0.85rem 1.75rem; font-size: 1rem;">
+        ⚡ Evaluate Sovereignty &amp; Risk
+      </button>
+      <a href="{{ url_for('new_assessment') }}" class="btn btn-secondary">Reset Form</a>
+      <span class="form-hint">Outputs deterministic statutory rule checks + explainable risk score (0-100).</span>
+    </div>
+  </form>
+</div>
+
+<!-- Evaluation Results Section -->
+{% if result %}
+<div id="results-anchor" class="card" style="border: 2px solid var(--accent); margin-top: 2rem;">
+  <div class="result-header">
+    <div>
+      <span class="stat-label">Assessment Result &bull; Audit ID</span>
+      <h2 class="card-title font-mono" style="font-size: 1.35rem; color: var(--accent);">{{ result.id }}</h2>
+      <span class="stat-sub">{{ result.timestamp }} &bull; Fiduciary: <strong>{{ result.source_org }}</strong></span>
+    </div>
+    <div>
+      <a href="{{ url_for('api_get_assessment', assessment_id=result.id) }}" target="_blank" class="btn btn-secondary btn-sm">
+        Export JSON Report &darr;
+      </a>
+      <a href="{{ url_for('assessment_detail', assessment_id=result.id) }}" class="btn btn-primary btn-sm">
+        Permanent Audit Page &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Score & Status Banner -->
+  <div class="score-banner">
+    {% set dial_class = 'low' if result.risk_score <= 25 else ('moderate' if result.risk_score <= 50 else ('high' if result.risk_score <= 75 else 'critical')) %}
+    <div class="score-dial {{ dial_class }}">
+      <span>{{ result.risk_score }}</span>
+      <span style="font-size: 0.65rem; text-transform: uppercase;">/ 100</span>
+    </div>
+
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.25rem;">
+        {% if result.compliance_status == 'COMPLIANT' %}
+          <span class="badge badge-compliant" style="font-size: 1rem; padding: 0.35rem 1rem;">STATUS: COMPLIANT</span>
+        {% elif result.compliance_status == 'NON_COMPLIANT' %}
+          <span class="badge badge-noncompliant" style="font-size: 1rem; padding: 0.35rem 1rem;">STATUS: NON-COMPLIANT</span>
+        {% else %}
+          <span class="badge badge-review" style="font-size: 1rem; padding: 0.35rem 1rem;">STATUS: NEEDS REVIEW</span>
+        {% endif %}
+
+        <span class="badge badge-neutral" style="font-size: 0.85rem;">{{ result.risk_category }} Exposure Band</span>
+      </div>
+      <div class="stat-sub">
+        Evaluating {{ result.data_category }} data &bull; Origin: {{ result.origin_jurisdiction }} &rarr; Target: {{ result.storage_region }}
+        {% if result.backup_region and result.backup_region != 'None' %}&bull; Backup: {{ result.backup_region }}{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- ML Model Advisory Comparison Pill -->
+  {% if result.ml_prediction and result.ml_prediction.model_available %}
+    <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 0.85rem; margin-bottom: 1.25rem; font-size: 0.85rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+          <strong>🤖 ML Baseline Model Advisory (scikit-learn):</strong>
+          Predicted Status: <span class="badge badge-info">{{ result.ml_prediction.predicted_status }}</span>
+          (Confidence: {{ (result.ml_prediction.confidence * 100)|round(1) }}%)
+        </div>
+        <span class="font-mono text-muted" style="font-size: 0.75rem;">Model: RandomForestClassifier (Trained on 1,200 synthetic scenarios)</span>
+      </div>
+      <p style="margin-top: 0.35rem; color: var(--text-muted); font-size: 0.8rem;">
+        {{ result.ml_prediction.advisory_note }}
+      </p>
+    </div>
+  {% endif %}
+
+  <!-- Explainable Calculation Narrative -->
+  <div class="score-narrative">
+    <strong>Explainable AI Rationale:</strong> {{ result.calculation_narrative }}
+  </div>
+
+  <!-- Contributing Factors Waterfall -->
+  <div style="margin-bottom: 2rem;">
+    <h3 style="font-size: 1.05rem; font-weight: 600; margin-bottom: 0.75rem;">Contributing Risk Factors &amp; Score Breakdown</h3>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Factor / Evaluation Item</th>
+            <th>Type</th>
+            <th>Points</th>
+            <th>Rationale &amp; Observation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for f in result.risk_factors %}
+            <tr>
+              <td style="font-weight: 600;">{{ f.factor }}</td>
+              <td><span class="badge badge-neutral">{{ f.type }}</span></td>
+              <td class="font-mono" style="font-weight: 700; color: {% if f.points > 0 %}var(--danger){% else %}var(--success){% endif %};">
+                {{ f.impact }}
+              </td>
+              <td style="font-size: 0.85rem; color: var(--secondary);">{{ f.description }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Individual Policy Checks -->
+  <div style="margin-bottom: 2rem;">
+    <h3 style="font-size: 1.05rem; font-weight: 600; margin-bottom: 0.75rem;">Statutory Policy Checks ({{ result.policy_results|length }} evaluated)</h3>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Rule ID</th>
+            <th>Framework</th>
+            <th>Severity</th>
+            <th>Check Status</th>
+            <th>Finding Explanation</th>
+            <th>Remediation / Legal Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in result.policy_results %}
+            {% if p.status != 'SKIPPED' %}
+              <tr>
+                <td class="font-mono" style="font-weight: 600;">{{ p.rule_id }}</td>
+                <td>{{ p.framework }}</td>
+                <td>
+                  <span class="badge {% if p.severity == 'CRITICAL' %}badge-danger{% elif p.severity == 'HIGH' %}badge-warning{% else %}badge-neutral{% endif %}">
+                    {{ p.severity }}
+                  </span>
+                </td>
+                <td>
+                  {% if p.status == 'PASS' %}
+                    <span class="badge badge-compliant">PASS</span>
+                  {% elif p.status == 'FAIL' %}
+                    <span class="badge badge-noncompliant">FAIL</span>
+                  {% else %}
+                    <span class="badge badge-review">REVIEW</span>
+                  {% endif %}
+                </td>
+                <td style="font-size: 0.85rem;">{{ p.explanation }}</td>
+                <td style="font-size: 0.8rem; color: var(--secondary);">
+                  <div>{{ p.remediation }}</div>
+                  {% if p.legal_reference %}
+                    <div style="margin-top: 0.25rem; font-weight: 600; color: var(--accent);">
+                      {{ p.legal_reference }}
+                    </div>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Actionable Recommendations & Next Steps -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;">
+    <div class="card" style="margin-bottom: 0; background: #fafafa;">
+      <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; color: #0f172a;">
+        🎯 Actionable Remediation Recommendations
+      </h3>
+      {% if result.recommendations %}
+        <ul class="recommendation-list">
+          {% for rec in result.recommendations %}
+            <li class="recommendation-item">{{ rec }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p style="font-size: 0.85rem; color: var(--text-muted);">No urgent remediations required.</p>
+      {% endif %}
+    </div>
+
+    <div class="card" style="margin-bottom: 0; background: #fafafa;">
+      <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; color: #0f172a;">
+        📋 Suggested Next Steps for Cloud Engineer
+      </h3>
+      {% if result.suggested_next_steps %}
+        <ul class="recommendation-list">
+          {% for step in result.suggested_next_steps %}
+            <li class="recommendation-item">{{ step }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+{% if result %}
+<script>
+  // Scroll directly to results on postback
+  const resEl = document.getElementById("results-anchor");
+  if (resEl) {
+    resEl.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+{% endif %}
+{% endblock %}

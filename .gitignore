@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local runtime data & caches
+data/*.db
+data/s3_mock/
+.DS_Store

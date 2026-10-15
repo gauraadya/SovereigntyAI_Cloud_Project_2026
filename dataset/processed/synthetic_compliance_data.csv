@@ -1,0 +1,1201 @@
+scenario_id,origin_jurisdiction,data_category,storage_region,backup_region,cross_border,transfer_mechanism,encryption_at_rest,access_control,audit_logging,framework,risk_score,risk_category,compliance_status
+SYN-00001,GLOBAL_OTHER,non_personal,eu-central-1,ap-south-1,1,scc,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00002,US_CA,non_personal,eu-central-1,eu-central-2,1,scc,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00003,US_CA,personal,ap-northeast-1,af-south-1,1,bcr,1,1,0,HIPAA,25,Low,COMPLIANT
+SYN-00004,US_FED,personal,eu-south-1,us-east-1,1,adequate_country,1,0,1,HIPAA,18,Low,COMPLIANT
+SYN-00005,US_FED,sensitive_personal,ap-south-2,eu-central-1,1,none_unverified,0,1,0,GDPR,100,Critical,NEEDS_REVIEW
+SYN-00006,UK,financial,us-west-1,af-south-1,1,scc,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00007,EU_EEA,personal,eu-west-2,us-west-1,0,scc,0,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00008,US_FED,personal,ap-south-2,eu-central-2,1,statutory_exemption,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00009,US_CA,financial,af-south-1,eu-south-1,1,none_unverified,1,1,1,GDPR,45,Moderate,NEEDS_REVIEW
+SYN-00010,US_FED,healthcare,ap-south-2,eu-central-2,1,scc,1,1,0,PCI-DSS / ISO 27001,75,High,NON_COMPLIANT
+SYN-00011,GLOBAL_OTHER,healthcare,eu-west-3,ap-south-1,1,scc,1,0,0,HIPAA,93,Critical,NON_COMPLIANT
+SYN-00012,IN,personal,me-south-1,ap-northeast-1,1,adequate_country,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00013,GLOBAL_OTHER,healthcare,eu-west-1,us-west-1,0,none_unverified,0,1,1,GDPR,70,High,NON_COMPLIANT
+SYN-00014,GLOBAL_OTHER,sensitive_personal,ap-south-2,us-east-1,1,bcr,0,1,0,GDPR,70,High,COMPLIANT
+SYN-00015,GLOBAL_OTHER,financial,me-south-1,eu-west-3,1,none_unverified,1,1,1,HIPAA,45,Moderate,NEEDS_REVIEW
+SYN-00016,IN,sensitive_personal,me-south-1,none,1,statutory_exemption,1,0,1,GDPR,63,High,NON_COMPLIANT
+SYN-00017,US_FED,financial,ap-south-1,eu-central-1,1,scc,1,1,0,GDPR,60,High,NEEDS_REVIEW
+SYN-00018,UK,personal,eu-west-3,ap-northeast-1,1,statutory_exemption,1,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00019,UK,personal,us-east-1,us-west-1,1,none_unverified,1,0,0,GDPR,73,High,NEEDS_REVIEW
+SYN-00020,IN,personal,eu-west-1,us-east-1,1,adequate_country,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00021,GLOBAL_OTHER,non_personal,ap-south-1,eu-central-2,1,bcr,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00022,IN,sensitive_personal,eu-west-3,af-south-1,1,statutory_exemption,0,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00023,IN,non_personal,eu-west-2,us-west-2,1,bcr,0,0,0,GDPR,43,Moderate,COMPLIANT
+SYN-00024,GLOBAL_OTHER,non_personal,eu-central-2,us-west-1,0,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00025,US_CA,personal,ap-southeast-1,eu-west-3,1,bcr,0,1,1,PCI-DSS / ISO 27001,25,Low,COMPLIANT
+SYN-00026,UK,non_personal,eu-central-2,me-south-1,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00027,US_CA,healthcare,eu-south-1,us-west-1,1,adequate_country,1,0,1,PCI-DSS / ISO 27001,68,High,NON_COMPLIANT
+SYN-00028,US_FED,healthcare,us-east-1,us-west-2,0,none_unverified,0,1,1,HIPAA,70,High,NON_COMPLIANT
+SYN-00029,IN,non_personal,sa-east-1,me-south-1,1,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00030,US_CA,sensitive_personal,me-south-1,eu-west-3,1,adequate_country,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00031,EU_EEA,personal,us-west-2,eu-west-1,1,statutory_exemption,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00032,GLOBAL_OTHER,sensitive_personal,sa-east-1,ap-southeast-2,0,scc,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00033,US_CA,personal,us-east-1,ap-southeast-1,0,scc,1,1,0,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00034,UK,non_personal,eu-west-1,me-south-1,1,scc,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00035,IN,financial,us-east-1,eu-west-3,1,explicit_consent,1,1,0,GDPR,65,High,NEEDS_REVIEW
+SYN-00036,IN,financial,eu-west-2,eu-west-1,1,none_unverified,1,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00037,IN,financial,eu-south-1,ap-south-1,1,statutory_exemption,0,1,1,GDPR,85,Critical,NON_COMPLIANT
+SYN-00038,GLOBAL_OTHER,healthcare,ap-south-2,eu-central-1,1,bcr,1,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00039,UK,healthcare,af-south-1,none,1,adequate_country,1,1,1,HIPAA,20,Low,COMPLIANT
+SYN-00040,UK,sensitive_personal,eu-west-3,us-west-2,1,scc,1,1,0,GDPR,45,Moderate,COMPLIANT
+SYN-00041,US_FED,personal,ap-south-1,eu-west-1,1,bcr,0,1,1,DPDP Act 2023,25,Low,COMPLIANT
+SYN-00042,IN,healthcare,eu-central-1,eu-west-3,1,none_unverified,1,0,1,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00043,IN,non_personal,us-west-2,eu-central-1,1,explicit_consent,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00044,US_FED,personal,ap-south-1,none,1,none_unverified,1,0,0,HIPAA,73,High,NEEDS_REVIEW
+SYN-00045,EU_EEA,financial,us-west-1,ap-southeast-2,1,explicit_consent,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00046,IN,sensitive_personal,ap-south-2,eu-central-1,0,adequate_country,0,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00047,UK,sensitive_personal,eu-west-2,us-west-1,0,none_unverified,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00048,EU_EEA,sensitive_personal,af-south-1,eu-north-1,1,bcr,0,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00049,US_FED,non_personal,us-east-1,ap-southeast-2,0,scc,0,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00050,UK,personal,eu-south-1,us-west-2,1,none_unverified,0,1,0,PCI-DSS / ISO 27001,80,Critical,NEEDS_REVIEW
+SYN-00051,UK,non_personal,us-east-1,ap-south-2,1,scc,0,1,0,PCI-DSS / ISO 27001,25,Low,COMPLIANT
+SYN-00052,US_CA,personal,me-south-1,ap-northeast-1,1,none_unverified,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00053,GLOBAL_OTHER,sensitive_personal,us-east-2,eu-central-2,1,none_unverified,1,1,1,DPDP Act 2023,50,Moderate,NEEDS_REVIEW
+SYN-00054,EU_EEA,non_personal,ap-south-1,ap-northeast-1,1,statutory_exemption,1,0,0,Cross-Border Standard,13,Low,COMPLIANT
+SYN-00055,IN,healthcare,ap-southeast-2,us-west-1,1,scc,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00056,IN,personal,me-south-1,ap-southeast-1,1,adequate_country,1,1,0,DPDP Act 2023,35,Moderate,NEEDS_REVIEW
+SYN-00057,US_CA,sensitive_personal,af-south-1,sa-east-1,1,bcr,0,0,0,DPDP Act 2023,88,Critical,COMPLIANT
+SYN-00058,GLOBAL_OTHER,healthcare,ap-northeast-1,ap-south-1,1,none_unverified,1,0,1,HIPAA,98,Critical,NON_COMPLIANT
+SYN-00059,US_CA,non_personal,us-east-1,eu-south-1,0,scc,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00060,IN,personal,us-west-2,eu-west-2,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,95,Critical,NON_COMPLIANT
+SYN-00061,US_FED,sensitive_personal,ap-northeast-1,us-west-2,1,adequate_country,1,0,0,Cross-Border Standard,63,High,COMPLIANT
+SYN-00062,GLOBAL_OTHER,non_personal,sa-east-1,us-west-1,0,adequate_country,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00063,UK,sensitive_personal,ap-south-1,ap-northeast-1,1,scc,1,0,0,GDPR,63,High,COMPLIANT
+SYN-00064,US_CA,financial,us-west-2,eu-west-3,0,scc,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00065,UK,non_personal,eu-west-1,us-west-2,1,scc,0,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00066,US_CA,financial,eu-south-1,ap-southeast-1,1,bcr,1,0,0,PCI-DSS / ISO 27001,78,Critical,NEEDS_REVIEW
+SYN-00067,US_FED,non_personal,ap-southeast-2,none,1,none_unverified,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00068,GLOBAL_OTHER,non_personal,eu-central-1,eu-south-1,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00069,GLOBAL_OTHER,non_personal,sa-east-1,eu-north-1,0,none_unverified,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00070,UK,non_personal,eu-north-1,ap-south-2,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00071,GLOBAL_OTHER,personal,eu-west-1,af-south-1,1,adequate_country,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00072,UK,healthcare,us-west-1,eu-central-2,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,70,High,NON_COMPLIANT
+SYN-00073,EU_EEA,healthcare,us-west-1,ap-southeast-1,1,none_unverified,1,0,1,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00074,GLOBAL_OTHER,financial,af-south-1,ap-northeast-1,0,scc,1,1,1,GDPR,10,Low,COMPLIANT
+SYN-00075,US_FED,healthcare,ap-south-1,ap-southeast-1,1,statutory_exemption,0,1,1,PCI-DSS / ISO 27001,70,High,NON_COMPLIANT
+SYN-00076,US_FED,personal,ap-southeast-2,eu-north-1,1,bcr,1,1,0,Cross-Border Standard,25,Low,COMPLIANT
+SYN-00077,GLOBAL_OTHER,financial,af-south-1,none,1,adequate_country,1,0,0,Cross-Border Standard,78,Critical,NEEDS_REVIEW
+SYN-00078,IN,healthcare,ap-southeast-2,ap-southeast-1,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00079,GLOBAL_OTHER,personal,us-east-1,af-south-1,0,scc,1,0,0,HIPAA,38,Moderate,COMPLIANT
+SYN-00080,GLOBAL_OTHER,healthcare,ap-south-2,ap-south-2,0,adequate_country,1,1,0,GDPR,70,High,NON_COMPLIANT
+SYN-00081,GLOBAL_OTHER,sensitive_personal,eu-north-1,eu-north-1,1,none_unverified,0,1,0,GDPR,100,Critical,NEEDS_REVIEW
+SYN-00082,IN,financial,ap-south-1,us-east-2,0,adequate_country,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00083,EU_EEA,non_personal,af-south-1,ap-south-2,1,none_unverified,1,0,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00084,UK,financial,ap-southeast-2,ap-northeast-1,1,explicit_consent,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00085,US_CA,non_personal,eu-west-1,us-west-1,1,explicit_consent,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00086,UK,financial,eu-west-1,eu-south-1,1,adequate_country,0,1,0,PCI-DSS / ISO 27001,85,Critical,NEEDS_REVIEW
+SYN-00087,US_CA,financial,sa-east-1,us-west-2,1,bcr,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-00088,US_FED,non_personal,eu-north-1,eu-south-1,1,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00089,US_CA,sensitive_personal,ap-southeast-2,ap-south-2,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00090,EU_EEA,personal,ap-south-2,af-south-1,1,none_unverified,1,0,1,Cross-Border Standard,98,Critical,NON_COMPLIANT
+SYN-00091,IN,personal,ap-south-2,eu-west-2,0,adequate_country,1,1,0,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00092,GLOBAL_OTHER,sensitive_personal,us-east-1,ap-southeast-1,1,explicit_consent,1,0,0,Cross-Border Standard,58,High,COMPLIANT
+SYN-00093,UK,healthcare,ap-northeast-1,eu-central-2,1,statutory_exemption,1,0,0,Cross-Border Standard,88,Critical,NON_COMPLIANT
+SYN-00094,US_FED,non_personal,eu-west-1,eu-south-1,1,none_unverified,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00095,US_CA,sensitive_personal,ap-northeast-1,ap-south-1,1,scc,0,0,1,PCI-DSS / ISO 27001,63,High,COMPLIANT
+SYN-00096,US_FED,healthcare,us-east-2,us-east-1,0,none_unverified,1,1,0,PCI-DSS / ISO 27001,70,High,NON_COMPLIANT
+SYN-00097,GLOBAL_OTHER,healthcare,us-east-1,us-west-1,1,explicit_consent,1,1,0,HIPAA,70,High,NON_COMPLIANT
+SYN-00098,EU_EEA,healthcare,me-south-1,none,1,none_unverified,0,0,1,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00099,UK,financial,ap-southeast-2,ap-southeast-1,1,adequate_country,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00100,US_CA,healthcare,eu-west-2,none,1,none_unverified,1,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00101,EU_EEA,sensitive_personal,ap-southeast-1,eu-central-2,1,scc,1,0,1,DPDP Act 2023,68,High,NON_COMPLIANT
+SYN-00102,US_CA,financial,me-south-1,ap-south-1,1,explicit_consent,0,0,1,PCI-DSS / ISO 27001,73,High,NEEDS_REVIEW
+SYN-00103,UK,personal,us-west-2,eu-north-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00104,US_FED,sensitive_personal,ap-south-2,none,1,bcr,1,0,1,PCI-DSS / ISO 27001,38,Moderate,COMPLIANT
+SYN-00105,UK,healthcare,us-west-1,us-east-1,1,statutory_exemption,0,0,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00106,GLOBAL_OTHER,personal,sa-east-1,us-west-1,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00107,US_CA,personal,ap-southeast-2,eu-central-1,1,scc,1,1,0,GDPR,25,Low,COMPLIANT
+SYN-00108,UK,healthcare,eu-central-1,eu-west-2,1,explicit_consent,1,1,0,HIPAA,70,High,NON_COMPLIANT
+SYN-00109,US_FED,sensitive_personal,us-west-2,eu-central-2,0,scc,0,1,0,Cross-Border Standard,65,High,COMPLIANT
+SYN-00110,EU_EEA,sensitive_personal,eu-west-1,eu-south-1,0,none_unverified,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00111,EU_EEA,non_personal,ap-northeast-1,eu-west-3,1,none_unverified,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00112,EU_EEA,financial,us-west-1,us-east-2,1,explicit_consent,1,1,0,Cross-Border Standard,65,High,NEEDS_REVIEW
+SYN-00113,GLOBAL_OTHER,personal,eu-north-1,eu-west-3,1,statutory_exemption,0,1,0,Cross-Border Standard,45,Moderate,COMPLIANT
+SYN-00114,IN,personal,ap-northeast-1,ap-south-1,1,explicit_consent,1,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00115,GLOBAL_OTHER,sensitive_personal,eu-north-1,eu-central-2,0,scc,1,0,0,PCI-DSS / ISO 27001,58,High,COMPLIANT
+SYN-00116,US_FED,personal,us-west-2,ap-northeast-1,0,adequate_country,1,0,0,Cross-Border Standard,38,Moderate,COMPLIANT
+SYN-00117,US_FED,financial,eu-central-1,us-west-1,1,bcr,1,1,0,HIPAA,60,High,NEEDS_REVIEW
+SYN-00118,IN,sensitive_personal,us-west-1,eu-south-1,1,none_unverified,1,1,1,GDPR,90,Critical,NON_COMPLIANT
+SYN-00119,GLOBAL_OTHER,non_personal,us-east-1,ap-southeast-1,1,statutory_exemption,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00120,US_FED,healthcare,eu-north-1,eu-north-1,1,scc,1,1,1,HIPAA,20,Low,COMPLIANT
+SYN-00121,US_CA,financial,us-east-2,eu-west-1,0,scc,1,1,1,PCI-DSS / ISO 27001,10,Low,COMPLIANT
+SYN-00122,UK,financial,eu-west-1,us-west-1,1,adequate_country,1,1,0,HIPAA,60,High,NEEDS_REVIEW
+SYN-00123,GLOBAL_OTHER,financial,sa-east-1,us-west-1,0,adequate_country,1,0,1,Cross-Border Standard,28,Moderate,COMPLIANT
+SYN-00124,UK,financial,ap-south-1,eu-central-2,1,none_unverified,0,1,0,GDPR,100,Critical,NEEDS_REVIEW
+SYN-00125,IN,non_personal,eu-central-2,ap-south-2,1,explicit_consent,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00126,IN,healthcare,ap-northeast-1,us-east-2,1,none_unverified,0,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00127,US_CA,sensitive_personal,ap-southeast-1,ap-south-1,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00128,IN,financial,eu-west-2,us-east-2,1,statutory_exemption,1,1,0,HIPAA,65,High,NEEDS_REVIEW
+SYN-00129,IN,non_personal,ap-northeast-1,eu-central-2,1,none_unverified,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00130,IN,personal,sa-east-1,eu-north-1,1,adequate_country,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00131,IN,sensitive_personal,eu-central-1,ap-south-1,1,scc,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00132,GLOBAL_OTHER,non_personal,eu-west-3,none,0,adequate_country,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00133,EU_EEA,personal,ap-southeast-1,ap-southeast-2,1,adequate_country,1,0,0,HIPAA,53,High,NEEDS_REVIEW
+SYN-00134,UK,sensitive_personal,eu-west-2,ap-southeast-1,0,none_unverified,1,1,0,PCI-DSS / ISO 27001,40,Moderate,COMPLIANT
+SYN-00135,GLOBAL_OTHER,non_personal,eu-central-2,ap-northeast-1,0,scc,1,0,0,GDPR,13,Low,COMPLIANT
+SYN-00136,EU_EEA,financial,eu-west-3,eu-central-2,0,adequate_country,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00137,UK,financial,ap-northeast-1,ap-southeast-2,1,statutory_exemption,0,1,1,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00138,GLOBAL_OTHER,personal,ap-southeast-1,ap-southeast-1,1,explicit_consent,1,0,0,PCI-DSS / ISO 27001,38,Moderate,COMPLIANT
+SYN-00139,GLOBAL_OTHER,non_personal,us-east-2,us-west-2,0,none_unverified,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00140,EU_EEA,non_personal,eu-west-1,eu-central-2,0,scc,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00141,EU_EEA,sensitive_personal,af-south-1,me-south-1,1,bcr,1,0,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00142,GLOBAL_OTHER,non_personal,us-east-1,sa-east-1,0,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00143,IN,non_personal,us-west-1,me-south-1,1,bcr,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00144,UK,sensitive_personal,af-south-1,none,1,statutory_exemption,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00145,GLOBAL_OTHER,financial,us-east-2,us-east-2,1,scc,1,0,1,DPDP Act 2023,33,Moderate,COMPLIANT
+SYN-00146,GLOBAL_OTHER,non_personal,eu-west-1,ap-southeast-2,1,explicit_consent,0,0,0,DPDP Act 2023,38,Moderate,COMPLIANT
+SYN-00147,US_FED,financial,us-east-2,af-south-1,0,none_unverified,1,1,1,DPDP Act 2023,10,Low,COMPLIANT
+SYN-00148,UK,non_personal,eu-west-1,ap-south-1,1,explicit_consent,0,0,0,PCI-DSS / ISO 27001,38,Moderate,COMPLIANT
+SYN-00149,US_FED,personal,me-south-1,eu-west-1,1,bcr,0,1,0,Cross-Border Standard,50,Moderate,COMPLIANT
+SYN-00150,US_CA,sensitive_personal,us-east-1,eu-central-1,0,adequate_country,0,1,1,DPDP Act 2023,40,Moderate,COMPLIANT
+SYN-00151,US_FED,personal,eu-west-3,ap-south-1,1,bcr,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00152,GLOBAL_OTHER,healthcare,eu-north-1,eu-west-2,0,none_unverified,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00153,GLOBAL_OTHER,non_personal,ap-southeast-1,none,0,adequate_country,1,0,0,PCI-DSS / ISO 27001,13,Low,COMPLIANT
+SYN-00154,US_FED,non_personal,us-west-2,none,0,scc,1,0,0,GDPR,13,Low,COMPLIANT
+SYN-00155,US_CA,non_personal,ap-south-1,us-west-2,1,statutory_exemption,0,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00156,GLOBAL_OTHER,financial,ap-south-1,us-east-1,1,adequate_country,1,1,0,HIPAA,60,High,NEEDS_REVIEW
+SYN-00157,GLOBAL_OTHER,personal,ap-south-1,eu-west-1,1,bcr,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00158,IN,healthcare,ap-northeast-1,af-south-1,1,statutory_exemption,0,1,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00159,US_CA,non_personal,ap-southeast-2,ap-southeast-1,1,none_unverified,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00160,UK,non_personal,us-east-1,ap-southeast-1,1,explicit_consent,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00161,EU_EEA,non_personal,me-south-1,us-west-1,1,explicit_consent,1,0,1,HIPAA,0,Low,COMPLIANT
+SYN-00162,UK,healthcare,me-south-1,eu-west-2,1,adequate_country,0,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00163,UK,personal,eu-central-2,eu-south-1,1,none_unverified,0,0,1,HIPAA,73,High,NEEDS_REVIEW
+SYN-00164,US_FED,financial,us-west-2,us-west-2,0,scc,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00165,EU_EEA,sensitive_personal,us-west-2,ap-south-2,1,bcr,1,1,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00166,GLOBAL_OTHER,personal,us-west-1,ap-south-2,0,adequate_country,1,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00167,IN,sensitive_personal,eu-west-1,us-west-2,1,statutory_exemption,1,1,0,HIPAA,50,Moderate,NEEDS_REVIEW
+SYN-00168,IN,personal,us-east-2,ap-northeast-1,1,scc,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00169,US_FED,non_personal,me-south-1,me-south-1,1,none_unverified,1,1,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00170,US_CA,personal,eu-north-1,eu-west-3,1,none_unverified,1,0,1,PCI-DSS / ISO 27001,48,Moderate,NEEDS_REVIEW
+SYN-00171,US_FED,personal,ap-northeast-1,sa-east-1,1,bcr,0,1,1,HIPAA,25,Low,COMPLIANT
+SYN-00172,US_CA,personal,us-west-1,af-south-1,0,scc,0,1,0,Cross-Border Standard,45,Moderate,COMPLIANT
+SYN-00173,UK,healthcare,eu-north-1,eu-north-1,1,statutory_exemption,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00174,US_FED,sensitive_personal,eu-west-2,ap-southeast-2,1,adequate_country,1,1,1,HIPAA,20,Low,COMPLIANT
+SYN-00175,US_CA,sensitive_personal,eu-west-3,us-west-2,1,adequate_country,1,0,0,GDPR,63,High,COMPLIANT
+SYN-00176,US_CA,non_personal,us-west-2,ap-southeast-2,0,scc,1,0,1,HIPAA,0,Low,COMPLIANT
+SYN-00177,IN,non_personal,us-east-2,eu-west-1,1,none_unverified,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00178,US_FED,healthcare,eu-west-3,ap-northeast-1,1,explicit_consent,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00179,IN,personal,af-south-1,sa-east-1,1,statutory_exemption,0,1,0,DPDP Act 2023,85,Critical,NON_COMPLIANT
+SYN-00180,US_FED,non_personal,eu-central-2,eu-south-1,1,explicit_consent,0,1,1,PCI-DSS / ISO 27001,5,Low,COMPLIANT
+SYN-00181,UK,sensitive_personal,eu-central-1,ap-southeast-2,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,40,Moderate,COMPLIANT
+SYN-00182,EU_EEA,sensitive_personal,us-west-1,eu-south-1,1,statutory_exemption,0,1,1,Cross-Border Standard,70,High,NON_COMPLIANT
+SYN-00183,US_FED,non_personal,me-south-1,me-south-1,1,statutory_exemption,1,0,0,GDPR,13,Low,COMPLIANT
+SYN-00184,GLOBAL_OTHER,healthcare,us-west-1,ap-south-1,1,bcr,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00185,UK,financial,eu-west-3,eu-central-1,1,bcr,1,1,0,PCI-DSS / ISO 27001,60,High,NEEDS_REVIEW
+SYN-00186,GLOBAL_OTHER,personal,eu-west-3,eu-central-2,0,adequate_country,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00187,EU_EEA,financial,us-east-1,ap-southeast-2,1,explicit_consent,0,1,1,DPDP Act 2023,65,High,NEEDS_REVIEW
+SYN-00188,US_FED,financial,eu-central-2,us-east-1,1,bcr,1,1,0,PCI-DSS / ISO 27001,60,High,NEEDS_REVIEW
+SYN-00189,GLOBAL_OTHER,healthcare,us-west-2,us-east-1,1,explicit_consent,0,1,0,GDPR,95,Critical,NON_COMPLIANT
+SYN-00190,GLOBAL_OTHER,healthcare,eu-west-1,us-west-2,1,statutory_exemption,1,1,1,GDPR,15,Low,COMPLIANT
+SYN-00191,US_FED,financial,us-east-1,ap-southeast-1,0,none_unverified,0,1,0,HIPAA,80,Critical,NEEDS_REVIEW
+SYN-00192,US_CA,non_personal,us-west-1,sa-east-1,0,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00193,US_FED,sensitive_personal,eu-north-1,none,1,scc,0,1,1,GDPR,45,Moderate,COMPLIANT
+SYN-00194,IN,financial,us-west-1,us-west-1,1,statutory_exemption,1,1,0,HIPAA,65,High,NEEDS_REVIEW
+SYN-00195,US_FED,healthcare,eu-west-1,af-south-1,1,scc,1,0,0,HIPAA,93,Critical,NON_COMPLIANT
+SYN-00196,IN,non_personal,eu-central-1,eu-west-3,1,explicit_consent,0,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00197,GLOBAL_OTHER,healthcare,eu-south-1,sa-east-1,0,none_unverified,0,1,1,DPDP Act 2023,70,High,NON_COMPLIANT
+SYN-00198,EU_EEA,healthcare,eu-north-1,ap-southeast-1,0,adequate_country,1,1,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00199,UK,financial,us-east-1,eu-west-3,1,none_unverified,1,1,1,GDPR,45,Moderate,NEEDS_REVIEW
+SYN-00200,IN,personal,ap-south-1,ap-northeast-1,0,adequate_country,1,1,0,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00201,IN,sensitive_personal,eu-west-1,eu-central-2,1,bcr,0,0,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00202,UK,non_personal,eu-west-3,us-east-1,1,none_unverified,1,0,0,Cross-Border Standard,38,Moderate,NEEDS_REVIEW
+SYN-00203,US_FED,personal,af-south-1,af-south-1,1,scc,1,0,1,GDPR,18,Low,COMPLIANT
+SYN-00204,UK,personal,us-east-1,eu-west-3,1,scc,1,1,0,Cross-Border Standard,25,Low,COMPLIANT
+SYN-00205,US_FED,non_personal,ap-south-2,eu-north-1,1,none_unverified,1,1,0,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00206,UK,non_personal,me-south-1,eu-west-3,1,statutory_exemption,1,1,0,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00207,EU_EEA,non_personal,eu-west-1,eu-central-1,0,none_unverified,1,1,0,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00208,GLOBAL_OTHER,non_personal,ap-southeast-2,me-south-1,0,none_unverified,1,0,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00209,US_FED,healthcare,eu-west-1,eu-central-1,1,scc,0,0,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00210,IN,financial,eu-west-3,us-east-1,1,none_unverified,1,1,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00211,US_FED,sensitive_personal,af-south-1,eu-west-1,1,bcr,1,0,1,HIPAA,38,Moderate,COMPLIANT
+SYN-00212,US_CA,personal,eu-west-3,eu-west-1,1,adequate_country,1,0,0,DPDP Act 2023,43,Moderate,COMPLIANT
+SYN-00213,IN,financial,sa-east-1,us-east-1,1,scc,1,0,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00214,US_FED,healthcare,eu-central-1,eu-central-2,1,explicit_consent,0,1,1,Cross-Border Standard,70,High,NON_COMPLIANT
+SYN-00215,US_FED,non_personal,eu-central-2,ap-south-2,1,explicit_consent,0,1,1,GDPR,5,Low,COMPLIANT
+SYN-00216,US_CA,personal,ap-south-2,us-east-2,1,explicit_consent,1,1,0,GDPR,20,Low,COMPLIANT
+SYN-00217,UK,sensitive_personal,eu-south-1,us-east-2,1,statutory_exemption,1,1,0,Cross-Border Standard,40,Moderate,COMPLIANT
+SYN-00218,US_CA,sensitive_personal,ap-south-2,sa-east-1,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,50,Moderate,NEEDS_REVIEW
+SYN-00219,US_FED,financial,af-south-1,us-east-2,1,scc,1,0,1,GDPR,33,Moderate,COMPLIANT
+SYN-00220,EU_EEA,personal,us-east-2,ap-northeast-1,1,statutory_exemption,0,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00221,UK,financial,eu-north-1,us-west-1,1,statutory_exemption,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00222,US_FED,healthcare,eu-central-1,us-east-2,1,bcr,1,0,0,GDPR,93,Critical,NON_COMPLIANT
+SYN-00223,UK,healthcare,ap-south-2,af-south-1,1,statutory_exemption,1,1,0,DPDP Act 2023,70,High,NON_COMPLIANT
+SYN-00224,UK,sensitive_personal,us-west-2,eu-west-2,1,none_unverified,1,1,1,DPDP Act 2023,50,Moderate,NEEDS_REVIEW
+SYN-00225,EU_EEA,healthcare,us-east-2,us-west-2,1,scc,0,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00226,UK,healthcare,eu-central-2,eu-west-2,1,statutory_exemption,1,1,0,Cross-Border Standard,70,High,NON_COMPLIANT
+SYN-00227,US_CA,financial,eu-north-1,ap-southeast-1,1,statutory_exemption,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00228,US_CA,personal,ap-south-1,ap-south-1,1,statutory_exemption,1,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00229,GLOBAL_OTHER,personal,ap-southeast-2,us-east-1,0,scc,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00230,GLOBAL_OTHER,sensitive_personal,us-west-2,us-west-1,0,adequate_country,1,1,0,GDPR,40,Moderate,COMPLIANT
+SYN-00231,US_FED,healthcare,ap-south-2,ap-northeast-1,1,scc,1,1,0,DPDP Act 2023,75,High,NON_COMPLIANT
+SYN-00232,EU_EEA,sensitive_personal,sa-east-1,eu-south-1,1,scc,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00233,EU_EEA,healthcare,us-east-2,ap-northeast-1,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00234,GLOBAL_OTHER,healthcare,ap-southeast-2,eu-north-1,0,scc,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00235,IN,sensitive_personal,eu-central-2,eu-west-3,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,50,Moderate,NEEDS_REVIEW
+SYN-00236,IN,financial,eu-central-2,none,1,bcr,1,1,0,PCI-DSS / ISO 27001,60,High,NEEDS_REVIEW
+SYN-00237,GLOBAL_OTHER,sensitive_personal,me-south-1,ap-northeast-1,1,statutory_exemption,0,1,1,GDPR,40,Moderate,COMPLIANT
+SYN-00238,US_FED,personal,ap-northeast-1,ap-south-1,1,none_unverified,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00239,UK,personal,eu-north-1,sa-east-1,1,none_unverified,0,0,0,GDPR,98,Critical,NEEDS_REVIEW
+SYN-00240,US_CA,non_personal,eu-north-1,eu-west-2,1,explicit_consent,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00241,US_CA,personal,ap-northeast-1,ap-south-1,1,bcr,1,1,0,HIPAA,25,Low,COMPLIANT
+SYN-00242,GLOBAL_OTHER,personal,eu-central-2,eu-west-1,0,scc,1,0,0,GDPR,38,Moderate,COMPLIANT
+SYN-00243,GLOBAL_OTHER,financial,us-west-1,sa-east-1,1,scc,1,0,1,PCI-DSS / ISO 27001,33,Moderate,COMPLIANT
+SYN-00244,GLOBAL_OTHER,sensitive_personal,us-west-1,us-west-2,0,none_unverified,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00245,US_CA,sensitive_personal,us-west-1,eu-central-2,0,none_unverified,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00246,UK,personal,eu-north-1,us-east-1,1,statutory_exemption,0,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00247,US_CA,non_personal,me-south-1,ap-southeast-1,1,adequate_country,0,1,0,PCI-DSS / ISO 27001,25,Low,COMPLIANT
+SYN-00248,UK,non_personal,af-south-1,ap-southeast-1,1,none_unverified,1,1,0,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00249,EU_EEA,personal,sa-east-1,eu-central-2,1,adequate_country,0,1,1,Cross-Border Standard,25,Low,COMPLIANT
+SYN-00250,EU_EEA,non_personal,ap-southeast-2,eu-central-1,1,bcr,0,1,1,PCI-DSS / ISO 27001,10,Low,COMPLIANT
+SYN-00251,US_FED,healthcare,ap-northeast-1,us-west-1,1,explicit_consent,1,1,0,GDPR,70,High,NON_COMPLIANT
+SYN-00252,IN,sensitive_personal,us-west-2,ap-southeast-2,1,scc,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00253,US_CA,sensitive_personal,ap-southeast-1,me-south-1,1,explicit_consent,1,1,0,HIPAA,40,Moderate,COMPLIANT
+SYN-00254,IN,financial,eu-south-1,eu-west-1,1,adequate_country,0,1,1,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00255,EU_EEA,non_personal,eu-central-2,ap-southeast-1,0,none_unverified,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00256,US_CA,personal,af-south-1,eu-north-1,1,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00257,US_FED,sensitive_personal,us-east-2,eu-south-1,0,scc,1,1,0,HIPAA,40,Moderate,COMPLIANT
+SYN-00258,US_FED,non_personal,af-south-1,af-south-1,1,none_unverified,1,0,0,GDPR,38,Moderate,NEEDS_REVIEW
+SYN-00259,US_FED,healthcare,me-south-1,us-east-1,1,none_unverified,0,0,1,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00260,US_CA,personal,af-south-1,ap-northeast-1,1,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00261,EU_EEA,sensitive_personal,ap-southeast-1,us-west-2,1,statutory_exemption,1,0,1,HIPAA,73,High,NON_COMPLIANT
+SYN-00262,IN,financial,eu-west-1,ap-southeast-1,1,bcr,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00263,US_CA,sensitive_personal,eu-central-2,eu-central-2,1,scc,1,0,1,HIPAA,38,Moderate,COMPLIANT
+SYN-00264,US_FED,non_personal,eu-south-1,eu-north-1,1,none_unverified,1,0,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00265,GLOBAL_OTHER,personal,us-west-2,eu-south-1,0,scc,0,0,0,HIPAA,63,High,COMPLIANT
+SYN-00266,US_FED,financial,me-south-1,ap-northeast-1,1,explicit_consent,1,0,0,DPDP Act 2023,73,High,NEEDS_REVIEW
+SYN-00267,US_FED,financial,ap-southeast-1,eu-central-1,1,statutory_exemption,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00268,UK,sensitive_personal,sa-east-1,us-west-2,1,bcr,1,1,0,DPDP Act 2023,45,Moderate,COMPLIANT
+SYN-00269,US_CA,sensitive_personal,ap-south-1,ap-northeast-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,40,Moderate,COMPLIANT
+SYN-00270,US_CA,personal,us-west-1,eu-west-3,0,adequate_country,0,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00271,EU_EEA,non_personal,eu-central-2,none,0,scc,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00272,EU_EEA,personal,me-south-1,ap-southeast-1,1,bcr,1,0,0,GDPR,53,High,NEEDS_REVIEW
+SYN-00273,EU_EEA,sensitive_personal,af-south-1,us-west-2,1,adequate_country,1,1,0,GDPR,85,Critical,NON_COMPLIANT
+SYN-00274,UK,healthcare,eu-north-1,eu-west-1,1,adequate_country,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00275,UK,financial,us-west-1,ap-south-1,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-00276,UK,personal,ap-south-1,ap-south-2,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00277,US_CA,healthcare,af-south-1,ap-northeast-1,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00278,US_CA,financial,sa-east-1,eu-west-1,1,statutory_exemption,1,1,1,Cross-Border Standard,10,Low,COMPLIANT
+SYN-00279,US_CA,financial,eu-central-2,eu-central-2,1,none_unverified,1,1,1,HIPAA,45,Moderate,NEEDS_REVIEW
+SYN-00280,EU_EEA,personal,sa-east-1,eu-west-2,1,none_unverified,0,1,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00281,UK,personal,sa-east-1,us-west-1,1,none_unverified,1,0,1,GDPR,48,Moderate,NEEDS_REVIEW
+SYN-00282,UK,financial,eu-central-2,eu-west-1,1,explicit_consent,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00283,UK,sensitive_personal,us-west-2,us-east-1,1,adequate_country,1,0,0,DPDP Act 2023,63,High,COMPLIANT
+SYN-00284,US_FED,sensitive_personal,us-west-2,us-west-2,0,adequate_country,0,1,0,DPDP Act 2023,65,High,COMPLIANT
+SYN-00285,GLOBAL_OTHER,non_personal,eu-west-1,ap-south-1,1,explicit_consent,1,0,0,HIPAA,13,Low,COMPLIANT
+SYN-00286,EU_EEA,non_personal,eu-central-1,ap-south-2,0,scc,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00287,EU_EEA,personal,ap-southeast-1,ap-southeast-1,1,statutory_exemption,0,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00288,US_FED,sensitive_personal,eu-west-1,sa-east-1,1,statutory_exemption,1,0,1,HIPAA,33,Moderate,COMPLIANT
+SYN-00289,US_CA,healthcare,eu-west-1,me-south-1,1,scc,1,0,1,DPDP Act 2023,68,High,NON_COMPLIANT
+SYN-00290,US_FED,financial,ap-south-2,ap-northeast-1,1,scc,1,1,0,HIPAA,60,High,NEEDS_REVIEW
+SYN-00291,US_CA,financial,ap-southeast-2,eu-central-2,1,bcr,1,1,0,Cross-Border Standard,60,High,NEEDS_REVIEW
+SYN-00292,UK,personal,ap-northeast-1,eu-west-1,1,scc,1,1,0,HIPAA,25,Low,COMPLIANT
+SYN-00293,UK,healthcare,us-east-2,ap-southeast-1,1,bcr,0,1,0,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00294,UK,personal,ap-southeast-2,us-east-1,1,scc,0,1,0,PCI-DSS / ISO 27001,50,Moderate,COMPLIANT
+SYN-00295,UK,personal,us-east-2,us-west-1,1,bcr,0,1,1,Cross-Border Standard,25,Low,COMPLIANT
+SYN-00296,IN,sensitive_personal,af-south-1,eu-west-3,1,none_unverified,1,0,1,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00297,US_FED,non_personal,ap-southeast-1,ap-northeast-1,1,scc,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00298,GLOBAL_OTHER,healthcare,us-west-2,eu-central-2,0,none_unverified,0,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00299,EU_EEA,financial,af-south-1,sa-east-1,1,none_unverified,1,1,1,HIPAA,95,Critical,NON_COMPLIANT
+SYN-00300,IN,sensitive_personal,eu-central-2,af-south-1,1,none_unverified,0,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00301,EU_EEA,non_personal,ap-south-2,eu-south-1,1,statutory_exemption,1,0,0,PCI-DSS / ISO 27001,13,Low,COMPLIANT
+SYN-00302,US_CA,sensitive_personal,me-south-1,eu-west-2,1,bcr,1,0,1,HIPAA,38,Moderate,COMPLIANT
+SYN-00303,US_CA,non_personal,eu-west-2,eu-west-2,1,bcr,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00304,UK,healthcare,us-west-1,ap-northeast-1,1,adequate_country,0,0,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00305,US_FED,non_personal,eu-west-2,none,1,bcr,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00306,IN,sensitive_personal,eu-north-1,us-east-1,1,statutory_exemption,0,0,1,PCI-DSS / ISO 27001,98,Critical,NON_COMPLIANT
+SYN-00307,GLOBAL_OTHER,personal,eu-north-1,us-west-2,0,adequate_country,1,0,0,PCI-DSS / ISO 27001,38,Moderate,COMPLIANT
+SYN-00308,EU_EEA,personal,eu-south-1,ap-south-1,0,none_unverified,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00309,US_FED,personal,ap-northeast-1,eu-west-1,1,bcr,0,1,0,Cross-Border Standard,50,Moderate,COMPLIANT
+SYN-00310,US_CA,sensitive_personal,eu-west-2,us-east-2,1,bcr,0,1,0,Cross-Border Standard,70,High,COMPLIANT
+SYN-00311,UK,non_personal,eu-west-3,us-east-1,1,adequate_country,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00312,US_FED,personal,me-south-1,us-west-1,1,explicit_consent,1,0,0,DPDP Act 2023,38,Moderate,COMPLIANT
+SYN-00313,US_CA,sensitive_personal,eu-north-1,me-south-1,1,scc,0,1,1,DPDP Act 2023,45,Moderate,COMPLIANT
+SYN-00314,US_FED,healthcare,eu-central-2,us-east-2,1,adequate_country,0,1,1,PCI-DSS / ISO 27001,75,High,NON_COMPLIANT
+SYN-00315,UK,sensitive_personal,ap-southeast-2,us-west-2,1,none_unverified,0,0,0,PCI-DSS / ISO 27001,100,Critical,NEEDS_REVIEW
+SYN-00316,IN,non_personal,sa-east-1,none,1,scc,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00317,UK,financial,eu-north-1,ap-southeast-1,1,statutory_exemption,0,1,1,HIPAA,55,High,NEEDS_REVIEW
+SYN-00318,UK,financial,af-south-1,eu-central-1,1,none_unverified,0,1,0,GDPR,100,Critical,NEEDS_REVIEW
+SYN-00319,GLOBAL_OTHER,personal,us-east-1,eu-central-1,0,scc,1,1,0,GDPR,20,Low,COMPLIANT
+SYN-00320,IN,personal,sa-east-1,us-east-2,1,none_unverified,0,1,1,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00321,IN,non_personal,sa-east-1,us-east-2,1,statutory_exemption,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00322,US_FED,sensitive_personal,ap-south-2,ap-southeast-2,1,none_unverified,1,1,0,GDPR,75,High,NEEDS_REVIEW
+SYN-00323,US_FED,personal,eu-west-3,eu-south-1,1,scc,1,1,0,PCI-DSS / ISO 27001,25,Low,COMPLIANT
+SYN-00324,IN,sensitive_personal,ap-south-2,us-west-2,0,scc,0,1,1,PCI-DSS / ISO 27001,80,Critical,NON_COMPLIANT
+SYN-00325,UK,financial,us-west-1,ap-southeast-1,1,explicit_consent,1,1,1,PCI-DSS / ISO 27001,10,Low,COMPLIANT
+SYN-00326,GLOBAL_OTHER,financial,eu-west-1,me-south-1,0,adequate_country,0,1,0,HIPAA,80,Critical,NEEDS_REVIEW
+SYN-00327,US_FED,financial,us-east-2,me-south-1,0,none_unverified,1,0,0,GDPR,73,High,NEEDS_REVIEW
+SYN-00328,EU_EEA,non_personal,ap-northeast-1,none,1,adequate_country,1,0,0,GDPR,18,Low,COMPLIANT
+SYN-00329,US_CA,personal,eu-west-3,ap-south-2,1,scc,1,1,0,HIPAA,25,Low,COMPLIANT
+SYN-00330,EU_EEA,financial,eu-north-1,eu-central-1,0,scc,1,1,0,GDPR,55,High,NEEDS_REVIEW
+SYN-00331,GLOBAL_OTHER,non_personal,eu-central-1,eu-north-1,0,adequate_country,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00332,EU_EEA,financial,eu-west-2,us-west-2,0,none_unverified,1,0,1,DPDP Act 2023,48,Moderate,NEEDS_REVIEW
+SYN-00333,US_CA,non_personal,eu-west-2,eu-west-1,1,bcr,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00334,IN,personal,eu-west-1,ap-southeast-2,1,statutory_exemption,1,1,0,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00335,GLOBAL_OTHER,personal,eu-west-3,us-west-2,0,adequate_country,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00336,UK,healthcare,us-west-1,us-west-2,1,bcr,1,1,0,GDPR,75,High,NON_COMPLIANT
+SYN-00337,IN,sensitive_personal,us-east-1,none,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,70,High,NEEDS_REVIEW
+SYN-00338,US_FED,non_personal,ap-south-1,ap-northeast-1,1,explicit_consent,1,1,0,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00339,EU_EEA,sensitive_personal,eu-central-1,us-east-2,0,scc,1,0,0,HIPAA,78,Critical,NEEDS_REVIEW
+SYN-00340,UK,personal,ap-southeast-2,eu-central-2,1,adequate_country,1,1,0,DPDP Act 2023,25,Low,COMPLIANT
+SYN-00341,EU_EEA,non_personal,us-west-2,ap-southeast-2,1,bcr,0,0,0,GDPR,43,Moderate,COMPLIANT
+SYN-00342,GLOBAL_OTHER,sensitive_personal,af-south-1,sa-east-1,1,bcr,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00343,IN,personal,af-south-1,us-east-1,1,explicit_consent,1,1,0,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00344,EU_EEA,personal,eu-west-1,us-west-2,0,adequate_country,0,1,0,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-00345,EU_EEA,non_personal,eu-west-3,none,0,adequate_country,0,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00346,US_FED,personal,ap-south-2,eu-west-1,1,adequate_country,1,0,0,Cross-Border Standard,43,Moderate,COMPLIANT
+SYN-00347,EU_EEA,financial,sa-east-1,eu-central-2,1,explicit_consent,0,1,1,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-00348,UK,personal,us-west-1,eu-west-3,1,bcr,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00349,EU_EEA,non_personal,eu-central-1,eu-south-1,0,adequate_country,0,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00350,IN,non_personal,af-south-1,us-west-2,1,scc,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00351,US_FED,non_personal,sa-east-1,us-east-2,1,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00352,EU_EEA,healthcare,eu-west-1,ap-southeast-1,0,scc,1,1,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00353,US_CA,non_personal,us-west-1,eu-north-1,0,scc,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00354,UK,healthcare,eu-south-1,me-south-1,1,scc,1,1,0,GDPR,75,High,NON_COMPLIANT
+SYN-00355,IN,sensitive_personal,us-west-1,none,1,bcr,1,0,0,GDPR,93,Critical,NON_COMPLIANT
+SYN-00356,IN,sensitive_personal,ap-south-1,us-west-2,0,scc,1,1,0,GDPR,50,Moderate,NEEDS_REVIEW
+SYN-00357,EU_EEA,personal,me-south-1,us-west-2,1,none_unverified,1,0,1,Cross-Border Standard,98,Critical,NON_COMPLIANT
+SYN-00358,EU_EEA,sensitive_personal,eu-west-3,us-west-1,0,adequate_country,1,0,1,DPDP Act 2023,53,High,NEEDS_REVIEW
+SYN-00359,US_FED,financial,us-east-2,us-west-1,0,none_unverified,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00360,IN,non_personal,eu-south-1,eu-west-2,1,statutory_exemption,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00361,US_CA,healthcare,us-east-2,us-west-2,0,adequate_country,1,1,0,HIPAA,70,High,NON_COMPLIANT
+SYN-00362,US_CA,financial,eu-west-2,eu-central-2,1,scc,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00363,IN,non_personal,ap-south-1,us-east-2,0,scc,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00364,EU_EEA,healthcare,ap-northeast-1,me-south-1,1,none_unverified,1,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00365,IN,non_personal,eu-central-1,eu-central-1,1,scc,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00366,GLOBAL_OTHER,non_personal,sa-east-1,af-south-1,0,adequate_country,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00367,IN,non_personal,us-east-2,eu-west-1,1,adequate_country,0,1,1,Cross-Border Standard,10,Low,COMPLIANT
+SYN-00368,US_CA,healthcare,ap-southeast-2,none,1,explicit_consent,0,1,0,DPDP Act 2023,95,Critical,NON_COMPLIANT
+SYN-00369,IN,financial,ap-south-2,ap-southeast-1,0,adequate_country,1,1,0,PCI-DSS / ISO 27001,65,High,NEEDS_REVIEW
+SYN-00370,US_CA,sensitive_personal,ap-southeast-2,eu-central-1,1,adequate_country,1,0,1,PCI-DSS / ISO 27001,38,Moderate,COMPLIANT
+SYN-00371,IN,sensitive_personal,ap-south-1,me-south-1,0,adequate_country,0,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00372,US_CA,financial,sa-east-1,ap-southeast-2,1,bcr,0,1,1,GDPR,60,High,NEEDS_REVIEW
+SYN-00373,US_FED,sensitive_personal,ap-south-1,none,1,bcr,1,0,0,Cross-Border Standard,63,High,COMPLIANT
+SYN-00374,IN,personal,eu-west-2,eu-south-1,1,none_unverified,1,1,1,DPDP Act 2023,70,High,NON_COMPLIANT
+SYN-00375,UK,healthcare,us-west-1,eu-west-3,1,scc,1,1,0,Cross-Border Standard,75,High,NON_COMPLIANT
+SYN-00376,EU_EEA,financial,sa-east-1,af-south-1,1,scc,1,0,0,DPDP Act 2023,88,Critical,NEEDS_REVIEW
+SYN-00377,US_CA,non_personal,eu-west-1,eu-central-1,1,scc,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00378,US_FED,sensitive_personal,eu-south-1,eu-west-2,1,bcr,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00379,IN,sensitive_personal,eu-west-3,eu-west-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,50,Moderate,NEEDS_REVIEW
+SYN-00380,UK,non_personal,us-east-2,ap-south-2,1,bcr,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00381,GLOBAL_OTHER,financial,eu-north-1,me-south-1,0,adequate_country,1,0,0,HIPAA,73,High,NEEDS_REVIEW
+SYN-00382,IN,personal,eu-central-1,af-south-1,1,explicit_consent,1,1,0,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00383,IN,sensitive_personal,eu-west-2,ap-northeast-1,1,scc,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00384,US_FED,personal,eu-west-1,us-east-1,1,explicit_consent,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00385,GLOBAL_OTHER,non_personal,us-west-1,ap-south-1,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00386,GLOBAL_OTHER,healthcare,eu-north-1,us-west-2,0,scc,1,0,1,PCI-DSS / ISO 27001,63,High,NON_COMPLIANT
+SYN-00387,UK,personal,eu-north-1,ap-southeast-1,1,adequate_country,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00388,US_FED,non_personal,eu-west-1,us-east-1,1,scc,0,1,1,Cross-Border Standard,10,Low,COMPLIANT
+SYN-00389,EU_EEA,financial,ap-southeast-2,none,1,explicit_consent,1,0,1,GDPR,28,Moderate,COMPLIANT
+SYN-00390,EU_EEA,financial,eu-south-1,eu-north-1,0,scc,1,1,0,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-00391,EU_EEA,non_personal,us-west-2,af-south-1,1,statutory_exemption,0,1,1,HIPAA,5,Low,COMPLIANT
+SYN-00392,EU_EEA,healthcare,eu-west-1,ap-south-2,0,none_unverified,0,1,1,GDPR,100,Critical,NON_COMPLIANT
+SYN-00393,IN,personal,us-east-1,eu-central-2,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00394,US_CA,financial,eu-west-1,me-south-1,1,explicit_consent,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00395,IN,healthcare,eu-central-2,ap-south-1,1,explicit_consent,0,1,1,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00396,UK,non_personal,eu-west-3,eu-west-1,1,adequate_country,1,0,1,Cross-Border Standard,3,Low,COMPLIANT
+SYN-00397,EU_EEA,healthcare,me-south-1,us-west-2,1,statutory_exemption,0,1,0,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00398,EU_EEA,healthcare,eu-central-2,ap-southeast-2,0,none_unverified,1,1,0,DPDP Act 2023,90,Critical,NON_COMPLIANT
+SYN-00399,IN,personal,eu-south-1,eu-west-2,1,adequate_country,0,1,0,DPDP Act 2023,90,Critical,NON_COMPLIANT
+SYN-00400,GLOBAL_OTHER,personal,ap-south-2,us-east-1,1,adequate_country,0,0,0,HIPAA,68,High,COMPLIANT
+SYN-00401,UK,healthcare,eu-central-1,sa-east-1,1,statutory_exemption,0,1,0,DPDP Act 2023,95,Critical,NON_COMPLIANT
+SYN-00402,IN,sensitive_personal,sa-east-1,af-south-1,1,adequate_country,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00403,US_FED,healthcare,ap-south-2,us-west-1,1,none_unverified,0,0,1,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00404,US_FED,healthcare,eu-west-3,sa-east-1,1,statutory_exemption,0,1,0,HIPAA,95,Critical,NON_COMPLIANT
+SYN-00405,GLOBAL_OTHER,personal,eu-central-2,ap-northeast-1,0,scc,1,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00406,US_FED,healthcare,eu-west-2,eu-south-1,1,scc,1,0,0,HIPAA,93,Critical,NON_COMPLIANT
+SYN-00407,GLOBAL_OTHER,healthcare,eu-west-1,eu-north-1,0,adequate_country,0,0,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00408,UK,personal,eu-west-1,ap-south-2,1,none_unverified,0,1,1,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-00409,IN,personal,eu-central-2,eu-south-1,1,adequate_country,0,1,0,DPDP Act 2023,90,Critical,NON_COMPLIANT
+SYN-00410,US_FED,financial,ap-northeast-1,ap-southeast-2,1,explicit_consent,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00411,US_CA,sensitive_personal,ap-northeast-1,eu-west-3,1,explicit_consent,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00412,GLOBAL_OTHER,non_personal,us-east-1,none,0,adequate_country,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00413,GLOBAL_OTHER,personal,ap-south-2,us-west-2,1,none_unverified,1,0,1,DPDP Act 2023,48,Moderate,NEEDS_REVIEW
+SYN-00414,UK,non_personal,ap-south-1,ap-south-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00415,US_FED,healthcare,ap-south-2,eu-north-1,1,explicit_consent,1,0,1,GDPR,63,High,NON_COMPLIANT
+SYN-00416,UK,financial,af-south-1,sa-east-1,1,statutory_exemption,1,1,1,PCI-DSS / ISO 27001,10,Low,COMPLIANT
+SYN-00417,EU_EEA,financial,ap-south-2,us-east-1,1,bcr,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00418,UK,personal,eu-central-2,sa-east-1,1,explicit_consent,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00419,US_FED,financial,ap-southeast-1,us-west-1,1,explicit_consent,1,1,0,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-00420,GLOBAL_OTHER,sensitive_personal,ap-southeast-2,us-east-2,0,adequate_country,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00421,IN,financial,af-south-1,eu-west-3,1,none_unverified,1,1,1,HIPAA,85,Critical,NON_COMPLIANT
+SYN-00422,IN,financial,ap-southeast-1,us-east-1,1,bcr,1,1,0,GDPR,70,High,NEEDS_REVIEW
+SYN-00423,US_CA,non_personal,sa-east-1,af-south-1,1,statutory_exemption,1,0,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00424,EU_EEA,healthcare,me-south-1,ap-south-2,1,explicit_consent,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00425,US_FED,healthcare,sa-east-1,ap-southeast-1,1,scc,1,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00426,US_FED,personal,us-east-2,eu-central-1,0,adequate_country,0,1,1,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00427,UK,personal,ap-southeast-2,eu-central-2,1,scc,0,0,0,PCI-DSS / ISO 27001,68,High,COMPLIANT
+SYN-00428,US_CA,healthcare,eu-central-1,eu-central-1,1,statutory_exemption,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00429,UK,personal,eu-central-1,none,1,none_unverified,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00430,IN,non_personal,us-west-2,ap-southeast-2,1,statutory_exemption,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00431,US_FED,financial,ap-northeast-1,ap-southeast-2,1,statutory_exemption,1,0,1,HIPAA,28,Moderate,COMPLIANT
+SYN-00432,US_CA,financial,eu-south-1,eu-west-3,1,explicit_consent,1,1,1,DPDP Act 2023,10,Low,COMPLIANT
+SYN-00433,IN,non_personal,sa-east-1,ap-southeast-2,1,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00434,GLOBAL_OTHER,financial,af-south-1,sa-east-1,1,statutory_exemption,1,1,1,GDPR,10,Low,COMPLIANT
+SYN-00435,GLOBAL_OTHER,non_personal,ap-southeast-1,ap-southeast-1,0,adequate_country,1,0,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00436,GLOBAL_OTHER,non_personal,us-east-1,us-west-2,1,none_unverified,1,1,0,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00437,UK,sensitive_personal,eu-west-2,ap-south-2,0,adequate_country,1,0,1,Cross-Border Standard,33,Moderate,COMPLIANT
+SYN-00438,IN,financial,me-south-1,eu-north-1,1,bcr,0,1,1,GDPR,100,Critical,NON_COMPLIANT
+SYN-00439,UK,healthcare,eu-south-1,ap-northeast-1,1,bcr,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00440,EU_EEA,sensitive_personal,ap-southeast-2,eu-west-2,1,adequate_country,1,1,0,DPDP Act 2023,85,Critical,NON_COMPLIANT
+SYN-00441,US_CA,financial,ap-south-2,ap-southeast-1,1,adequate_country,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00442,US_FED,financial,ap-southeast-1,eu-west-1,1,adequate_country,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-00443,US_FED,financial,ap-northeast-1,sa-east-1,1,bcr,1,1,0,DPDP Act 2023,60,High,NEEDS_REVIEW
+SYN-00444,EU_EEA,healthcare,us-west-2,ap-southeast-1,1,bcr,0,0,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00445,EU_EEA,personal,eu-central-2,eu-west-3,0,adequate_country,0,0,0,DPDP Act 2023,63,High,COMPLIANT
+SYN-00446,UK,healthcare,us-west-1,sa-east-1,1,adequate_country,1,0,0,GDPR,93,Critical,NON_COMPLIANT
+SYN-00447,US_CA,healthcare,eu-central-2,eu-central-2,1,bcr,1,1,1,HIPAA,20,Low,COMPLIANT
+SYN-00448,UK,sensitive_personal,eu-west-2,us-west-2,0,none_unverified,1,0,0,PCI-DSS / ISO 27001,58,High,COMPLIANT
+SYN-00449,IN,sensitive_personal,eu-central-2,none,1,none_unverified,1,0,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00450,EU_EEA,healthcare,us-east-2,eu-south-1,1,bcr,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00451,GLOBAL_OTHER,healthcare,us-west-2,eu-south-1,1,explicit_consent,0,0,1,PCI-DSS / ISO 27001,88,Critical,NON_COMPLIANT
+SYN-00452,US_CA,financial,eu-west-2,ap-northeast-1,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,90,Critical,NEEDS_REVIEW
+SYN-00453,EU_EEA,sensitive_personal,af-south-1,none,1,adequate_country,1,1,0,HIPAA,75,High,NON_COMPLIANT
+SYN-00454,US_FED,non_personal,ap-south-1,ap-southeast-1,1,bcr,0,1,0,GDPR,25,Low,COMPLIANT
+SYN-00455,EU_EEA,personal,eu-central-1,us-east-1,0,scc,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00456,IN,healthcare,eu-west-3,us-west-2,1,adequate_country,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00457,US_CA,personal,ap-northeast-1,eu-north-1,1,none_unverified,1,1,0,GDPR,55,High,NEEDS_REVIEW
+SYN-00458,GLOBAL_OTHER,sensitive_personal,eu-west-2,ap-southeast-1,0,none_unverified,1,0,1,Cross-Border Standard,33,Moderate,COMPLIANT
+SYN-00459,GLOBAL_OTHER,non_personal,af-south-1,us-west-2,0,none_unverified,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00460,US_CA,sensitive_personal,us-east-2,ap-southeast-2,0,scc,0,1,0,PCI-DSS / ISO 27001,65,High,COMPLIANT
+SYN-00461,US_FED,financial,ap-northeast-1,eu-west-2,1,scc,0,1,0,Cross-Border Standard,85,Critical,NEEDS_REVIEW
+SYN-00462,GLOBAL_OTHER,personal,eu-south-1,eu-north-1,0,none_unverified,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00463,UK,financial,eu-west-2,us-east-2,0,none_unverified,0,0,0,PCI-DSS / ISO 27001,98,Critical,NEEDS_REVIEW
+SYN-00464,EU_EEA,sensitive_personal,eu-west-2,none,0,scc,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-00465,US_FED,personal,us-east-1,ap-south-1,0,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00466,EU_EEA,financial,ap-northeast-1,eu-west-1,1,statutory_exemption,1,0,1,Cross-Border Standard,28,Moderate,COMPLIANT
+SYN-00467,GLOBAL_OTHER,financial,eu-central-2,us-west-1,0,scc,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00468,IN,sensitive_personal,ap-northeast-1,eu-south-1,1,none_unverified,1,1,1,HIPAA,90,Critical,NON_COMPLIANT
+SYN-00469,US_CA,personal,eu-west-1,eu-west-3,1,scc,1,0,1,PCI-DSS / ISO 27001,18,Low,COMPLIANT
+SYN-00470,US_FED,sensitive_personal,ap-south-2,eu-west-2,1,scc,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00471,GLOBAL_OTHER,personal,eu-central-2,eu-west-2,0,none_unverified,1,1,0,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00472,UK,financial,eu-west-1,us-east-1,1,statutory_exemption,1,1,1,Cross-Border Standard,10,Low,COMPLIANT
+SYN-00473,IN,healthcare,af-south-1,me-south-1,1,explicit_consent,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00474,GLOBAL_OTHER,financial,us-east-2,us-east-2,0,adequate_country,0,1,1,HIPAA,55,High,NEEDS_REVIEW
+SYN-00475,US_CA,personal,ap-south-1,eu-central-1,1,none_unverified,1,0,1,PCI-DSS / ISO 27001,48,Moderate,NEEDS_REVIEW
+SYN-00476,US_FED,sensitive_personal,us-east-1,none,0,none_unverified,1,0,0,GDPR,58,High,COMPLIANT
+SYN-00477,US_FED,personal,us-east-2,ap-southeast-2,0,adequate_country,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00478,IN,personal,ap-southeast-1,eu-west-1,1,scc,0,1,1,GDPR,65,High,NON_COMPLIANT
+SYN-00479,US_CA,financial,eu-central-2,eu-central-2,1,adequate_country,1,1,0,Cross-Border Standard,60,High,NEEDS_REVIEW
+SYN-00480,EU_EEA,sensitive_personal,ap-south-1,ap-south-1,1,explicit_consent,0,0,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00481,US_FED,non_personal,us-west-2,eu-west-1,0,none_unverified,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00482,US_FED,sensitive_personal,eu-west-2,ap-south-2,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,75,High,NEEDS_REVIEW
+SYN-00483,US_CA,healthcare,eu-central-1,ap-northeast-1,1,scc,1,1,0,Cross-Border Standard,75,High,NON_COMPLIANT
+SYN-00484,US_FED,personal,us-east-1,us-east-2,0,adequate_country,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00485,UK,sensitive_personal,us-west-2,me-south-1,1,statutory_exemption,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00486,IN,healthcare,me-south-1,eu-west-2,1,scc,1,1,0,DPDP Act 2023,85,Critical,NON_COMPLIANT
+SYN-00487,EU_EEA,personal,sa-east-1,eu-central-1,1,statutory_exemption,0,1,0,GDPR,45,Moderate,COMPLIANT
+SYN-00488,US_FED,non_personal,eu-south-1,af-south-1,1,explicit_consent,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00489,EU_EEA,financial,eu-west-1,eu-north-1,0,scc,0,0,0,Cross-Border Standard,98,Critical,NEEDS_REVIEW
+SYN-00490,GLOBAL_OTHER,financial,sa-east-1,eu-west-2,0,scc,0,1,1,HIPAA,55,High,NEEDS_REVIEW
+SYN-00491,IN,personal,ap-southeast-1,ap-south-1,1,bcr,1,1,0,PCI-DSS / ISO 27001,25,Low,COMPLIANT
+SYN-00492,US_CA,financial,us-east-1,ap-northeast-1,0,none_unverified,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00493,IN,sensitive_personal,eu-south-1,ap-south-1,1,none_unverified,1,1,1,Cross-Border Standard,70,High,NEEDS_REVIEW
+SYN-00494,GLOBAL_OTHER,non_personal,sa-east-1,af-south-1,0,none_unverified,1,1,0,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00495,UK,healthcare,eu-west-3,us-east-2,1,explicit_consent,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00496,UK,sensitive_personal,eu-west-1,us-west-1,1,bcr,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00497,IN,healthcare,eu-north-1,eu-west-3,1,statutory_exemption,1,0,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00498,IN,healthcare,ap-south-1,eu-central-2,0,scc,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00499,UK,financial,us-west-2,ap-northeast-1,1,explicit_consent,1,1,0,GDPR,55,High,NEEDS_REVIEW
+SYN-00500,GLOBAL_OTHER,sensitive_personal,ap-south-2,ap-south-1,1,explicit_consent,0,1,1,Cross-Border Standard,40,Moderate,COMPLIANT
+SYN-00501,US_FED,healthcare,ap-south-1,ap-southeast-2,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,70,High,NON_COMPLIANT
+SYN-00502,UK,non_personal,me-south-1,eu-west-2,1,explicit_consent,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00503,GLOBAL_OTHER,financial,eu-south-1,eu-west-2,1,scc,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00504,US_FED,non_personal,ap-southeast-2,ap-northeast-1,1,explicit_consent,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00505,IN,non_personal,eu-west-3,af-south-1,1,statutory_exemption,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00506,IN,non_personal,eu-north-1,ap-south-1,1,scc,0,1,0,GDPR,25,Low,COMPLIANT
+SYN-00507,IN,healthcare,ap-southeast-2,ap-northeast-1,1,scc,1,0,1,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00508,IN,sensitive_personal,me-south-1,ap-south-1,1,scc,1,0,1,DPDP Act 2023,68,High,NON_COMPLIANT
+SYN-00509,US_CA,healthcare,eu-west-3,eu-west-1,1,adequate_country,1,0,1,Cross-Border Standard,68,High,NON_COMPLIANT
+SYN-00510,EU_EEA,personal,ap-southeast-2,sa-east-1,1,statutory_exemption,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00511,GLOBAL_OTHER,personal,af-south-1,none,0,none_unverified,0,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00512,US_CA,personal,ap-southeast-2,us-west-1,1,bcr,1,0,1,HIPAA,18,Low,COMPLIANT
+SYN-00513,US_CA,personal,eu-west-1,ap-south-2,1,statutory_exemption,0,1,1,GDPR,20,Low,COMPLIANT
+SYN-00514,GLOBAL_OTHER,non_personal,sa-east-1,ap-southeast-2,1,statutory_exemption,1,0,1,HIPAA,0,Low,COMPLIANT
+SYN-00515,US_CA,financial,eu-west-2,eu-west-2,1,explicit_consent,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-00516,US_FED,sensitive_personal,ap-south-2,us-west-1,1,scc,0,0,1,HIPAA,63,High,COMPLIANT
+SYN-00517,UK,sensitive_personal,ap-southeast-2,ap-south-1,1,bcr,1,0,1,GDPR,38,Moderate,COMPLIANT
+SYN-00518,GLOBAL_OTHER,personal,ap-northeast-1,eu-west-3,1,scc,0,1,1,DPDP Act 2023,25,Low,COMPLIANT
+SYN-00519,US_CA,non_personal,eu-west-1,eu-west-2,1,explicit_consent,0,1,1,HIPAA,5,Low,COMPLIANT
+SYN-00520,IN,financial,eu-west-1,sa-east-1,1,adequate_country,0,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00521,EU_EEA,personal,ap-southeast-2,ap-southeast-1,1,adequate_country,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00522,UK,sensitive_personal,me-south-1,eu-south-1,1,statutory_exemption,1,1,0,DPDP Act 2023,40,Moderate,COMPLIANT
+SYN-00523,GLOBAL_OTHER,non_personal,eu-north-1,eu-central-2,0,scc,1,0,0,Cross-Border Standard,13,Low,COMPLIANT
+SYN-00524,IN,sensitive_personal,eu-central-1,eu-central-2,1,adequate_country,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00525,IN,sensitive_personal,eu-south-1,ap-southeast-1,1,explicit_consent,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00526,UK,non_personal,af-south-1,eu-central-2,1,statutory_exemption,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00527,US_FED,sensitive_personal,sa-east-1,ap-south-1,1,none_unverified,0,0,0,DPDP Act 2023,100,Critical,NEEDS_REVIEW
+SYN-00528,US_FED,healthcare,ap-northeast-1,af-south-1,1,adequate_country,0,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00529,US_CA,personal,ap-south-1,us-east-1,1,explicit_consent,1,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00530,US_FED,non_personal,us-west-2,us-east-1,0,adequate_country,1,0,0,HIPAA,13,Low,COMPLIANT
+SYN-00531,IN,sensitive_personal,ap-south-2,eu-west-3,0,none_unverified,1,0,1,DPDP Act 2023,83,Critical,NON_COMPLIANT
+SYN-00532,GLOBAL_OTHER,personal,ap-south-2,eu-north-1,1,scc,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00533,EU_EEA,non_personal,ap-southeast-2,sa-east-1,1,adequate_country,1,0,0,Cross-Border Standard,18,Low,COMPLIANT
+SYN-00534,US_FED,healthcare,sa-east-1,ap-south-1,1,explicit_consent,1,1,0,DPDP Act 2023,70,High,NON_COMPLIANT
+SYN-00535,UK,personal,eu-central-2,ap-southeast-2,1,explicit_consent,0,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00536,GLOBAL_OTHER,personal,ap-northeast-1,eu-west-1,0,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00537,UK,non_personal,us-east-2,us-east-2,1,statutory_exemption,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00538,US_FED,healthcare,us-east-2,us-east-2,0,adequate_country,0,0,1,PCI-DSS / ISO 27001,88,Critical,NON_COMPLIANT
+SYN-00539,GLOBAL_OTHER,financial,us-west-1,us-west-1,0,scc,1,1,1,GDPR,10,Low,COMPLIANT
+SYN-00540,GLOBAL_OTHER,financial,ap-south-1,me-south-1,0,scc,1,1,1,PCI-DSS / ISO 27001,10,Low,COMPLIANT
+SYN-00541,EU_EEA,personal,ap-southeast-1,ap-northeast-1,1,scc,1,0,0,HIPAA,53,High,NEEDS_REVIEW
+SYN-00542,UK,sensitive_personal,eu-central-2,us-west-1,1,adequate_country,1,1,1,HIPAA,20,Low,COMPLIANT
+SYN-00543,US_CA,non_personal,ap-northeast-1,us-east-1,1,bcr,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00544,EU_EEA,healthcare,eu-west-2,us-east-2,0,none_unverified,1,1,0,HIPAA,90,Critical,NON_COMPLIANT
+SYN-00545,US_FED,sensitive_personal,ap-southeast-2,ap-southeast-1,1,adequate_country,0,1,0,DPDP Act 2023,70,High,COMPLIANT
+SYN-00546,IN,financial,ap-southeast-1,sa-east-1,1,statutory_exemption,0,1,1,DPDP Act 2023,95,Critical,NON_COMPLIANT
+SYN-00547,US_FED,personal,us-east-2,us-east-1,0,none_unverified,1,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00548,US_CA,financial,sa-east-1,ap-southeast-2,1,explicit_consent,0,1,1,GDPR,55,High,NEEDS_REVIEW
+SYN-00549,IN,personal,ap-south-2,eu-central-2,0,adequate_country,1,0,1,GDPR,55,High,NON_COMPLIANT
+SYN-00550,EU_EEA,healthcare,af-south-1,eu-central-1,1,adequate_country,0,1,1,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00551,UK,personal,eu-west-1,us-west-1,1,bcr,1,1,0,PCI-DSS / ISO 27001,25,Low,COMPLIANT
+SYN-00552,GLOBAL_OTHER,personal,eu-west-3,ap-southeast-2,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,25,Low,COMPLIANT
+SYN-00553,US_CA,sensitive_personal,ap-south-2,me-south-1,1,explicit_consent,1,1,0,Cross-Border Standard,40,Moderate,COMPLIANT
+SYN-00554,US_CA,sensitive_personal,af-south-1,ap-south-2,1,bcr,0,1,1,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00555,US_FED,financial,ap-southeast-1,ap-south-1,1,scc,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00556,IN,financial,us-east-1,ap-northeast-1,1,statutory_exemption,1,0,0,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00557,EU_EEA,healthcare,us-east-1,sa-east-1,1,scc,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00558,UK,healthcare,us-west-2,eu-south-1,1,scc,0,0,1,HIPAA,93,Critical,NON_COMPLIANT
+SYN-00559,EU_EEA,healthcare,ap-south-1,ap-southeast-2,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00560,IN,non_personal,eu-north-1,eu-west-2,1,bcr,1,0,0,HIPAA,18,Low,COMPLIANT
+SYN-00561,GLOBAL_OTHER,sensitive_personal,ap-southeast-2,eu-north-1,0,adequate_country,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-00562,EU_EEA,financial,ap-south-2,eu-west-2,1,none_unverified,0,1,1,GDPR,100,Critical,NON_COMPLIANT
+SYN-00563,IN,non_personal,ap-southeast-2,eu-north-1,1,bcr,0,1,0,HIPAA,25,Low,COMPLIANT
+SYN-00564,US_CA,non_personal,us-east-2,eu-central-2,0,adequate_country,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00565,UK,healthcare,eu-north-1,eu-north-1,1,bcr,0,1,1,DPDP Act 2023,75,High,NON_COMPLIANT
+SYN-00566,US_CA,healthcare,ap-south-1,eu-central-1,1,scc,0,1,1,PCI-DSS / ISO 27001,75,High,NON_COMPLIANT
+SYN-00567,US_CA,financial,us-east-2,eu-west-3,0,none_unverified,1,1,0,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-00568,GLOBAL_OTHER,financial,eu-south-1,us-east-2,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,45,Moderate,NEEDS_REVIEW
+SYN-00569,US_FED,non_personal,eu-north-1,ap-south-1,1,statutory_exemption,1,0,1,GDPR,0,Low,COMPLIANT
+SYN-00570,EU_EEA,sensitive_personal,ap-southeast-2,sa-east-1,1,scc,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00571,US_CA,non_personal,us-east-2,eu-central-1,0,adequate_country,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00572,US_CA,personal,us-east-2,me-south-1,0,none_unverified,1,0,1,GDPR,13,Low,COMPLIANT
+SYN-00573,GLOBAL_OTHER,healthcare,us-west-1,eu-west-2,0,adequate_country,0,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00574,GLOBAL_OTHER,healthcare,eu-south-1,af-south-1,1,statutory_exemption,1,1,0,HIPAA,70,High,NON_COMPLIANT
+SYN-00575,UK,sensitive_personal,eu-north-1,eu-central-2,1,statutory_exemption,1,0,0,HIPAA,58,High,COMPLIANT
+SYN-00576,UK,financial,ap-northeast-1,none,1,none_unverified,0,1,1,Cross-Border Standard,90,Critical,NEEDS_REVIEW
+SYN-00577,US_FED,sensitive_personal,ap-south-1,us-east-1,1,none_unverified,1,0,1,Cross-Border Standard,68,High,NEEDS_REVIEW
+SYN-00578,GLOBAL_OTHER,healthcare,af-south-1,eu-west-2,0,scc,0,1,1,GDPR,70,High,NON_COMPLIANT
+SYN-00579,UK,non_personal,eu-central-2,eu-west-2,1,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00580,IN,non_personal,eu-central-2,af-south-1,1,none_unverified,0,0,0,GDPR,63,High,NEEDS_REVIEW
+SYN-00581,US_FED,personal,eu-west-1,none,1,scc,0,1,0,GDPR,50,Moderate,COMPLIANT
+SYN-00582,US_FED,sensitive_personal,ap-southeast-1,us-east-2,1,none_unverified,1,1,1,GDPR,50,Moderate,NEEDS_REVIEW
+SYN-00583,US_FED,non_personal,eu-south-1,ap-southeast-2,1,adequate_country,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00584,IN,sensitive_personal,ap-south-1,af-south-1,0,none_unverified,1,0,1,Cross-Border Standard,83,Critical,NON_COMPLIANT
+SYN-00585,US_FED,healthcare,ap-southeast-1,eu-west-1,1,scc,1,0,0,DPDP Act 2023,93,Critical,NON_COMPLIANT
+SYN-00586,UK,sensitive_personal,ap-northeast-1,us-east-2,1,bcr,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00587,GLOBAL_OTHER,financial,ap-south-1,af-south-1,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-00588,US_CA,non_personal,eu-central-2,ap-south-2,1,statutory_exemption,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00589,US_FED,personal,eu-south-1,us-east-1,1,adequate_country,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00590,US_CA,financial,eu-west-3,eu-west-2,1,bcr,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00591,US_FED,non_personal,sa-east-1,us-west-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00592,IN,healthcare,sa-east-1,eu-west-1,1,statutory_exemption,1,1,0,GDPR,80,Critical,NON_COMPLIANT
+SYN-00593,EU_EEA,financial,us-west-1,us-west-2,1,explicit_consent,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00594,EU_EEA,financial,me-south-1,eu-central-1,1,bcr,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-00595,EU_EEA,healthcare,ap-northeast-1,sa-east-1,1,statutory_exemption,1,1,0,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00596,US_CA,personal,eu-west-3,us-east-1,1,adequate_country,0,1,0,HIPAA,50,Moderate,COMPLIANT
+SYN-00597,EU_EEA,healthcare,me-south-1,us-west-2,1,none_unverified,1,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00598,IN,healthcare,us-west-2,af-south-1,1,scc,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00599,US_CA,financial,sa-east-1,eu-central-2,1,adequate_country,0,0,0,HIPAA,100,Critical,NEEDS_REVIEW
+SYN-00600,IN,financial,us-west-1,sa-east-1,1,none_unverified,1,1,1,HIPAA,85,Critical,NON_COMPLIANT
+SYN-00601,UK,healthcare,eu-west-3,ap-southeast-1,1,adequate_country,1,1,0,DPDP Act 2023,75,High,NON_COMPLIANT
+SYN-00602,GLOBAL_OTHER,non_personal,eu-west-2,eu-central-1,1,statutory_exemption,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00603,GLOBAL_OTHER,non_personal,us-east-1,ap-southeast-1,0,adequate_country,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00604,UK,sensitive_personal,ap-south-2,me-south-1,1,explicit_consent,1,1,0,Cross-Border Standard,40,Moderate,COMPLIANT
+SYN-00605,GLOBAL_OTHER,sensitive_personal,eu-central-2,ap-south-1,1,adequate_country,1,1,0,GDPR,45,Moderate,COMPLIANT
+SYN-00606,US_CA,non_personal,eu-west-1,us-west-1,1,none_unverified,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00607,US_FED,healthcare,ap-south-1,us-west-1,1,statutory_exemption,1,1,0,Cross-Border Standard,70,High,NON_COMPLIANT
+SYN-00608,UK,non_personal,eu-north-1,eu-north-1,1,statutory_exemption,0,1,1,DPDP Act 2023,5,Low,COMPLIANT
+SYN-00609,UK,financial,us-east-2,ap-northeast-1,1,explicit_consent,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00610,US_FED,financial,ap-south-1,ap-southeast-2,1,bcr,1,1,0,GDPR,60,High,NEEDS_REVIEW
+SYN-00611,UK,financial,ap-south-1,eu-west-2,1,bcr,0,1,1,PCI-DSS / ISO 27001,60,High,NEEDS_REVIEW
+SYN-00612,UK,sensitive_personal,ap-south-1,us-west-2,1,scc,1,0,0,Cross-Border Standard,63,High,COMPLIANT
+SYN-00613,US_FED,healthcare,af-south-1,eu-west-2,1,scc,1,1,1,HIPAA,20,Low,COMPLIANT
+SYN-00614,GLOBAL_OTHER,sensitive_personal,eu-west-3,us-west-2,1,none_unverified,1,1,1,Cross-Border Standard,50,Moderate,NEEDS_REVIEW
+SYN-00615,UK,non_personal,eu-north-1,us-east-1,1,scc,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00616,US_FED,healthcare,ap-south-2,eu-west-2,1,scc,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00617,UK,sensitive_personal,ap-south-2,sa-east-1,1,statutory_exemption,1,1,1,GDPR,15,Low,COMPLIANT
+SYN-00618,US_FED,non_personal,ap-southeast-2,eu-west-2,1,statutory_exemption,0,1,1,PCI-DSS / ISO 27001,5,Low,COMPLIANT
+SYN-00619,US_CA,healthcare,eu-west-3,eu-west-3,1,scc,1,1,0,GDPR,75,High,NON_COMPLIANT
+SYN-00620,US_FED,healthcare,ap-south-1,eu-north-1,1,scc,1,1,0,Cross-Border Standard,75,High,NON_COMPLIANT
+SYN-00621,US_CA,financial,ap-northeast-1,eu-south-1,1,explicit_consent,0,1,0,HIPAA,80,Critical,NEEDS_REVIEW
+SYN-00622,US_CA,sensitive_personal,sa-east-1,sa-east-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,40,Moderate,COMPLIANT
+SYN-00623,EU_EEA,personal,me-south-1,me-south-1,1,explicit_consent,1,0,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00624,US_FED,healthcare,us-west-2,ap-south-2,0,scc,0,1,0,HIPAA,95,Critical,NON_COMPLIANT
+SYN-00625,UK,non_personal,me-south-1,eu-west-2,1,explicit_consent,0,1,1,DPDP Act 2023,5,Low,COMPLIANT
+SYN-00626,UK,sensitive_personal,eu-west-3,us-west-1,1,explicit_consent,1,0,1,DPDP Act 2023,33,Moderate,COMPLIANT
+SYN-00627,US_CA,sensitive_personal,eu-south-1,ap-southeast-1,1,adequate_country,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00628,EU_EEA,non_personal,ap-northeast-1,us-east-2,1,adequate_country,0,1,0,Cross-Border Standard,25,Low,COMPLIANT
+SYN-00629,US_CA,non_personal,eu-north-1,us-east-1,1,statutory_exemption,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00630,GLOBAL_OTHER,non_personal,ap-southeast-1,ap-south-2,0,none_unverified,0,1,1,GDPR,5,Low,COMPLIANT
+SYN-00631,IN,personal,eu-central-1,sa-east-1,1,bcr,1,0,0,PCI-DSS / ISO 27001,83,Critical,NON_COMPLIANT
+SYN-00632,UK,non_personal,ap-southeast-2,eu-south-1,1,scc,0,0,0,PCI-DSS / ISO 27001,43,Moderate,COMPLIANT
+SYN-00633,EU_EEA,sensitive_personal,eu-central-1,eu-south-1,0,none_unverified,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-00634,IN,non_personal,us-west-1,eu-central-1,1,scc,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00635,EU_EEA,non_personal,ap-southeast-1,eu-west-3,1,scc,1,1,0,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00636,US_FED,non_personal,eu-west-1,ap-south-2,1,bcr,1,0,1,PCI-DSS / ISO 27001,3,Low,COMPLIANT
+SYN-00637,UK,non_personal,us-east-1,ap-northeast-1,1,scc,1,1,0,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00638,US_CA,sensitive_personal,eu-south-1,eu-north-1,1,statutory_exemption,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00639,GLOBAL_OTHER,sensitive_personal,us-east-1,us-west-2,0,scc,1,1,0,Cross-Border Standard,40,Moderate,COMPLIANT
+SYN-00640,GLOBAL_OTHER,healthcare,ap-southeast-2,eu-west-3,1,none_unverified,1,1,1,GDPR,50,Moderate,NEEDS_REVIEW
+SYN-00641,EU_EEA,healthcare,eu-west-2,eu-north-1,0,none_unverified,0,0,1,HIPAA,98,Critical,NON_COMPLIANT
+SYN-00642,US_FED,sensitive_personal,eu-south-1,none,1,none_unverified,1,1,0,GDPR,75,High,NEEDS_REVIEW
+SYN-00643,US_FED,financial,me-south-1,me-south-1,1,bcr,1,1,0,HIPAA,60,High,NEEDS_REVIEW
+SYN-00644,US_CA,sensitive_personal,eu-central-1,eu-west-3,1,scc,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00645,EU_EEA,personal,ap-southeast-2,eu-west-2,1,none_unverified,0,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00646,GLOBAL_OTHER,non_personal,me-south-1,ap-south-2,0,none_unverified,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00647,EU_EEA,personal,ap-south-2,none,1,bcr,0,1,0,DPDP Act 2023,50,Moderate,COMPLIANT
+SYN-00648,UK,non_personal,us-east-1,us-east-1,1,none_unverified,1,1,0,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00649,US_CA,personal,us-west-1,ap-southeast-1,0,scc,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00650,US_FED,non_personal,eu-south-1,eu-central-2,1,explicit_consent,1,0,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00651,US_FED,healthcare,me-south-1,ap-south-2,1,bcr,1,1,1,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00652,GLOBAL_OTHER,non_personal,ap-northeast-1,us-west-1,1,adequate_country,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00653,US_CA,non_personal,eu-west-2,ap-southeast-2,1,none_unverified,1,1,0,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00654,US_FED,personal,eu-south-1,ap-south-2,1,bcr,1,0,1,HIPAA,18,Low,COMPLIANT
+SYN-00655,IN,personal,ap-south-2,eu-west-1,0,adequate_country,1,1,0,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00656,US_FED,financial,eu-west-3,ap-south-2,1,statutory_exemption,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00657,UK,financial,af-south-1,ap-southeast-1,1,adequate_country,1,1,0,GDPR,60,High,NEEDS_REVIEW
+SYN-00658,EU_EEA,healthcare,eu-central-2,eu-central-2,0,scc,0,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00659,US_FED,financial,us-east-2,eu-north-1,0,none_unverified,1,0,1,GDPR,28,Moderate,COMPLIANT
+SYN-00660,GLOBAL_OTHER,healthcare,eu-west-2,ap-southeast-1,0,none_unverified,0,0,1,DPDP Act 2023,88,Critical,NON_COMPLIANT
+SYN-00661,IN,sensitive_personal,ap-south-2,us-east-2,0,scc,1,1,0,PCI-DSS / ISO 27001,50,Moderate,NEEDS_REVIEW
+SYN-00662,US_CA,non_personal,eu-west-1,ap-northeast-1,1,adequate_country,1,0,0,DPDP Act 2023,18,Low,COMPLIANT
+SYN-00663,US_FED,financial,sa-east-1,eu-west-2,1,statutory_exemption,1,0,1,HIPAA,28,Moderate,COMPLIANT
+SYN-00664,UK,non_personal,us-east-1,me-south-1,1,explicit_consent,0,0,1,Cross-Border Standard,23,Low,COMPLIANT
+SYN-00665,IN,sensitive_personal,eu-north-1,ap-northeast-1,1,explicit_consent,1,1,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00666,US_CA,healthcare,sa-east-1,us-east-1,1,statutory_exemption,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00667,US_CA,non_personal,sa-east-1,sa-east-1,1,explicit_consent,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00668,US_FED,healthcare,eu-west-1,sa-east-1,1,adequate_country,0,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00669,EU_EEA,personal,eu-west-3,af-south-1,0,none_unverified,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00670,UK,financial,us-west-2,sa-east-1,1,statutory_exemption,0,1,1,HIPAA,55,High,NEEDS_REVIEW
+SYN-00671,US_FED,sensitive_personal,us-east-1,us-west-2,0,none_unverified,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00672,UK,healthcare,eu-west-3,ap-south-2,1,adequate_country,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00673,US_FED,non_personal,us-east-1,none,0,adequate_country,0,0,0,PCI-DSS / ISO 27001,38,Moderate,COMPLIANT
+SYN-00674,US_CA,healthcare,ap-southeast-1,me-south-1,1,scc,1,0,1,DPDP Act 2023,68,High,NON_COMPLIANT
+SYN-00675,UK,healthcare,us-west-1,us-west-2,1,scc,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00676,EU_EEA,non_personal,eu-west-3,ap-northeast-1,0,none_unverified,0,1,1,DPDP Act 2023,5,Low,COMPLIANT
+SYN-00677,GLOBAL_OTHER,healthcare,ap-northeast-1,sa-east-1,0,none_unverified,1,0,0,Cross-Border Standard,88,Critical,NON_COMPLIANT
+SYN-00678,US_CA,healthcare,us-west-1,eu-south-1,0,adequate_country,0,1,0,DPDP Act 2023,95,Critical,NON_COMPLIANT
+SYN-00679,GLOBAL_OTHER,sensitive_personal,ap-south-2,us-west-2,0,adequate_country,1,0,0,GDPR,58,High,COMPLIANT
+SYN-00680,UK,healthcare,eu-west-1,eu-west-2,1,none_unverified,1,0,1,Cross-Border Standard,98,Critical,NON_COMPLIANT
+SYN-00681,UK,non_personal,ap-south-1,ap-northeast-1,1,none_unverified,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00682,UK,non_personal,ap-southeast-2,ap-southeast-1,1,statutory_exemption,0,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00683,US_FED,financial,eu-north-1,eu-central-1,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,45,Moderate,NEEDS_REVIEW
+SYN-00684,UK,personal,sa-east-1,eu-central-1,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-00685,EU_EEA,personal,me-south-1,eu-central-2,1,bcr,1,1,0,HIPAA,25,Low,COMPLIANT
+SYN-00686,US_FED,non_personal,eu-west-2,sa-east-1,1,scc,1,0,0,DPDP Act 2023,18,Low,COMPLIANT
+SYN-00687,US_FED,personal,ap-southeast-2,eu-west-3,1,statutory_exemption,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00688,UK,personal,ap-southeast-2,us-west-2,1,explicit_consent,1,0,1,DPDP Act 2023,13,Low,COMPLIANT
+SYN-00689,UK,financial,eu-central-2,ap-south-1,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,60,High,NEEDS_REVIEW
+SYN-00690,US_CA,financial,ap-southeast-2,me-south-1,1,scc,0,0,0,HIPAA,100,Critical,NEEDS_REVIEW
+SYN-00691,IN,sensitive_personal,ap-southeast-1,none,1,bcr,0,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00692,GLOBAL_OTHER,non_personal,eu-west-2,me-south-1,0,scc,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00693,EU_EEA,financial,sa-east-1,us-west-1,1,explicit_consent,1,1,0,DPDP Act 2023,65,High,NEEDS_REVIEW
+SYN-00694,US_FED,sensitive_personal,eu-central-1,none,1,adequate_country,1,0,1,Cross-Border Standard,38,Moderate,COMPLIANT
+SYN-00695,EU_EEA,healthcare,us-west-1,eu-south-1,1,none_unverified,1,1,1,GDPR,100,Critical,NON_COMPLIANT
+SYN-00696,EU_EEA,sensitive_personal,eu-west-1,eu-central-1,0,none_unverified,1,1,1,GDPR,15,Low,COMPLIANT
+SYN-00697,UK,personal,us-west-2,af-south-1,1,scc,1,1,0,HIPAA,25,Low,COMPLIANT
+SYN-00698,US_CA,non_personal,ap-northeast-1,ap-south-1,1,explicit_consent,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00699,US_FED,non_personal,us-west-2,us-west-1,0,scc,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00700,US_CA,non_personal,ap-southeast-2,eu-north-1,1,statutory_exemption,0,1,0,GDPR,20,Low,COMPLIANT
+SYN-00701,IN,sensitive_personal,ap-southeast-1,eu-north-1,1,statutory_exemption,1,0,0,GDPR,98,Critical,NON_COMPLIANT
+SYN-00702,EU_EEA,non_personal,eu-west-1,af-south-1,0,none_unverified,1,0,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00703,IN,non_personal,eu-central-2,us-west-1,1,bcr,1,1,0,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00704,EU_EEA,sensitive_personal,ap-southeast-2,ap-northeast-1,1,explicit_consent,0,1,1,GDPR,80,Critical,NON_COMPLIANT
+SYN-00705,US_CA,healthcare,eu-west-2,af-south-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,70,High,NON_COMPLIANT
+SYN-00706,EU_EEA,non_personal,us-west-1,me-south-1,1,bcr,1,0,0,DPDP Act 2023,18,Low,COMPLIANT
+SYN-00707,IN,sensitive_personal,eu-central-2,us-west-1,1,none_unverified,1,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00708,GLOBAL_OTHER,financial,ap-southeast-2,eu-central-2,0,none_unverified,1,1,1,DPDP Act 2023,10,Low,COMPLIANT
+SYN-00709,EU_EEA,sensitive_personal,ap-south-1,ap-northeast-1,1,explicit_consent,1,1,0,Cross-Border Standard,80,Critical,NON_COMPLIANT
+SYN-00710,US_CA,non_personal,eu-central-2,us-east-1,1,adequate_country,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00711,IN,sensitive_personal,ap-northeast-1,me-south-1,1,scc,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00712,US_CA,non_personal,ap-southeast-2,sa-east-1,1,adequate_country,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00713,GLOBAL_OTHER,non_personal,us-east-1,eu-west-1,0,none_unverified,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00714,US_CA,sensitive_personal,ap-south-1,eu-central-2,1,scc,0,1,0,HIPAA,70,High,COMPLIANT
+SYN-00715,EU_EEA,sensitive_personal,af-south-1,eu-west-2,1,bcr,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00716,EU_EEA,non_personal,ap-south-2,eu-west-2,1,explicit_consent,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00717,IN,sensitive_personal,eu-central-2,eu-west-2,1,adequate_country,0,1,1,PCI-DSS / ISO 27001,85,Critical,NON_COMPLIANT
+SYN-00718,EU_EEA,non_personal,eu-central-1,eu-west-3,0,adequate_country,1,0,0,DPDP Act 2023,13,Low,COMPLIANT
+SYN-00719,IN,personal,ap-south-2,ap-southeast-2,0,scc,0,1,1,Cross-Border Standard,60,High,NON_COMPLIANT
+SYN-00720,GLOBAL_OTHER,non_personal,eu-north-1,ap-northeast-1,1,none_unverified,1,1,0,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00721,UK,personal,eu-south-1,eu-west-1,1,statutory_exemption,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00722,GLOBAL_OTHER,personal,ap-south-2,eu-central-1,1,adequate_country,1,0,0,DPDP Act 2023,43,Moderate,COMPLIANT
+SYN-00723,IN,non_personal,eu-central-2,us-east-2,1,bcr,1,0,0,HIPAA,18,Low,COMPLIANT
+SYN-00724,UK,healthcare,eu-central-2,eu-west-1,1,none_unverified,1,1,1,GDPR,50,Moderate,NEEDS_REVIEW
+SYN-00725,US_CA,sensitive_personal,eu-west-2,eu-central-2,1,scc,0,1,0,DPDP Act 2023,70,High,COMPLIANT
+SYN-00726,GLOBAL_OTHER,financial,ap-south-1,eu-west-1,0,adequate_country,1,1,0,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-00727,US_CA,personal,eu-west-1,ap-northeast-1,1,statutory_exemption,0,1,0,DPDP Act 2023,45,Moderate,COMPLIANT
+SYN-00728,IN,sensitive_personal,ap-northeast-1,eu-west-3,1,explicit_consent,1,1,0,DPDP Act 2023,50,Moderate,NEEDS_REVIEW
+SYN-00729,GLOBAL_OTHER,financial,ap-south-2,eu-north-1,0,adequate_country,1,1,0,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-00730,EU_EEA,healthcare,ap-northeast-1,us-west-2,1,scc,1,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00731,IN,sensitive_personal,eu-north-1,af-south-1,1,statutory_exemption,1,1,0,Cross-Border Standard,50,Moderate,NEEDS_REVIEW
+SYN-00732,US_CA,personal,sa-east-1,ap-northeast-1,1,explicit_consent,1,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00733,IN,financial,ap-southeast-1,af-south-1,1,scc,1,1,0,GDPR,70,High,NEEDS_REVIEW
+SYN-00734,EU_EEA,healthcare,me-south-1,eu-central-1,1,explicit_consent,0,0,1,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00735,US_CA,personal,eu-west-1,me-south-1,1,adequate_country,0,1,1,HIPAA,25,Low,COMPLIANT
+SYN-00736,US_FED,personal,eu-west-1,none,1,explicit_consent,1,1,0,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00737,GLOBAL_OTHER,sensitive_personal,eu-central-1,ap-southeast-1,0,adequate_country,0,1,0,PCI-DSS / ISO 27001,65,High,COMPLIANT
+SYN-00738,GLOBAL_OTHER,non_personal,eu-west-1,us-west-1,0,none_unverified,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-00739,GLOBAL_OTHER,sensitive_personal,af-south-1,af-south-1,1,none_unverified,1,1,1,Cross-Border Standard,50,Moderate,NEEDS_REVIEW
+SYN-00740,GLOBAL_OTHER,financial,eu-central-2,eu-west-1,0,scc,0,1,0,HIPAA,80,Critical,NEEDS_REVIEW
+SYN-00741,IN,sensitive_personal,eu-west-1,me-south-1,1,none_unverified,1,1,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-00742,UK,non_personal,ap-southeast-2,af-south-1,1,none_unverified,1,1,0,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00743,US_FED,sensitive_personal,ap-southeast-1,ap-south-1,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00744,US_CA,sensitive_personal,me-south-1,eu-west-1,1,explicit_consent,1,0,0,GDPR,58,High,COMPLIANT
+SYN-00745,IN,healthcare,eu-west-1,eu-central-2,1,explicit_consent,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00746,IN,financial,eu-west-2,eu-west-2,1,explicit_consent,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00747,US_CA,sensitive_personal,eu-west-3,ap-northeast-1,1,bcr,0,0,1,HIPAA,63,High,COMPLIANT
+SYN-00748,IN,non_personal,eu-central-1,eu-south-1,1,statutory_exemption,1,0,0,HIPAA,13,Low,COMPLIANT
+SYN-00749,US_CA,sensitive_personal,me-south-1,me-south-1,1,explicit_consent,0,1,1,HIPAA,40,Moderate,COMPLIANT
+SYN-00750,IN,financial,ap-south-1,ap-northeast-1,0,scc,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00751,US_FED,healthcare,eu-north-1,sa-east-1,1,scc,1,1,1,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00752,IN,personal,eu-west-2,eu-central-1,1,bcr,1,0,0,HIPAA,83,Critical,NON_COMPLIANT
+SYN-00753,IN,personal,af-south-1,eu-central-1,1,none_unverified,1,1,1,HIPAA,70,High,NON_COMPLIANT
+SYN-00754,US_CA,sensitive_personal,eu-north-1,me-south-1,1,bcr,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00755,IN,healthcare,us-east-2,eu-west-2,1,adequate_country,1,1,0,HIPAA,85,Critical,NON_COMPLIANT
+SYN-00756,UK,personal,sa-east-1,ap-southeast-1,1,bcr,1,0,1,DPDP Act 2023,18,Low,COMPLIANT
+SYN-00757,GLOBAL_OTHER,sensitive_personal,eu-west-2,ap-south-2,1,explicit_consent,1,0,0,GDPR,58,High,COMPLIANT
+SYN-00758,US_FED,non_personal,eu-south-1,af-south-1,1,statutory_exemption,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00759,EU_EEA,sensitive_personal,ap-northeast-1,eu-central-2,1,statutory_exemption,0,1,0,HIPAA,95,Critical,NON_COMPLIANT
+SYN-00760,UK,sensitive_personal,me-south-1,eu-central-1,1,none_unverified,1,0,1,PCI-DSS / ISO 27001,68,High,NEEDS_REVIEW
+SYN-00761,US_FED,healthcare,us-west-1,none,0,scc,1,1,0,PCI-DSS / ISO 27001,70,High,NON_COMPLIANT
+SYN-00762,UK,non_personal,eu-south-1,ap-southeast-1,1,none_unverified,0,0,0,DPDP Act 2023,63,High,NEEDS_REVIEW
+SYN-00763,GLOBAL_OTHER,healthcare,ap-southeast-1,eu-west-2,1,scc,1,1,0,Cross-Border Standard,75,High,NON_COMPLIANT
+SYN-00764,US_FED,non_personal,sa-east-1,us-west-1,1,adequate_country,1,0,0,PCI-DSS / ISO 27001,18,Low,COMPLIANT
+SYN-00765,IN,sensitive_personal,ap-northeast-1,af-south-1,1,scc,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00766,UK,healthcare,eu-central-2,ap-south-2,1,statutory_exemption,1,0,0,DPDP Act 2023,88,Critical,NON_COMPLIANT
+SYN-00767,EU_EEA,non_personal,eu-west-3,ap-south-1,0,scc,0,1,0,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00768,IN,healthcare,ap-south-1,none,0,adequate_country,1,0,1,Cross-Border Standard,93,Critical,NON_COMPLIANT
+SYN-00769,GLOBAL_OTHER,financial,sa-east-1,ap-northeast-1,0,scc,0,1,0,Cross-Border Standard,80,Critical,NEEDS_REVIEW
+SYN-00770,GLOBAL_OTHER,sensitive_personal,eu-central-1,ap-south-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,40,Moderate,COMPLIANT
+SYN-00771,GLOBAL_OTHER,personal,us-west-1,eu-west-3,1,bcr,1,0,0,GDPR,43,Moderate,COMPLIANT
+SYN-00772,US_FED,financial,me-south-1,eu-central-2,1,statutory_exemption,1,1,1,Cross-Border Standard,10,Low,COMPLIANT
+SYN-00773,IN,sensitive_personal,us-east-2,us-east-1,1,none_unverified,1,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00774,UK,sensitive_personal,us-west-1,eu-west-2,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00775,US_CA,financial,eu-north-1,eu-west-1,1,scc,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00776,UK,sensitive_personal,af-south-1,me-south-1,1,none_unverified,1,0,0,GDPR,93,Critical,NEEDS_REVIEW
+SYN-00777,EU_EEA,personal,eu-central-1,ap-northeast-1,0,scc,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00778,UK,sensitive_personal,us-east-2,eu-west-3,1,none_unverified,1,1,1,DPDP Act 2023,50,Moderate,NEEDS_REVIEW
+SYN-00779,IN,personal,ap-south-1,ap-south-2,0,adequate_country,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00780,GLOBAL_OTHER,non_personal,eu-west-1,none,0,scc,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00781,GLOBAL_OTHER,sensitive_personal,sa-east-1,eu-central-1,0,adequate_country,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00782,GLOBAL_OTHER,non_personal,eu-west-2,eu-west-1,1,statutory_exemption,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00783,EU_EEA,personal,ap-south-2,af-south-1,1,bcr,1,1,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00784,UK,non_personal,eu-west-2,af-south-1,0,adequate_country,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00785,UK,non_personal,eu-west-2,eu-north-1,0,none_unverified,0,1,1,PCI-DSS / ISO 27001,5,Low,COMPLIANT
+SYN-00786,GLOBAL_OTHER,non_personal,eu-north-1,us-east-2,0,scc,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00787,US_FED,non_personal,ap-northeast-1,eu-west-1,1,statutory_exemption,1,0,0,HIPAA,13,Low,COMPLIANT
+SYN-00788,UK,non_personal,eu-west-1,us-east-1,1,explicit_consent,1,0,0,PCI-DSS / ISO 27001,13,Low,COMPLIANT
+SYN-00789,UK,financial,ap-northeast-1,eu-south-1,1,statutory_exemption,0,1,0,DPDP Act 2023,80,Critical,NEEDS_REVIEW
+SYN-00790,EU_EEA,healthcare,us-west-1,eu-west-3,1,adequate_country,0,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00791,UK,non_personal,eu-west-2,eu-west-2,0,scc,0,1,1,GDPR,5,Low,COMPLIANT
+SYN-00792,US_FED,personal,us-east-2,eu-north-1,0,none_unverified,0,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00793,GLOBAL_OTHER,healthcare,ap-south-2,af-south-1,0,none_unverified,0,1,0,Cross-Border Standard,95,Critical,NON_COMPLIANT
+SYN-00794,US_CA,healthcare,me-south-1,ap-south-1,1,scc,0,1,1,HIPAA,75,High,NON_COMPLIANT
+SYN-00795,US_CA,healthcare,ap-south-1,eu-west-2,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00796,GLOBAL_OTHER,non_personal,eu-north-1,us-west-1,0,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00797,US_CA,healthcare,eu-south-1,ap-south-2,1,none_unverified,0,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00798,US_FED,sensitive_personal,af-south-1,none,1,adequate_country,0,1,0,PCI-DSS / ISO 27001,70,High,COMPLIANT
+SYN-00799,US_FED,healthcare,ap-northeast-1,ap-southeast-1,1,adequate_country,1,1,0,DPDP Act 2023,75,High,NON_COMPLIANT
+SYN-00800,US_CA,healthcare,eu-west-3,ap-south-2,1,none_unverified,0,0,1,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00801,GLOBAL_OTHER,healthcare,af-south-1,me-south-1,0,scc,1,1,0,HIPAA,70,High,NON_COMPLIANT
+SYN-00802,US_CA,sensitive_personal,us-west-2,sa-east-1,0,none_unverified,1,1,0,GDPR,40,Moderate,COMPLIANT
+SYN-00803,EU_EEA,sensitive_personal,eu-central-2,eu-west-2,0,scc,1,1,0,PCI-DSS / ISO 27001,50,Moderate,NEEDS_REVIEW
+SYN-00804,EU_EEA,healthcare,us-west-1,us-east-2,1,explicit_consent,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00805,IN,financial,sa-east-1,eu-central-2,1,none_unverified,1,1,1,HIPAA,85,Critical,NON_COMPLIANT
+SYN-00806,IN,non_personal,af-south-1,us-east-1,1,adequate_country,0,0,0,HIPAA,43,Moderate,COMPLIANT
+SYN-00807,EU_EEA,healthcare,sa-east-1,none,1,bcr,0,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00808,EU_EEA,healthcare,eu-west-2,eu-north-1,0,scc,0,1,1,Cross-Border Standard,80,Critical,NON_COMPLIANT
+SYN-00809,US_FED,financial,ap-southeast-1,eu-north-1,1,explicit_consent,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00810,EU_EEA,financial,sa-east-1,us-west-1,1,scc,1,1,0,HIPAA,70,High,NEEDS_REVIEW
+SYN-00811,EU_EEA,sensitive_personal,me-south-1,ap-northeast-1,1,explicit_consent,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00812,UK,financial,ap-southeast-1,me-south-1,1,bcr,1,0,0,HIPAA,78,Critical,NEEDS_REVIEW
+SYN-00813,UK,sensitive_personal,ap-northeast-1,me-south-1,1,scc,1,1,0,DPDP Act 2023,45,Moderate,COMPLIANT
+SYN-00814,GLOBAL_OTHER,healthcare,ap-south-2,me-south-1,0,none_unverified,1,1,0,PCI-DSS / ISO 27001,70,High,NON_COMPLIANT
+SYN-00815,IN,personal,eu-west-3,ap-south-2,1,explicit_consent,0,1,1,DPDP Act 2023,55,High,NON_COMPLIANT
+SYN-00816,US_CA,financial,us-east-1,eu-west-3,0,scc,1,0,1,GDPR,28,Moderate,COMPLIANT
+SYN-00817,IN,personal,eu-central-1,eu-south-1,1,bcr,0,0,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00818,GLOBAL_OTHER,non_personal,eu-south-1,eu-west-3,0,adequate_country,1,1,0,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00819,IN,non_personal,ap-southeast-2,none,1,adequate_country,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00820,US_CA,financial,eu-west-1,us-west-1,1,none_unverified,1,1,1,Cross-Border Standard,45,Moderate,NEEDS_REVIEW
+SYN-00821,GLOBAL_OTHER,sensitive_personal,eu-west-2,ap-southeast-2,0,scc,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00822,US_FED,sensitive_personal,us-west-2,eu-south-1,0,scc,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-00823,IN,financial,ap-northeast-1,us-west-2,1,bcr,1,0,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00824,US_FED,sensitive_personal,ap-southeast-1,ap-northeast-1,1,none_unverified,1,1,1,HIPAA,50,Moderate,NEEDS_REVIEW
+SYN-00825,US_CA,financial,us-east-1,none,0,none_unverified,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-00826,UK,healthcare,us-east-1,us-east-2,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00827,EU_EEA,healthcare,ap-south-2,ap-south-2,1,adequate_country,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00828,US_CA,financial,ap-southeast-1,eu-central-1,1,bcr,1,0,0,PCI-DSS / ISO 27001,78,Critical,NEEDS_REVIEW
+SYN-00829,US_FED,healthcare,eu-west-2,eu-west-3,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00830,UK,sensitive_personal,us-east-2,ap-southeast-1,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,50,Moderate,NEEDS_REVIEW
+SYN-00831,GLOBAL_OTHER,personal,eu-central-1,us-west-1,1,none_unverified,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00832,IN,personal,me-south-1,eu-west-2,1,statutory_exemption,0,1,0,PCI-DSS / ISO 27001,85,Critical,NON_COMPLIANT
+SYN-00833,GLOBAL_OTHER,personal,ap-south-2,eu-west-3,0,scc,1,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00834,IN,healthcare,us-west-2,af-south-1,1,scc,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00835,US_CA,personal,ap-south-2,eu-west-3,1,adequate_country,0,0,0,DPDP Act 2023,68,High,COMPLIANT
+SYN-00836,EU_EEA,financial,eu-north-1,af-south-1,0,adequate_country,1,0,0,PCI-DSS / ISO 27001,83,Critical,NEEDS_REVIEW
+SYN-00837,EU_EEA,personal,eu-south-1,eu-north-1,0,scc,1,0,0,DPDP Act 2023,38,Moderate,COMPLIANT
+SYN-00838,US_CA,personal,eu-south-1,ap-south-2,1,none_unverified,1,0,1,PCI-DSS / ISO 27001,48,Moderate,NEEDS_REVIEW
+SYN-00839,IN,non_personal,us-east-1,ap-south-1,1,scc,0,1,0,Cross-Border Standard,25,Low,COMPLIANT
+SYN-00840,GLOBAL_OTHER,healthcare,eu-west-1,none,0,adequate_country,1,0,1,PCI-DSS / ISO 27001,63,High,NON_COMPLIANT
+SYN-00841,GLOBAL_OTHER,healthcare,ap-south-2,eu-central-2,1,statutory_exemption,1,1,0,DPDP Act 2023,70,High,NON_COMPLIANT
+SYN-00842,US_CA,financial,eu-central-2,none,1,bcr,0,1,0,HIPAA,85,Critical,NEEDS_REVIEW
+SYN-00843,IN,sensitive_personal,eu-central-2,af-south-1,1,scc,1,1,0,HIPAA,55,High,NEEDS_REVIEW
+SYN-00844,US_CA,personal,eu-west-1,us-east-1,1,none_unverified,0,1,0,GDPR,80,Critical,NEEDS_REVIEW
+SYN-00845,US_FED,non_personal,eu-west-3,ap-northeast-1,1,bcr,1,0,0,HIPAA,18,Low,COMPLIANT
+SYN-00846,UK,financial,me-south-1,us-east-1,1,explicit_consent,1,1,0,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-00847,UK,healthcare,eu-central-2,eu-north-1,1,scc,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-00848,US_CA,financial,eu-north-1,ap-southeast-1,1,explicit_consent,1,0,1,PCI-DSS / ISO 27001,28,Moderate,COMPLIANT
+SYN-00849,US_FED,sensitive_personal,ap-southeast-2,ap-southeast-1,1,explicit_consent,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-00850,EU_EEA,personal,us-east-1,eu-west-3,1,scc,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00851,UK,personal,ap-southeast-1,eu-central-2,1,scc,0,1,0,GDPR,50,Moderate,COMPLIANT
+SYN-00852,US_FED,non_personal,us-west-2,us-east-2,0,none_unverified,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00853,EU_EEA,healthcare,ap-southeast-2,ap-southeast-1,1,none_unverified,1,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00854,GLOBAL_OTHER,sensitive_personal,ap-northeast-1,us-east-1,1,scc,1,1,0,GDPR,45,Moderate,COMPLIANT
+SYN-00855,GLOBAL_OTHER,non_personal,af-south-1,sa-east-1,0,adequate_country,0,1,1,DPDP Act 2023,5,Low,COMPLIANT
+SYN-00856,US_CA,non_personal,eu-central-1,eu-north-1,1,scc,0,0,0,DPDP Act 2023,43,Moderate,COMPLIANT
+SYN-00857,EU_EEA,financial,ap-southeast-2,us-west-2,1,none_unverified,1,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00858,US_FED,sensitive_personal,eu-south-1,ap-northeast-1,1,explicit_consent,0,0,0,Cross-Border Standard,83,Critical,COMPLIANT
+SYN-00859,UK,healthcare,eu-west-1,us-west-2,1,bcr,1,0,0,GDPR,93,Critical,NON_COMPLIANT
+SYN-00860,EU_EEA,sensitive_personal,us-east-2,ap-southeast-1,1,none_unverified,1,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00861,GLOBAL_OTHER,sensitive_personal,eu-west-1,ap-south-2,0,scc,1,0,0,DPDP Act 2023,58,High,COMPLIANT
+SYN-00862,IN,financial,ap-south-1,ap-southeast-2,0,scc,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00863,UK,non_personal,me-south-1,us-west-2,1,explicit_consent,1,0,0,HIPAA,13,Low,COMPLIANT
+SYN-00864,US_FED,sensitive_personal,eu-west-1,ap-southeast-2,1,adequate_country,1,0,1,DPDP Act 2023,38,Moderate,COMPLIANT
+SYN-00865,US_CA,non_personal,eu-west-1,us-west-2,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00866,UK,financial,us-east-2,eu-west-3,1,scc,1,1,0,GDPR,60,High,NEEDS_REVIEW
+SYN-00867,US_CA,sensitive_personal,eu-central-1,none,1,explicit_consent,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-00868,US_CA,healthcare,ap-southeast-2,ap-south-2,1,statutory_exemption,1,0,0,GDPR,88,Critical,NON_COMPLIANT
+SYN-00869,IN,personal,eu-central-1,eu-north-1,1,adequate_country,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00870,US_CA,personal,ap-south-1,us-west-2,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-00871,IN,healthcare,ap-southeast-1,none,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,75,High,NON_COMPLIANT
+SYN-00872,US_CA,non_personal,ap-northeast-1,af-south-1,1,scc,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00873,US_FED,non_personal,eu-west-2,us-west-2,1,explicit_consent,0,1,1,PCI-DSS / ISO 27001,5,Low,COMPLIANT
+SYN-00874,US_CA,healthcare,me-south-1,af-south-1,1,none_unverified,0,1,1,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00875,EU_EEA,healthcare,sa-east-1,us-east-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00876,EU_EEA,healthcare,us-west-1,ap-southeast-1,1,none_unverified,0,1,1,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00877,GLOBAL_OTHER,personal,ap-southeast-2,us-east-2,0,adequate_country,1,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00878,US_FED,healthcare,ap-southeast-1,us-east-2,1,explicit_consent,1,1,0,GDPR,70,High,NON_COMPLIANT
+SYN-00879,GLOBAL_OTHER,healthcare,eu-west-3,eu-west-3,1,scc,0,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00880,US_FED,personal,eu-south-1,me-south-1,1,adequate_country,1,1,0,HIPAA,25,Low,COMPLIANT
+SYN-00881,GLOBAL_OTHER,personal,eu-north-1,ap-southeast-2,1,adequate_country,1,0,1,Cross-Border Standard,18,Low,COMPLIANT
+SYN-00882,IN,non_personal,af-south-1,eu-south-1,1,explicit_consent,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00883,UK,financial,eu-west-3,ap-southeast-2,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-00884,EU_EEA,non_personal,eu-west-2,me-south-1,0,adequate_country,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00885,US_FED,personal,us-east-1,ap-southeast-1,0,none_unverified,0,1,1,HIPAA,20,Low,COMPLIANT
+SYN-00886,US_FED,personal,eu-west-2,eu-north-1,1,explicit_consent,0,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-00887,US_FED,financial,me-south-1,eu-west-3,1,adequate_country,1,1,0,HIPAA,60,High,NEEDS_REVIEW
+SYN-00888,GLOBAL_OTHER,personal,eu-west-3,ap-southeast-2,0,adequate_country,1,0,0,PCI-DSS / ISO 27001,38,Moderate,COMPLIANT
+SYN-00889,US_CA,sensitive_personal,us-west-1,none,0,scc,1,1,1,GDPR,15,Low,COMPLIANT
+SYN-00890,US_FED,financial,us-west-2,eu-west-3,0,scc,1,0,1,DPDP Act 2023,28,Moderate,COMPLIANT
+SYN-00891,UK,non_personal,me-south-1,ap-south-2,1,explicit_consent,0,1,0,HIPAA,20,Low,COMPLIANT
+SYN-00892,EU_EEA,financial,me-south-1,sa-east-1,1,scc,0,0,1,Cross-Border Standard,88,Critical,NEEDS_REVIEW
+SYN-00893,UK,sensitive_personal,ap-northeast-1,us-east-2,1,none_unverified,0,1,0,GDPR,100,Critical,NEEDS_REVIEW
+SYN-00894,EU_EEA,sensitive_personal,us-east-2,us-west-1,1,none_unverified,1,1,1,GDPR,100,Critical,NON_COMPLIANT
+SYN-00895,UK,sensitive_personal,us-east-1,ap-southeast-2,1,bcr,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00896,UK,financial,ap-south-1,ap-south-2,1,none_unverified,0,1,1,HIPAA,90,Critical,NEEDS_REVIEW
+SYN-00897,US_FED,sensitive_personal,us-west-1,eu-west-1,0,adequate_country,1,0,0,Cross-Border Standard,58,High,COMPLIANT
+SYN-00898,GLOBAL_OTHER,non_personal,ap-northeast-1,us-east-1,1,none_unverified,1,1,0,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-00899,GLOBAL_OTHER,sensitive_personal,eu-west-3,us-west-1,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00900,EU_EEA,personal,ap-southeast-1,us-west-2,1,adequate_country,1,1,0,DPDP Act 2023,35,Moderate,NEEDS_REVIEW
+SYN-00901,US_CA,personal,ap-northeast-1,eu-central-2,1,bcr,0,0,0,Cross-Border Standard,68,High,COMPLIANT
+SYN-00902,US_CA,healthcare,ap-northeast-1,ap-northeast-1,1,none_unverified,0,1,1,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00903,IN,healthcare,ap-northeast-1,eu-west-2,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00904,EU_EEA,personal,af-south-1,us-east-2,1,adequate_country,0,1,1,HIPAA,35,Moderate,NEEDS_REVIEW
+SYN-00905,UK,financial,eu-central-2,ap-southeast-2,1,scc,1,1,0,HIPAA,60,High,NEEDS_REVIEW
+SYN-00906,US_FED,financial,ap-southeast-2,none,1,scc,1,0,1,HIPAA,33,Moderate,COMPLIANT
+SYN-00907,US_FED,personal,eu-north-1,ap-northeast-1,1,adequate_country,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00908,US_CA,healthcare,sa-east-1,ap-south-2,1,statutory_exemption,0,1,0,PCI-DSS / ISO 27001,95,Critical,NON_COMPLIANT
+SYN-00909,GLOBAL_OTHER,sensitive_personal,eu-west-3,eu-west-2,0,scc,0,1,0,GDPR,65,High,COMPLIANT
+SYN-00910,UK,sensitive_personal,ap-southeast-1,us-west-1,1,scc,0,1,1,PCI-DSS / ISO 27001,45,Moderate,COMPLIANT
+SYN-00911,GLOBAL_OTHER,financial,eu-west-1,eu-west-3,1,statutory_exemption,1,1,1,DPDP Act 2023,10,Low,COMPLIANT
+SYN-00912,UK,sensitive_personal,sa-east-1,eu-central-1,1,statutory_exemption,1,0,1,GDPR,33,Moderate,COMPLIANT
+SYN-00913,GLOBAL_OTHER,sensitive_personal,eu-north-1,none,0,adequate_country,1,0,1,Cross-Border Standard,33,Moderate,COMPLIANT
+SYN-00914,UK,financial,us-west-2,af-south-1,1,adequate_country,0,1,0,PCI-DSS / ISO 27001,85,Critical,NEEDS_REVIEW
+SYN-00915,IN,healthcare,eu-central-1,ap-southeast-2,1,bcr,0,1,1,GDPR,100,Critical,NON_COMPLIANT
+SYN-00916,EU_EEA,sensitive_personal,eu-north-1,ap-south-2,0,adequate_country,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00917,US_FED,healthcare,eu-north-1,eu-central-1,1,statutory_exemption,1,1,1,GDPR,15,Low,COMPLIANT
+SYN-00918,US_FED,healthcare,eu-west-2,us-east-1,1,scc,0,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00919,EU_EEA,non_personal,eu-south-1,eu-south-1,0,none_unverified,1,0,0,GDPR,13,Low,COMPLIANT
+SYN-00920,US_FED,non_personal,us-east-2,ap-southeast-1,0,none_unverified,0,1,0,GDPR,20,Low,COMPLIANT
+SYN-00921,US_CA,personal,eu-central-1,ap-south-1,1,statutory_exemption,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00922,UK,healthcare,ap-northeast-1,eu-central-2,1,none_unverified,1,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-00923,IN,personal,af-south-1,us-west-2,1,statutory_exemption,0,1,1,PCI-DSS / ISO 27001,60,High,NON_COMPLIANT
+SYN-00924,UK,financial,eu-north-1,none,1,adequate_country,0,1,0,PCI-DSS / ISO 27001,85,Critical,NEEDS_REVIEW
+SYN-00925,US_FED,personal,sa-east-1,ap-southeast-2,1,bcr,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00926,EU_EEA,healthcare,eu-west-2,eu-west-2,0,none_unverified,1,0,1,Cross-Border Standard,93,Critical,NON_COMPLIANT
+SYN-00927,UK,financial,us-east-2,ap-south-1,1,none_unverified,0,1,1,HIPAA,90,Critical,NEEDS_REVIEW
+SYN-00928,US_FED,personal,ap-northeast-1,sa-east-1,1,bcr,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00929,US_CA,non_personal,eu-central-1,eu-west-3,1,explicit_consent,0,0,1,GDPR,23,Low,COMPLIANT
+SYN-00930,UK,non_personal,ap-northeast-1,eu-west-1,1,bcr,0,1,0,DPDP Act 2023,25,Low,COMPLIANT
+SYN-00931,GLOBAL_OTHER,non_personal,eu-west-2,ap-southeast-1,0,adequate_country,0,1,1,GDPR,5,Low,COMPLIANT
+SYN-00932,US_FED,financial,eu-south-1,eu-central-2,1,statutory_exemption,1,1,1,PCI-DSS / ISO 27001,10,Low,COMPLIANT
+SYN-00933,US_FED,non_personal,ap-south-2,ap-northeast-1,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00934,EU_EEA,financial,sa-east-1,ap-southeast-2,1,explicit_consent,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-00935,UK,personal,eu-west-1,eu-west-2,1,bcr,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00936,GLOBAL_OTHER,sensitive_personal,ap-south-2,me-south-1,0,adequate_country,0,1,0,PCI-DSS / ISO 27001,65,High,COMPLIANT
+SYN-00937,US_CA,financial,eu-west-2,ap-southeast-2,1,explicit_consent,0,1,1,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-00938,EU_EEA,financial,ap-southeast-1,me-south-1,1,explicit_consent,1,1,0,DPDP Act 2023,65,High,NEEDS_REVIEW
+SYN-00939,US_FED,non_personal,sa-east-1,none,1,none_unverified,1,0,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00940,IN,personal,us-east-2,ap-south-2,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,25,Low,COMPLIANT
+SYN-00941,EU_EEA,sensitive_personal,us-east-2,ap-south-1,1,scc,1,0,1,HIPAA,78,Critical,NON_COMPLIANT
+SYN-00942,EU_EEA,financial,me-south-1,eu-south-1,1,adequate_country,0,1,0,Cross-Border Standard,85,Critical,NEEDS_REVIEW
+SYN-00943,EU_EEA,non_personal,eu-central-2,eu-central-1,0,scc,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00944,US_CA,non_personal,us-east-1,sa-east-1,0,none_unverified,0,1,1,GDPR,5,Low,COMPLIANT
+SYN-00945,UK,non_personal,us-east-1,us-west-1,1,explicit_consent,1,0,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00946,GLOBAL_OTHER,sensitive_personal,eu-central-1,ap-southeast-1,0,scc,0,1,0,GDPR,65,High,COMPLIANT
+SYN-00947,US_CA,sensitive_personal,us-east-2,af-south-1,0,adequate_country,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00948,GLOBAL_OTHER,non_personal,sa-east-1,eu-north-1,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00949,GLOBAL_OTHER,sensitive_personal,ap-northeast-1,eu-west-3,1,scc,1,1,1,HIPAA,20,Low,COMPLIANT
+SYN-00950,UK,healthcare,me-south-1,us-east-2,1,bcr,1,1,0,HIPAA,75,High,NON_COMPLIANT
+SYN-00951,UK,financial,us-east-1,us-east-2,1,adequate_country,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-00952,UK,non_personal,ap-southeast-1,us-east-2,1,scc,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00953,IN,healthcare,ap-northeast-1,sa-east-1,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00954,US_FED,personal,eu-west-2,ap-southeast-1,1,adequate_country,0,1,1,DPDP Act 2023,25,Low,COMPLIANT
+SYN-00955,GLOBAL_OTHER,personal,ap-northeast-1,sa-east-1,1,scc,0,1,0,DPDP Act 2023,50,Moderate,COMPLIANT
+SYN-00956,US_CA,personal,eu-central-1,us-east-2,1,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00957,EU_EEA,personal,us-east-1,ap-southeast-1,1,scc,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00958,IN,financial,eu-north-1,eu-south-1,1,bcr,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00959,IN,non_personal,eu-north-1,ap-south-1,1,adequate_country,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-00960,US_FED,personal,us-east-1,ap-southeast-1,0,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-00961,UK,healthcare,eu-west-1,eu-west-1,1,scc,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00962,US_CA,financial,us-east-2,sa-east-1,0,scc,1,1,1,Cross-Border Standard,10,Low,COMPLIANT
+SYN-00963,US_FED,personal,us-east-2,eu-south-1,0,adequate_country,1,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-00964,GLOBAL_OTHER,non_personal,ap-southeast-2,sa-east-1,1,scc,0,1,0,Cross-Border Standard,25,Low,COMPLIANT
+SYN-00965,US_CA,personal,us-east-2,us-east-2,0,none_unverified,0,0,0,HIPAA,63,High,COMPLIANT
+SYN-00966,UK,healthcare,sa-east-1,eu-central-1,1,scc,1,1,0,DPDP Act 2023,75,High,NON_COMPLIANT
+SYN-00967,US_CA,personal,us-east-1,us-west-2,0,scc,1,1,0,Cross-Border Standard,20,Low,COMPLIANT
+SYN-00968,EU_EEA,personal,eu-west-1,ap-south-2,0,scc,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-00969,UK,sensitive_personal,us-east-2,us-west-2,1,explicit_consent,0,0,0,HIPAA,83,Critical,COMPLIANT
+SYN-00970,US_CA,financial,ap-south-2,us-west-1,1,adequate_country,1,0,1,HIPAA,33,Moderate,COMPLIANT
+SYN-00971,GLOBAL_OTHER,non_personal,us-west-1,eu-central-2,0,none_unverified,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-00972,EU_EEA,non_personal,us-west-1,eu-central-1,1,statutory_exemption,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00973,US_FED,financial,ap-south-2,eu-north-1,1,none_unverified,1,1,1,HIPAA,45,Moderate,NEEDS_REVIEW
+SYN-00974,US_FED,financial,us-west-2,us-west-1,0,none_unverified,1,0,1,PCI-DSS / ISO 27001,28,Moderate,COMPLIANT
+SYN-00975,IN,personal,eu-south-1,ap-northeast-1,1,scc,0,0,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-00976,US_FED,personal,ap-southeast-1,us-west-2,1,scc,0,0,1,HIPAA,43,Moderate,COMPLIANT
+SYN-00977,IN,sensitive_personal,eu-west-3,ap-south-2,1,none_unverified,1,0,0,HIPAA,100,Critical,NON_COMPLIANT
+SYN-00978,IN,healthcare,ap-southeast-1,us-west-1,1,none_unverified,1,1,1,Cross-Border Standard,90,Critical,NON_COMPLIANT
+SYN-00979,EU_EEA,personal,eu-west-3,us-east-1,0,none_unverified,0,0,1,PCI-DSS / ISO 27001,58,High,NEEDS_REVIEW
+SYN-00980,EU_EEA,sensitive_personal,us-west-2,eu-north-1,1,explicit_consent,1,1,0,HIPAA,70,High,NON_COMPLIANT
+SYN-00981,EU_EEA,personal,eu-west-2,me-south-1,0,adequate_country,1,0,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00982,IN,non_personal,us-west-2,ap-south-2,1,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-00983,EU_EEA,financial,me-south-1,none,1,scc,1,0,0,DPDP Act 2023,78,Critical,NEEDS_REVIEW
+SYN-00984,EU_EEA,personal,af-south-1,us-west-2,1,explicit_consent,1,0,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-00985,IN,financial,ap-southeast-1,ap-northeast-1,1,scc,1,1,0,HIPAA,70,High,NEEDS_REVIEW
+SYN-00986,IN,non_personal,eu-west-3,ap-southeast-1,1,adequate_country,0,1,0,Cross-Border Standard,25,Low,COMPLIANT
+SYN-00987,US_CA,healthcare,ap-northeast-1,af-south-1,1,adequate_country,1,1,0,HIPAA,75,High,NON_COMPLIANT
+SYN-00988,GLOBAL_OTHER,financial,us-west-2,sa-east-1,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-00989,US_CA,personal,sa-east-1,eu-west-1,1,explicit_consent,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-00990,GLOBAL_OTHER,sensitive_personal,us-east-1,eu-central-2,1,explicit_consent,0,1,0,GDPR,65,High,COMPLIANT
+SYN-00991,EU_EEA,sensitive_personal,us-east-2,us-west-2,1,explicit_consent,1,1,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-00992,EU_EEA,healthcare,eu-central-1,eu-central-2,0,none_unverified,0,0,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-00993,IN,healthcare,eu-central-2,none,1,bcr,1,1,0,PCI-DSS / ISO 27001,75,High,NON_COMPLIANT
+SYN-00994,US_CA,healthcare,eu-west-1,eu-central-2,1,statutory_exemption,1,0,1,PCI-DSS / ISO 27001,63,High,NON_COMPLIANT
+SYN-00995,US_FED,personal,eu-north-1,none,1,statutory_exemption,1,1,0,GDPR,20,Low,COMPLIANT
+SYN-00996,UK,healthcare,eu-north-1,eu-central-2,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,50,Moderate,NEEDS_REVIEW
+SYN-00997,US_FED,personal,eu-south-1,eu-central-1,1,none_unverified,1,0,1,Cross-Border Standard,48,Moderate,NEEDS_REVIEW
+SYN-00998,GLOBAL_OTHER,non_personal,us-west-2,ap-south-2,0,adequate_country,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-00999,IN,financial,ap-south-1,eu-north-1,0,adequate_country,1,0,1,GDPR,68,High,NON_COMPLIANT
+SYN-01000,US_FED,personal,eu-west-1,eu-south-1,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-01001,UK,non_personal,us-east-2,us-east-1,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-01002,EU_EEA,personal,eu-south-1,eu-west-1,0,scc,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-01003,GLOBAL_OTHER,financial,eu-central-1,us-west-1,1,explicit_consent,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-01004,US_FED,non_personal,eu-west-1,eu-north-1,1,explicit_consent,1,0,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-01005,UK,personal,ap-south-2,eu-west-1,1,statutory_exemption,1,0,1,HIPAA,13,Low,COMPLIANT
+SYN-01006,IN,financial,ap-southeast-2,eu-central-2,1,bcr,1,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-01007,GLOBAL_OTHER,personal,me-south-1,af-south-1,1,scc,1,1,0,DPDP Act 2023,25,Low,COMPLIANT
+SYN-01008,GLOBAL_OTHER,healthcare,ap-south-1,sa-east-1,1,adequate_country,1,1,0,HIPAA,75,High,NON_COMPLIANT
+SYN-01009,IN,personal,us-west-2,eu-north-1,1,none_unverified,1,1,0,HIPAA,95,Critical,NON_COMPLIANT
+SYN-01010,IN,financial,us-east-2,eu-central-1,1,statutory_exemption,0,1,1,DPDP Act 2023,95,Critical,NON_COMPLIANT
+SYN-01011,GLOBAL_OTHER,financial,us-east-2,eu-south-1,1,statutory_exemption,1,1,1,Cross-Border Standard,10,Low,COMPLIANT
+SYN-01012,US_CA,sensitive_personal,us-east-2,eu-west-3,0,scc,1,1,0,GDPR,40,Moderate,COMPLIANT
+SYN-01013,IN,non_personal,eu-west-3,eu-north-1,1,scc,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01014,UK,non_personal,ap-southeast-1,ap-southeast-1,1,bcr,1,1,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-01015,IN,sensitive_personal,ap-south-1,ap-south-2,0,scc,0,1,0,PCI-DSS / ISO 27001,95,Critical,NON_COMPLIANT
+SYN-01016,EU_EEA,financial,us-west-2,us-west-1,1,scc,0,0,0,Cross-Border Standard,100,Critical,NEEDS_REVIEW
+SYN-01017,UK,healthcare,eu-west-3,ap-northeast-1,1,adequate_country,0,0,1,HIPAA,93,Critical,NON_COMPLIANT
+SYN-01018,UK,sensitive_personal,eu-west-3,me-south-1,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,75,High,NEEDS_REVIEW
+SYN-01019,US_FED,healthcare,us-east-1,us-west-1,0,none_unverified,0,1,0,DPDP Act 2023,95,Critical,NON_COMPLIANT
+SYN-01020,GLOBAL_OTHER,healthcare,eu-south-1,eu-west-2,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,75,High,NON_COMPLIANT
+SYN-01021,US_CA,healthcare,us-west-1,us-west-1,0,scc,1,1,0,GDPR,70,High,NON_COMPLIANT
+SYN-01022,EU_EEA,healthcare,sa-east-1,eu-west-3,1,scc,0,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-01023,GLOBAL_OTHER,healthcare,us-west-1,eu-central-1,0,scc,1,1,0,GDPR,70,High,NON_COMPLIANT
+SYN-01024,US_FED,non_personal,eu-west-3,ap-south-1,1,statutory_exemption,0,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-01025,UK,sensitive_personal,eu-north-1,none,1,adequate_country,1,0,0,Cross-Border Standard,63,High,COMPLIANT
+SYN-01026,EU_EEA,sensitive_personal,eu-south-1,us-west-2,0,adequate_country,0,1,0,Cross-Border Standard,85,Critical,NEEDS_REVIEW
+SYN-01027,UK,healthcare,sa-east-1,ap-south-2,1,none_unverified,0,1,1,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-01028,US_FED,personal,ap-south-2,eu-north-1,1,none_unverified,0,1,1,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-01029,US_CA,non_personal,eu-west-2,eu-central-2,1,none_unverified,0,0,0,PCI-DSS / ISO 27001,63,High,NEEDS_REVIEW
+SYN-01030,IN,personal,us-west-1,eu-west-3,1,none_unverified,1,1,0,DPDP Act 2023,95,Critical,NON_COMPLIANT
+SYN-01031,UK,non_personal,ap-northeast-1,af-south-1,1,scc,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01032,IN,financial,ap-southeast-1,ap-southeast-1,1,none_unverified,1,1,1,HIPAA,85,Critical,NON_COMPLIANT
+SYN-01033,EU_EEA,healthcare,eu-west-2,ap-south-1,0,adequate_country,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-01034,US_CA,non_personal,eu-central-1,eu-central-1,1,bcr,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01035,UK,non_personal,us-west-2,sa-east-1,1,statutory_exemption,1,0,0,HIPAA,13,Low,COMPLIANT
+SYN-01036,UK,healthcare,us-east-2,us-east-2,1,none_unverified,1,1,1,HIPAA,50,Moderate,NEEDS_REVIEW
+SYN-01037,GLOBAL_OTHER,healthcare,us-west-2,sa-east-1,1,bcr,1,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-01038,GLOBAL_OTHER,healthcare,eu-west-3,none,1,statutory_exemption,1,1,0,PCI-DSS / ISO 27001,70,High,NON_COMPLIANT
+SYN-01039,UK,healthcare,me-south-1,us-west-2,1,none_unverified,1,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-01040,GLOBAL_OTHER,financial,eu-central-2,us-east-1,0,adequate_country,0,0,1,HIPAA,73,High,NEEDS_REVIEW
+SYN-01041,US_CA,healthcare,eu-west-2,us-west-1,1,bcr,1,1,1,DPDP Act 2023,20,Low,COMPLIANT
+SYN-01042,US_CA,non_personal,us-east-1,me-south-1,0,scc,1,0,1,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-01043,GLOBAL_OTHER,sensitive_personal,ap-south-1,eu-south-1,1,scc,1,1,0,GDPR,45,Moderate,COMPLIANT
+SYN-01044,IN,financial,us-west-2,ap-south-1,1,scc,1,0,1,DPDP Act 2023,63,High,NON_COMPLIANT
+SYN-01045,UK,healthcare,eu-west-1,us-east-1,1,scc,1,1,0,PCI-DSS / ISO 27001,75,High,NON_COMPLIANT
+SYN-01046,GLOBAL_OTHER,sensitive_personal,ap-southeast-1,eu-south-1,1,bcr,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-01047,EU_EEA,financial,sa-east-1,eu-north-1,1,none_unverified,1,1,1,HIPAA,75,High,NON_COMPLIANT
+SYN-01048,US_CA,sensitive_personal,eu-central-1,ap-south-2,1,adequate_country,1,0,0,HIPAA,63,High,COMPLIANT
+SYN-01049,US_FED,personal,me-south-1,sa-east-1,1,statutory_exemption,1,1,0,GDPR,20,Low,COMPLIANT
+SYN-01050,UK,healthcare,us-east-2,eu-west-2,1,bcr,1,0,0,DPDP Act 2023,93,Critical,NON_COMPLIANT
+SYN-01051,UK,financial,eu-west-3,eu-central-1,1,statutory_exemption,1,1,1,HIPAA,10,Low,COMPLIANT
+SYN-01052,GLOBAL_OTHER,sensitive_personal,ap-southeast-2,eu-north-1,0,scc,0,1,0,DPDP Act 2023,65,High,COMPLIANT
+SYN-01053,GLOBAL_OTHER,personal,ap-south-1,eu-central-1,1,explicit_consent,0,1,1,GDPR,20,Low,COMPLIANT
+SYN-01054,UK,healthcare,us-east-2,us-west-2,1,none_unverified,0,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-01055,EU_EEA,sensitive_personal,us-east-1,ap-south-2,1,none_unverified,1,0,1,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-01056,US_FED,sensitive_personal,eu-central-2,ap-south-2,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,40,Moderate,COMPLIANT
+SYN-01057,US_FED,personal,eu-south-1,eu-north-1,1,none_unverified,1,1,0,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-01058,EU_EEA,personal,us-west-2,us-west-2,1,none_unverified,1,1,1,HIPAA,80,Critical,NON_COMPLIANT
+SYN-01059,US_CA,personal,eu-central-2,eu-west-1,1,statutory_exemption,1,0,1,PCI-DSS / ISO 27001,13,Low,COMPLIANT
+SYN-01060,IN,non_personal,eu-west-2,eu-south-1,1,explicit_consent,0,1,1,PCI-DSS / ISO 27001,5,Low,COMPLIANT
+SYN-01061,GLOBAL_OTHER,non_personal,ap-northeast-1,us-west-1,0,none_unverified,0,1,1,GDPR,5,Low,COMPLIANT
+SYN-01062,EU_EEA,non_personal,eu-west-2,ap-northeast-1,0,none_unverified,1,1,0,HIPAA,0,Low,COMPLIANT
+SYN-01063,GLOBAL_OTHER,non_personal,sa-east-1,eu-west-3,0,scc,0,1,1,GDPR,5,Low,COMPLIANT
+SYN-01064,US_FED,non_personal,af-south-1,eu-west-3,1,explicit_consent,1,0,0,GDPR,13,Low,COMPLIANT
+SYN-01065,UK,sensitive_personal,af-south-1,eu-west-1,1,scc,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-01066,UK,healthcare,us-east-2,eu-west-1,1,adequate_country,1,1,1,GDPR,20,Low,COMPLIANT
+SYN-01067,UK,financial,eu-central-2,eu-central-2,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-01068,GLOBAL_OTHER,non_personal,ap-south-1,ap-south-2,1,statutory_exemption,1,0,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-01069,US_CA,financial,me-south-1,us-east-2,1,statutory_exemption,1,1,1,DPDP Act 2023,10,Low,COMPLIANT
+SYN-01070,EU_EEA,personal,eu-west-3,ap-south-2,0,adequate_country,1,1,0,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-01071,IN,sensitive_personal,ap-southeast-1,eu-central-2,1,statutory_exemption,1,1,0,DPDP Act 2023,50,Moderate,NEEDS_REVIEW
+SYN-01072,US_CA,healthcare,eu-west-1,ap-south-1,1,none_unverified,0,1,1,GDPR,100,Critical,NON_COMPLIANT
+SYN-01073,GLOBAL_OTHER,financial,eu-south-1,us-east-2,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,55,High,NEEDS_REVIEW
+SYN-01074,EU_EEA,sensitive_personal,ap-south-1,eu-central-2,1,bcr,1,1,0,GDPR,75,High,NON_COMPLIANT
+SYN-01075,US_FED,non_personal,us-west-1,us-east-1,0,scc,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-01076,EU_EEA,healthcare,ap-south-1,us-west-1,1,adequate_country,1,1,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-01077,US_CA,non_personal,me-south-1,us-east-2,1,none_unverified,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-01078,IN,financial,us-west-2,eu-west-3,1,bcr,0,0,1,HIPAA,100,Critical,NON_COMPLIANT
+SYN-01079,EU_EEA,sensitive_personal,eu-west-3,eu-west-2,0,adequate_country,0,1,1,HIPAA,60,High,NEEDS_REVIEW
+SYN-01080,GLOBAL_OTHER,personal,ap-southeast-1,ap-southeast-1,1,explicit_consent,1,0,0,HIPAA,38,Moderate,COMPLIANT
+SYN-01081,US_CA,sensitive_personal,ap-south-1,ap-south-2,1,none_unverified,1,1,0,HIPAA,75,High,NEEDS_REVIEW
+SYN-01082,EU_EEA,non_personal,eu-west-1,eu-south-1,0,adequate_country,1,1,1,HIPAA,0,Low,COMPLIANT
+SYN-01083,UK,healthcare,eu-central-1,us-west-2,1,none_unverified,1,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-01084,GLOBAL_OTHER,sensitive_personal,eu-west-2,us-west-1,1,statutory_exemption,1,1,0,Cross-Border Standard,40,Moderate,COMPLIANT
+SYN-01085,GLOBAL_OTHER,financial,ap-south-1,ap-southeast-2,1,statutory_exemption,0,1,1,DPDP Act 2023,55,High,NEEDS_REVIEW
+SYN-01086,EU_EEA,financial,eu-west-3,ap-southeast-2,0,scc,1,0,0,PCI-DSS / ISO 27001,83,Critical,NEEDS_REVIEW
+SYN-01087,IN,financial,eu-west-2,us-east-1,1,none_unverified,1,1,0,HIPAA,100,Critical,NON_COMPLIANT
+SYN-01088,US_CA,financial,ap-south-2,eu-north-1,1,adequate_country,0,1,0,Cross-Border Standard,85,Critical,NEEDS_REVIEW
+SYN-01089,EU_EEA,healthcare,ap-southeast-2,eu-central-1,1,bcr,1,0,0,HIPAA,100,Critical,NON_COMPLIANT
+SYN-01090,US_FED,non_personal,eu-central-1,us-east-2,1,none_unverified,1,0,0,GDPR,38,Moderate,NEEDS_REVIEW
+SYN-01091,EU_EEA,healthcare,ap-southeast-2,eu-north-1,1,adequate_country,1,0,1,PCI-DSS / ISO 27001,98,Critical,NON_COMPLIANT
+SYN-01092,EU_EEA,personal,ap-south-2,eu-south-1,1,explicit_consent,0,1,0,HIPAA,45,Moderate,COMPLIANT
+SYN-01093,US_CA,personal,af-south-1,ap-south-1,1,adequate_country,0,0,1,DPDP Act 2023,43,Moderate,COMPLIANT
+SYN-01094,US_FED,healthcare,eu-central-1,us-east-2,1,none_unverified,1,1,1,HIPAA,50,Moderate,NEEDS_REVIEW
+SYN-01095,EU_EEA,personal,us-west-2,us-west-2,1,none_unverified,1,1,1,DPDP Act 2023,80,Critical,NON_COMPLIANT
+SYN-01096,US_CA,financial,eu-west-2,us-west-2,1,explicit_consent,0,1,0,PCI-DSS / ISO 27001,80,Critical,NEEDS_REVIEW
+SYN-01097,UK,healthcare,eu-west-3,eu-west-1,1,adequate_country,1,1,1,HIPAA,20,Low,COMPLIANT
+SYN-01098,UK,non_personal,ap-south-1,eu-central-1,1,none_unverified,1,0,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-01099,US_CA,financial,us-east-1,ap-northeast-1,0,adequate_country,0,1,1,Cross-Border Standard,55,High,NEEDS_REVIEW
+SYN-01100,IN,personal,ap-south-2,eu-west-1,0,scc,1,0,1,PCI-DSS / ISO 27001,55,High,NON_COMPLIANT
+SYN-01101,GLOBAL_OTHER,non_personal,me-south-1,sa-east-1,1,scc,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01102,US_CA,non_personal,ap-south-2,eu-north-1,1,scc,0,1,1,GDPR,10,Low,COMPLIANT
+SYN-01103,EU_EEA,healthcare,ap-southeast-1,ap-southeast-2,1,bcr,1,1,0,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-01104,US_CA,non_personal,me-south-1,us-west-2,1,none_unverified,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-01105,US_FED,financial,us-west-1,us-west-2,0,adequate_country,1,1,1,GDPR,10,Low,COMPLIANT
+SYN-01106,EU_EEA,non_personal,us-east-2,eu-north-1,1,bcr,0,1,1,PCI-DSS / ISO 27001,10,Low,COMPLIANT
+SYN-01107,IN,financial,ap-southeast-2,us-east-2,1,bcr,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-01108,GLOBAL_OTHER,sensitive_personal,eu-west-3,us-east-1,0,none_unverified,1,1,1,HIPAA,15,Low,COMPLIANT
+SYN-01109,IN,sensitive_personal,us-west-2,eu-central-2,1,adequate_country,1,1,1,Cross-Border Standard,30,Moderate,NEEDS_REVIEW
+SYN-01110,GLOBAL_OTHER,personal,eu-south-1,ap-southeast-1,1,adequate_country,1,1,0,DPDP Act 2023,25,Low,COMPLIANT
+SYN-01111,UK,personal,eu-central-2,eu-west-2,1,scc,0,1,0,HIPAA,50,Moderate,COMPLIANT
+SYN-01112,US_CA,non_personal,ap-southeast-1,eu-central-2,1,explicit_consent,0,1,1,Cross-Border Standard,5,Low,COMPLIANT
+SYN-01113,US_FED,personal,us-east-1,eu-central-1,0,none_unverified,1,1,0,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-01114,GLOBAL_OTHER,sensitive_personal,me-south-1,eu-central-2,1,explicit_consent,0,0,0,Cross-Border Standard,83,Critical,COMPLIANT
+SYN-01115,US_FED,personal,eu-north-1,none,1,scc,1,1,0,Cross-Border Standard,25,Low,COMPLIANT
+SYN-01116,GLOBAL_OTHER,sensitive_personal,ap-south-2,ap-south-2,1,bcr,1,1,1,DPDP Act 2023,20,Low,COMPLIANT
+SYN-01117,EU_EEA,sensitive_personal,ap-south-1,ap-south-2,1,adequate_country,1,1,1,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-01118,EU_EEA,personal,eu-south-1,me-south-1,0,adequate_country,1,1,0,HIPAA,30,Moderate,NEEDS_REVIEW
+SYN-01119,EU_EEA,sensitive_personal,ap-south-2,eu-west-2,1,explicit_consent,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-01120,US_FED,personal,ap-south-2,eu-west-3,1,bcr,1,1,0,HIPAA,25,Low,COMPLIANT
+SYN-01121,GLOBAL_OTHER,sensitive_personal,af-south-1,eu-north-1,0,adequate_country,1,1,1,Cross-Border Standard,15,Low,COMPLIANT
+SYN-01122,GLOBAL_OTHER,healthcare,eu-west-3,ap-southeast-1,1,none_unverified,0,1,1,PCI-DSS / ISO 27001,100,Critical,NON_COMPLIANT
+SYN-01123,EU_EEA,healthcare,eu-north-1,ap-southeast-1,0,adequate_country,1,1,0,DPDP Act 2023,80,Critical,NON_COMPLIANT
+SYN-01124,GLOBAL_OTHER,financial,eu-central-1,ap-south-2,1,scc,0,1,1,DPDP Act 2023,60,High,NEEDS_REVIEW
+SYN-01125,EU_EEA,healthcare,ap-south-1,ap-southeast-1,1,none_unverified,0,1,1,GDPR,100,Critical,NON_COMPLIANT
+SYN-01126,UK,non_personal,us-west-2,us-west-1,1,adequate_country,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01127,IN,non_personal,ap-south-2,eu-west-2,0,none_unverified,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-01128,GLOBAL_OTHER,financial,eu-west-1,eu-north-1,1,explicit_consent,0,1,0,HIPAA,80,Critical,NEEDS_REVIEW
+SYN-01129,US_CA,personal,ap-south-1,eu-central-1,1,statutory_exemption,1,1,1,GDPR,0,Low,COMPLIANT
+SYN-01130,EU_EEA,sensitive_personal,us-east-1,eu-west-1,1,statutory_exemption,0,1,1,DPDP Act 2023,70,High,NON_COMPLIANT
+SYN-01131,EU_EEA,personal,ap-southeast-1,us-west-1,1,scc,1,1,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-01132,GLOBAL_OTHER,non_personal,ap-southeast-2,eu-west-3,1,scc,1,1,0,GDPR,0,Low,COMPLIANT
+SYN-01133,UK,financial,eu-west-2,us-east-2,0,adequate_country,1,1,1,PCI-DSS / ISO 27001,10,Low,COMPLIANT
+SYN-01134,UK,financial,eu-north-1,us-west-2,1,scc,1,1,0,GDPR,60,High,NEEDS_REVIEW
+SYN-01135,US_FED,healthcare,us-west-1,ap-south-1,0,none_unverified,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-01136,US_FED,personal,us-west-2,ap-southeast-1,0,none_unverified,0,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-01137,US_CA,financial,eu-west-3,eu-central-2,1,bcr,1,1,0,HIPAA,60,High,NEEDS_REVIEW
+SYN-01138,US_FED,healthcare,ap-southeast-1,ap-northeast-1,1,none_unverified,0,1,1,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-01139,US_CA,healthcare,af-south-1,ap-northeast-1,1,statutory_exemption,0,1,0,GDPR,95,Critical,NON_COMPLIANT
+SYN-01140,UK,healthcare,me-south-1,af-south-1,1,none_unverified,1,1,1,HIPAA,50,Moderate,NEEDS_REVIEW
+SYN-01141,EU_EEA,personal,eu-central-1,us-east-2,0,none_unverified,0,1,1,GDPR,40,Moderate,NEEDS_REVIEW
+SYN-01142,US_FED,financial,eu-west-3,ap-south-2,1,explicit_consent,1,0,1,DPDP Act 2023,28,Moderate,COMPLIANT
+SYN-01143,IN,non_personal,eu-west-3,eu-west-1,1,none_unverified,1,0,1,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-01144,US_FED,non_personal,eu-west-2,af-south-1,1,adequate_country,0,1,1,DPDP Act 2023,10,Low,COMPLIANT
+SYN-01145,US_FED,personal,eu-west-1,eu-south-1,1,adequate_country,1,0,1,DPDP Act 2023,18,Low,COMPLIANT
+SYN-01146,US_CA,personal,me-south-1,ap-south-2,1,explicit_consent,0,1,0,GDPR,45,Moderate,COMPLIANT
+SYN-01147,US_FED,non_personal,eu-west-3,eu-central-1,1,none_unverified,1,1,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-01148,US_CA,healthcare,ap-northeast-1,me-south-1,1,none_unverified,1,1,1,PCI-DSS / ISO 27001,50,Moderate,NEEDS_REVIEW
+SYN-01149,IN,financial,eu-west-1,ap-southeast-2,1,explicit_consent,1,1,0,Cross-Border Standard,65,High,NEEDS_REVIEW
+SYN-01150,EU_EEA,personal,us-west-2,eu-west-3,1,none_unverified,1,0,0,HIPAA,100,Critical,NON_COMPLIANT
+SYN-01151,GLOBAL_OTHER,healthcare,us-west-2,eu-west-3,1,bcr,0,1,0,GDPR,100,Critical,NON_COMPLIANT
+SYN-01152,EU_EEA,non_personal,us-west-1,sa-east-1,1,bcr,1,1,0,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01153,UK,non_personal,eu-west-1,eu-north-1,1,statutory_exemption,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-01154,IN,non_personal,ap-south-1,ap-south-1,0,adequate_country,1,0,1,GDPR,0,Low,COMPLIANT
+SYN-01155,US_FED,non_personal,us-east-1,none,0,scc,1,0,1,HIPAA,0,Low,COMPLIANT
+SYN-01156,US_CA,financial,eu-west-3,eu-west-1,1,bcr,0,1,1,GDPR,60,High,NEEDS_REVIEW
+SYN-01157,UK,healthcare,ap-southeast-2,af-south-1,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-01158,EU_EEA,non_personal,ap-south-1,eu-north-1,1,none_unverified,1,1,0,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-01159,IN,financial,us-east-1,us-east-2,1,statutory_exemption,0,1,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-01160,IN,sensitive_personal,eu-west-1,eu-west-2,1,statutory_exemption,0,1,1,DPDP Act 2023,80,Critical,NON_COMPLIANT
+SYN-01161,US_FED,sensitive_personal,eu-west-1,ap-northeast-1,1,adequate_country,0,1,1,HIPAA,45,Moderate,COMPLIANT
+SYN-01162,IN,non_personal,ap-south-2,af-south-1,0,scc,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01163,GLOBAL_OTHER,healthcare,ap-south-2,ap-northeast-1,0,scc,1,1,0,GDPR,70,High,NON_COMPLIANT
+SYN-01164,US_FED,financial,us-west-2,us-west-2,0,none_unverified,1,0,0,Cross-Border Standard,73,High,NEEDS_REVIEW
+SYN-01165,UK,financial,us-west-1,eu-central-2,1,none_unverified,0,0,0,GDPR,100,Critical,NEEDS_REVIEW
+SYN-01166,UK,non_personal,ap-south-1,me-south-1,1,adequate_country,1,1,0,PCI-DSS / ISO 27001,0,Low,COMPLIANT
+SYN-01167,IN,sensitive_personal,us-west-2,eu-central-2,1,scc,0,0,1,HIPAA,100,Critical,NON_COMPLIANT
+SYN-01168,US_CA,healthcare,af-south-1,ap-southeast-1,1,adequate_country,1,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-01169,US_CA,personal,us-west-2,us-east-1,0,adequate_country,1,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-01170,GLOBAL_OTHER,healthcare,eu-west-2,ap-south-1,0,adequate_country,1,0,1,DPDP Act 2023,63,High,NON_COMPLIANT
+SYN-01171,US_FED,sensitive_personal,eu-central-2,sa-east-1,1,explicit_consent,1,1,0,PCI-DSS / ISO 27001,40,Moderate,COMPLIANT
+SYN-01172,IN,non_personal,eu-south-1,none,1,none_unverified,0,1,0,DPDP Act 2023,45,Moderate,NEEDS_REVIEW
+SYN-01173,EU_EEA,personal,eu-west-1,ap-south-1,0,scc,1,1,0,PCI-DSS / ISO 27001,30,Moderate,NEEDS_REVIEW
+SYN-01174,UK,personal,ap-south-2,eu-west-3,1,adequate_country,1,0,0,HIPAA,43,Moderate,COMPLIANT
+SYN-01175,IN,personal,us-west-1,us-west-2,1,explicit_consent,0,1,0,HIPAA,85,Critical,NON_COMPLIANT
+SYN-01176,GLOBAL_OTHER,sensitive_personal,us-west-2,none,1,adequate_country,1,1,0,GDPR,45,Moderate,COMPLIANT
+SYN-01177,IN,healthcare,eu-west-3,ap-northeast-1,1,bcr,1,0,0,Cross-Border Standard,100,Critical,NON_COMPLIANT
+SYN-01178,GLOBAL_OTHER,non_personal,ap-northeast-1,eu-west-2,0,none_unverified,1,1,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01179,US_CA,sensitive_personal,eu-north-1,sa-east-1,1,explicit_consent,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-01180,GLOBAL_OTHER,sensitive_personal,eu-central-1,us-east-2,0,adequate_country,1,1,1,PCI-DSS / ISO 27001,15,Low,COMPLIANT
+SYN-01181,GLOBAL_OTHER,healthcare,ap-southeast-1,us-west-2,0,scc,0,1,1,DPDP Act 2023,70,High,NON_COMPLIANT
+SYN-01182,US_CA,healthcare,us-west-1,eu-west-3,0,none_unverified,1,0,0,HIPAA,88,Critical,NON_COMPLIANT
+SYN-01183,GLOBAL_OTHER,healthcare,us-east-1,sa-east-1,1,adequate_country,1,1,1,Cross-Border Standard,20,Low,COMPLIANT
+SYN-01184,US_CA,non_personal,ap-southeast-2,sa-east-1,1,statutory_exemption,1,0,1,HIPAA,0,Low,COMPLIANT
+SYN-01185,US_CA,personal,ap-south-1,ap-southeast-1,1,statutory_exemption,0,1,1,PCI-DSS / ISO 27001,20,Low,COMPLIANT
+SYN-01186,EU_EEA,financial,ap-northeast-1,us-west-2,1,none_unverified,0,1,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-01187,UK,financial,ap-south-2,ap-south-1,1,bcr,0,1,1,PCI-DSS / ISO 27001,60,High,NEEDS_REVIEW
+SYN-01188,EU_EEA,non_personal,eu-central-1,eu-west-2,0,scc,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-01189,US_CA,personal,af-south-1,us-west-1,1,scc,0,1,0,DPDP Act 2023,50,Moderate,COMPLIANT
+SYN-01190,GLOBAL_OTHER,healthcare,eu-north-1,us-west-1,0,none_unverified,1,0,1,GDPR,63,High,NON_COMPLIANT
+SYN-01191,GLOBAL_OTHER,personal,me-south-1,eu-west-1,0,none_unverified,1,1,0,DPDP Act 2023,20,Low,COMPLIANT
+SYN-01192,EU_EEA,non_personal,eu-central-1,us-west-2,0,adequate_country,1,1,1,Cross-Border Standard,0,Low,COMPLIANT
+SYN-01193,US_CA,non_personal,eu-west-3,ap-southeast-1,1,none_unverified,1,1,1,DPDP Act 2023,30,Moderate,NEEDS_REVIEW
+SYN-01194,US_FED,personal,af-south-1,eu-south-1,1,none_unverified,0,1,1,HIPAA,55,High,NEEDS_REVIEW
+SYN-01195,EU_EEA,personal,eu-central-1,af-south-1,0,adequate_country,1,0,1,GDPR,30,Moderate,NEEDS_REVIEW
+SYN-01196,IN,financial,ap-south-2,eu-west-3,0,adequate_country,1,0,0,DPDP Act 2023,100,Critical,NON_COMPLIANT
+SYN-01197,US_CA,non_personal,ap-southeast-2,none,1,explicit_consent,1,0,1,DPDP Act 2023,0,Low,COMPLIANT
+SYN-01198,GLOBAL_OTHER,healthcare,us-west-2,us-east-1,0,adequate_country,1,1,1,DPDP Act 2023,15,Low,COMPLIANT
+SYN-01199,GLOBAL_OTHER,sensitive_personal,eu-central-2,eu-west-1,0,scc,0,1,1,Cross-Border Standard,40,Moderate,COMPLIANT
+SYN-01200,GLOBAL_OTHER,financial,eu-west-2,eu-north-1,1,statutory_exemption,1,1,1,HIPAA,10,Low,COMPLIANT

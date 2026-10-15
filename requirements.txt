@@ -1,0 +1,10 @@
+# Core Web Framework
+Flask>=3.0.0
+
+# Machine Learning Baseline & Scientific Computing
+scikit-learn>=1.3.0
+pandas>=2.0.0
+joblib>=1.3.0
+
+# Optional Cloud Integration (Graceful offline fallback when uninstalled/unconfigured)
+# boto3>=1.28.0

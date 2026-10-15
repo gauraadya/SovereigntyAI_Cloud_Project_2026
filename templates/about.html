@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}About &amp; Viva Guide &mdash; SovereigntyAI{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1 class="page-title">About SovereigntyAI</h1>
+  <p class="page-subtitle">
+    Autonomous Cloud Data Sovereignty Compliance Framework for Cross-Border Cloud Applications.
+  </p>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Project Overview &amp; College Course Objectives</h2>
+  </div>
+  <p style="margin-bottom: 1rem;">
+    <strong>SovereigntyAI</strong> is a college capstone software project designed to solve a pressing dilemma in modern cloud engineering:
+    how multinational enterprises can store and transfer digital records across public cloud regions (such as Amazon Web Services)
+    while rigorously adhering to contradictory, extraterritorial data sovereignty laws like the <strong>European Union GDPR</strong>,
+    the <strong>Indian Digital Personal Data Protection Act (DPDP Act 2023)</strong>, and <strong>US healthcare/financial regulations (HIPAA/PCI-DSS)</strong>.
+  </p>
+  <p style="margin-bottom: 1rem;">
+    The framework couples a <em>deterministic, rule-based policy intelligence engine</em> with an <em>explainable AI (XAI) risk-scoring model</em>
+    and an advisory <em>scikit-learn machine learning baseline</em>. It evaluates cloud storage configurations, explains the exact
+    reasoning behind every compliance decision, calculates a calibrated exposure score from 0 to 100, and recommends actionable AWS remediations.
+  </p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+  <div class="card" style="margin-bottom: 0;">
+    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--accent);">
+      1. Deterministic Policy Intelligence
+    </h3>
+    <p style="font-size: 0.875rem; color: var(--secondary);">
+      Unlike black-box generative AI models that can hallucinate legal advice, SovereigntyAI executes formal condition trees
+      grounded in statutory text (e.g. GDPR Chapter V Articles 44-49, DPDP Act 2023 Sections 8 &amp; 16). Every evaluation outcome
+      is linked to statutory citations and official regulatory guidelines.
+    </p>
+  </div>
+
+  <div class="card" style="margin-bottom: 0;">
+    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--accent);">
+      2. Explainable Risk Algorithm (XAI)
+    </h3>
+    <p style="font-size: 0.875rem; color: var(--secondary);">
+      The 0-100 risk score is completely transparent. It begins with data sensitivity baseline weights (e.g. PHI / biometrics = 40),
+      adds statutory penalty points for missing transfer mechanisms (+25) or missing encryption (+15), and applies mitigation credits
+      for defense-in-depth security controls (KMS encryption: -10, IAM RBAC: -8, CloudTrail logging: -7).
+    </p>
+  </div>
+
+  <div class="card" style="margin-bottom: 0;">
+    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--accent);">
+      3. Enterprise AWS Architecture
+    </h3>
+    <p style="font-size: 0.875rem; color: var(--secondary);">
+      Designed for frictionless extension to AWS: Amazon S3 for immutable audit storage, Amazon RDS PostgreSQL for enterprise persistence,
+      AWS Lambda for event-driven policy evaluation, Amazon SNS for compliance breach notifications, and Amazon CloudWatch for telemetry.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Viva Voce Quick Cheat-Sheet</h2>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.9rem;">
+    <div>
+      <strong>Q: Why not use a pure Large Language Model (LLM) or deep neural net for legal decisions?</strong><br>
+      <span style="color: var(--secondary);">
+        A: Regulatory compliance mandates 100% determinism, zero hallucinations, non-repudiation, and auditability.
+        A rule engine guarantees consistency; our ML component acts purely as an advisory heuristic trained on synthetic benchmark data.
+      </span>
+    </div>
+    <div>
+      <strong>Q: Does GDPR prohibit all cross-border transfers outside the EU?</strong><br>
+      <span style="color: var(--secondary);">
+        A: No. GDPR Chapter V permits international transfers if an Adequacy Decision (Article 45) exists, or if Appropriate Safeguards
+        such as Standard Contractual Clauses (Article 46 SCCs) with supplementary technical measures (EDPB 01/2020) are in place.
+      </span>
+    </div>
+    <div>
+      <strong>Q: What is the cross-border transfer model under India's DPDP Act 2023?</strong><br>
+      <span style="color: var(--secondary);">
+        A: Section 16 of the DPDP Act 2023 adopts a "blacklist" or "negative-list" approach: personal data transfers outside India
+        are permitted by default, except to countries restricted by the Central Government.
+      </span>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}Audit Record {{ assessment.id }} &mdash; SovereigntyAI{% endblock %}
+
+{% block content %}
+<div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">
+      <a href="{{ url_for('assessment_history') }}" style="color: var(--accent); text-decoration: none;">&larr; Back to Audit History</a>
+    </div>
+    <h1 class="page-title font-mono" style="margin-top: 0.25rem;">{{ assessment.id }}</h1>
+    <p class="page-subtitle">
+      Recorded on {{ assessment.timestamp }} &bull; Fiduciary: <strong>{{ assessment.source_org }}</strong>
+    </p>
+  </div>
+  <div style="display: flex; gap: 0.5rem;">
+    <button onclick="window.print()" class="btn btn-secondary btn-sm">Print Audit &uarr;</button>
+    <a href="{{ url_for('api_get_assessment', assessment_id=assessment.id) }}" target="_blank" class="btn btn-secondary btn-sm">
+      Raw JSON &darr;
+    </a>
+  </div>
+</div>
+
+<!-- Score & Status Card -->
+<div class="card" style="border-top: 4px solid var(--accent);">
+  <div class="score-banner">
+    {% set dial_class = 'low' if assessment.risk_score <= 25 else ('moderate' if assessment.risk_score <= 50 else ('high' if assessment.risk_score <= 75 else 'critical')) %}
+    <div class="score-dial {{ dial_class }}">
+      <span>{{ assessment.risk_score }}</span>
+      <span style="font-size: 0.65rem;">/ 100</span>
+    </div>
+
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.25rem;">
+        {% if assessment.compliance_status == 'COMPLIANT' %}
+          <span class="badge badge-compliant" style="font-size: 1rem; padding: 0.35rem 1rem;">STATUS: COMPLIANT</span>
+        {% elif assessment.compliance_status == 'NON_COMPLIANT' %}
+          <span class="badge badge-noncompliant" style="font-size: 1rem; padding: 0.35rem 1rem;">STATUS: NON-COMPLIANT</span>
+        {% else %}
+          <span class="badge badge-review" style="font-size: 1rem; padding: 0.35rem 1rem;">STATUS: NEEDS REVIEW</span>
+        {% endif %}
+
+        <span class="badge badge-neutral">{{ assessment.risk_category }} Risk</span>
+      </div>
+      <div class="stat-sub">
+        Applicable Framework: <strong>{{ assessment.framework }}</strong> &bull; Origin: <strong>{{ assessment.origin_jurisdiction }}</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parameter Breakdown Grid -->
+  <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-top: 1rem;">
+    <h3 style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; color: var(--secondary);">
+      Audited Configuration Parameters
+    </h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; font-size: 0.875rem;">
+      <div>
+        <span class="text-muted" style="display: block; font-size: 0.75rem;">DATA CATEGORY</span>
+        <strong>{{ assessment.data_category }}</strong>
+      </div>
+      <div>
+        <span class="text-muted" style="display: block; font-size: 0.75rem;">STORAGE REGION</span>
+        <strong class="font-mono">{{ assessment.storage_region }}</strong>
+      </div>
+      <div>
+        <span class="text-muted" style="display: block; font-size: 0.75rem;">DR / BACKUP REGION</span>
+        <strong class="font-mono">{{ assessment.backup_region or 'None' }}</strong>
+      </div>
+      <div>
+        <span class="text-muted" style="display: block; font-size: 0.75rem;">CROSS-BORDER TRANSFER</span>
+        <strong>{{ 'Yes' if assessment.cross_border else 'No' }}</strong>
+      </div>
+      <div>
+        <span class="text-muted" style="display: block; font-size: 0.75rem;">TRANSFER MECHANISM</span>
+        <strong>{{ assessment.transfer_mechanism }}</strong>
+      </div>
+      <div>
+        <span class="text-muted" style="display: block; font-size: 0.75rem;">ENCRYPTION AT REST</span>
+        <strong class="{% if assessment.encryption_at_rest %}text-success{% else %}text-danger{% endif %}">
+          {{ 'Enabled (KMS)' if assessment.encryption_at_rest else 'Disabled (Plaintext)' }}
+        </strong>
+      </div>
+      <div>
+        <span class="text-muted" style="display: block; font-size: 0.75rem;">ACCESS CONTROLS</span>
+        <strong class="{% if assessment.access_control %}text-success{% else %}text-danger{% endif %}">
+          {{ 'Enforced (RBAC)' if assessment.access_control else 'Missing' }}
+        </strong>
+      </div>
+      <div>
+        <span class="text-muted" style="display: block; font-size: 0.75rem;">AUDIT LOGGING</span>
+        <strong class="{% if assessment.audit_logging %}text-success{% else %}text-danger{% endif %}">
+          {{ 'Active (CloudTrail)' if assessment.audit_logging else 'Disabled' }}
+        </strong>
+      </div>
+    </div>
+
+    {% if assessment.notes %}
+      <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border); font-size: 0.85rem;">
+        <span class="text-muted" style="font-size: 0.75rem; display: block;">DEPLOYMENT NOTES:</span>
+        <em>{{ assessment.notes }}</em>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Evaluated Policy Rules Table -->
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Policy Verification Detail</h2>
+  </div>
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Rule ID</th>
+          <th>Framework</th>
+          <th>Severity</th>
+          <th>Result</th>
+          <th>Finding Explanation</th>
+          <th>Remediation / Statute</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in assessment.policy_results %}
+          {% if p.status != 'SKIPPED' %}
+            <tr>
+              <td class="font-mono" style="font-weight: 700;">{{ p.rule_id }}</td>
+              <td>{{ p.framework }}</td>
+              <td>
+                <span class="badge {% if p.severity == 'CRITICAL' %}badge-danger{% elif p.severity == 'HIGH' %}badge-warning{% else %}badge-neutral{% endif %}">
+                  {{ p.severity }}
+                </span>
+              </td>
+              <td>
+                {% if p.status == 'PASS' %}
+                  <span class="badge badge-compliant">PASS</span>
+                {% elif p.status == 'FAIL' %}
+                  <span class="badge badge-noncompliant">FAIL</span>
+                {% else %}
+                  <span class="badge badge-review">REVIEW</span>
+                {% endif %}
+              </td>
+              <td style="font-size: 0.85rem;">{{ p.explanation }}</td>
+              <td style="font-size: 0.8rem; color: var(--secondary);">
+                <div>{{ p.remediation }}</div>
+                {% if p.legal_reference %}
+                  <div style="margin-top: 0.25rem; font-weight: 600; color: var(--accent);">{{ p.legal_reference }}</div>
+                {% endif %}
+              </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Recommendations -->
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Remediation Recommendations</h2>
+  </div>
+  {% if assessment.recommendations %}
+    <ul class="recommendation-list">
+      {% for rec in assessment.recommendations %}
+        <li class="recommendation-item">{{ rec }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">No specific remediation needed.</p>
+  {% endif %}
+</div>
+{% endblock %}

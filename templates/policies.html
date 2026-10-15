@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Policy Explorer &mdash; SovereigntyAI{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1 class="page-title">Compliance Policy Rule Explorer</h1>
+  <p class="page-subtitle">
+    Inspect the configurable governance rules evaluating cross-border cloud deployments under GDPR, DPDP Act 2023, and HIPAA.
+  </p>
+</div>
+
+<!-- Legal & Prototype Disclaimer Card -->
+<div class="card" style="background: #fffbeb; border-left: 4px solid var(--warning); padding: 1rem 1.25rem;">
+  <div style="font-size: 0.875rem; color: #92400e;">
+    <strong>Academic Methodology Notice:</strong> Rules in this engine are categorized as
+    <span class="badge badge-success" style="font-size: 0.7rem;">Verified Legal Requirement</span> (supported by statute),
+    <span class="badge badge-info" style="font-size: 0.7rem;">Demonstration Rule</span> (industry standard best-practice), or
+    <span class="badge badge-warning" style="font-size: 0.7rem;">Simplifying Assumption</span> (architectural baseline).
+    This prototype does not issue certified legal opinions.
+  </div>
+</div>
+
+<!-- Filter & Search Controls -->
+<div class="card" style="padding: 1.25rem;">
+  <div class="form-grid" style="margin-bottom: 0;">
+    <div class="form-group">
+      <label for="policy-search">Search Rules &amp; Statutes</label>
+      <input type="text" id="policy-search" placeholder="Type keyword (e.g. GDPR, encryption, India, HIPAA)...">
+    </div>
+
+    <div class="form-group">
+      <label for="filter-jurisdiction">Filter by Jurisdiction</label>
+      <select id="filter-jurisdiction">
+        <option value="">All Jurisdictions</option>
+        <option value="EU_EEA">European Union / EEA (GDPR)</option>
+        <option value="IN">India (DPDP Act 2023)</option>
+        <option value="US_FED">United States (Federal/Sectoral)</option>
+        <option value="GLOBAL_OTHER">Global / Multi-Jurisdiction</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="filter-severity">Filter by Severity</label>
+      <select id="filter-severity">
+        <option value="">All Severities</option>
+        <option value="CRITICAL">Critical</option>
+        <option value="HIGH">High</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="LOW">Low</option>
+      </select>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+    <span id="filtered-count" class="stat-sub" style="font-weight: 600;">{{ rules|length }} rules loaded</span>
+    <span class="stat-sub font-mono">Framework v{{ metadata.version }} &bull; Updated {{ metadata.last_updated }}</span>
+  </div>
+</div>
+
+<!-- Policy Rules Table -->
+<div class="card">
+  <div class="table-responsive">
+    <table id="policies-table">
+      <thead>
+        <tr>
+          <th>Rule ID</th>
+          <th>Rule Name &amp; Description</th>
+          <th>Jurisdiction</th>
+          <th>Type</th>
+          <th>Severity</th>
+          <th>Legal Citation &amp; Source</th>
+          <th>Remediation Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for rule in rules %}
+          <tr data-jurisdiction="{{ rule.jurisdiction }}" data-severity="{{ rule.severity }}">
+            <td class="font-mono" style="font-weight: 700; color: var(--accent);">
+              {{ rule.rule_id }}
+            </td>
+            <td>
+              <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem;">
+                {{ rule.rule_name }}
+              </div>
+              <div style="font-size: 0.825rem; color: var(--secondary);">
+                {{ rule.description }}
+              </div>
+              <div style="margin-top: 0.35rem; font-size: 0.75rem; color: var(--text-muted);">
+                <strong>Applies to:</strong> {{ rule.applicable_categories|join(', ') }}
+              </div>
+            </td>
+            <td>
+              <span class="badge badge-neutral">{{ rule.jurisdiction }}</span>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">{{ rule.framework }}</div>
+            </td>
+            <td>
+              {% if rule.rule_type == 'VERIFIED_LEGAL_REQUIREMENT' %}
+                <span class="badge badge-success" style="font-size: 0.65rem;">Verified Legal</span>
+              {% elif rule.rule_type == 'DEMONSTRATION_RULE' %}
+                <span class="badge badge-info" style="font-size: 0.65rem;">Demo Standard</span>
+              {% else %}
+                <span class="badge badge-warning" style="font-size: 0.65rem;">Assumption</span>
+              {% endif %}
+            </td>
+            <td>
+              <span class="badge {% if rule.severity == 'CRITICAL' %}badge-danger{% elif rule.severity == 'HIGH' %}badge-warning{% elif rule.severity == 'MEDIUM' %}badge-info{% else %}badge-neutral{% endif %}">
+                {{ rule.severity }}
+              </span>
+            </td>
+            <td style="font-size: 0.8rem;">
+              <div>{{ rule.legal_reference }}</div>
+              {% if rule.reference_url %}
+                <a href="{{ rule.reference_url }}" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 500; display: inline-block; margin-top: 0.25rem;">
+                  Official Source Link &nearr;
+                </a>
+              {% endif %}
+            </td>
+            <td style="font-size: 0.825rem; color: var(--secondary);">
+              {{ rule.remediation }}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

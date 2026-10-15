@@ -1,0 +1,203 @@
+{
+  "framework_metadata": {
+    "version": "1.0.0",
+    "last_updated": "2026-10-15",
+    "description": "Configurable compliance policy rules for cross-border cloud sovereignty assessments.",
+    "rule_count": 10,
+    "legal_disclaimer": "This policy engine is an educational and academic prototype designed for architectural risk analysis and viva demonstration. It does not constitute formal legal counsel or certification under EU, Indian, or US law."
+  },
+  "rules": [
+    {
+      "rule_id": "POL-GDPR-001",
+      "rule_name": "GDPR Chapter V International Data Transfer Safeguard",
+      "jurisdiction": "EU_EEA",
+      "framework": "GDPR",
+      "rule_type": "VERIFIED_LEGAL_REQUIREMENT",
+      "severity": "CRITICAL",
+      "applicable_categories": ["personal", "sensitive_personal", "financial", "healthcare"],
+      "description": "Personal data originating within the EU/EEA may only be transferred to a third country outside the EEA if an adequacy decision (Art 45), appropriate safeguards such as Standard Contractual Clauses (Art 46), or explicit derogations (Art 49) are established.",
+      "conditions": {
+        "origin_jurisdiction": ["EU_EEA"],
+        "cross_border": true,
+        "destination_is_native": false,
+        "require_transfer_mechanism": ["adequate_country", "scc", "bcr", "explicit_consent", "statutory_exemption"]
+      },
+      "explanation_pass": "The cross-border transfer outside the EEA is protected by an approved Article 46/45 transfer mechanism or remains within the EEA.",
+      "explanation_fail": "Personal data originating in the EU/EEA is proposed to be transferred to a non-EEA destination without a verified Article 45/46 transfer mechanism (such as SCCs or an Adequacy Decision).",
+      "remediation": "Deploy data inside an EU AWS region (e.g., eu-central-1 Frankfurt or eu-west-1 Dublin) or execute European Commission Standard Contractual Clauses (SCCs) with a transfer impact assessment.",
+      "reference_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "legal_reference": "GDPR Chapter V, Articles 44, 45, 46 & 49 (EU) 2016/679"
+    },
+    {
+      "rule_id": "POL-GDPR-002",
+      "rule_name": "GDPR Article 9 Special Category & Health Data Enhanced Protection",
+      "jurisdiction": "EU_EEA",
+      "framework": "GDPR",
+      "rule_type": "VERIFIED_LEGAL_REQUIREMENT",
+      "severity": "CRITICAL",
+      "applicable_categories": ["sensitive_personal", "healthcare"],
+      "description": "Processing of special category data (health, biometrics, genetic) outside the EEA requires explicit derogations or rigorous supplementary technical measures alongside SCCs under the EDPB Schrems II guidelines.",
+      "conditions": {
+        "origin_jurisdiction": ["EU_EEA"],
+        "cross_border": true,
+        "require_all_security": ["encryption_at_rest", "access_control", "audit_logging"],
+        "disallowed_mechanisms_without_supplementary": ["none_unverified"]
+      },
+      "explanation_pass": "Special category personal data transferred internationally satisfies enhanced technical controls including encryption at rest, least-privilege access, and audit logging.",
+      "explanation_fail": "Special category (sensitive or healthcare) data is transferred cross-border without complete technical safeguards (encryption, access control, and audit logging) required under EDPB Recommendations 01/2020.",
+      "remediation": "Enforce customer-managed KMS encryption at rest, IAM least-privilege access controls, and CloudTrail audit logging before transferring special category data.",
+      "reference_url": "https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en",
+      "legal_reference": "GDPR Article 9 & EDPB Recommendations 01/2020 on Supplementary Measures"
+    },
+    {
+      "rule_id": "POL-DPDP-001",
+      "rule_name": "India DPDP Act 2023 Section 16 Cross-Border Transfer Assessment",
+      "jurisdiction": "IN",
+      "framework": "DPDP Act 2023",
+      "rule_type": "VERIFIED_LEGAL_REQUIREMENT",
+      "severity": "HIGH",
+      "applicable_categories": ["personal", "sensitive_personal", "financial", "healthcare"],
+      "description": "Under Section 16 of the Digital Personal Data Protection Act, 2023, personal data may be transferred outside India unless restricted by Central Government notification (negative-list / blacklist model).",
+      "conditions": {
+        "origin_jurisdiction": ["IN"],
+        "cross_border": true,
+        "require_transfer_mechanism": ["adequate_country", "scc", "bcr", "explicit_consent", "statutory_exemption"]
+      },
+      "explanation_pass": "Data transfer outside India complies with Section 16 general transfer rules and maintains contractual safeguards.",
+      "explanation_fail": "Proposed transfer outside India lacks documented contractual transfer terms, consent basis, or authorization.",
+      "remediation": "Keep data in Indian AWS regions (ap-south-1 Mumbai, ap-south-2 Hyderabad) or verify bilateral contractual data protection agreements.",
+      "reference_url": "https://www.meity.gov.in/content/digital-personal-data-protection-act-2023",
+      "legal_reference": "Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023), Section 16"
+    },
+    {
+      "rule_id": "POL-DPDP-002",
+      "rule_name": "India DPDP Act 2023 Section 8 Reasonable Security Safeguards",
+      "jurisdiction": "IN",
+      "framework": "DPDP Act 2023",
+      "rule_type": "VERIFIED_LEGAL_REQUIREMENT",
+      "severity": "CRITICAL",
+      "applicable_categories": ["personal", "sensitive_personal", "financial", "healthcare"],
+      "description": "Section 8(5) mandates that Data Fiduciaries protect personal data in their possession or under their control by taking reasonable security safeguards to prevent personal data breaches.",
+      "conditions": {
+        "origin_jurisdiction": ["IN"],
+        "require_all_security": ["encryption_at_rest", "access_control"]
+      },
+      "explanation_pass": "Reasonable security safeguards (encryption and access control) are enabled in compliance with Section 8(5).",
+      "explanation_fail": "Missing mandatory baseline security safeguards (encryption at rest or access control) required by Section 8(5) of the DPDP Act.",
+      "remediation": "Enable AWS KMS server-side encryption and IAM role-based access policies on target storage repositories.",
+      "reference_url": "https://www.meity.gov.in/content/digital-personal-data-protection-act-2023",
+      "legal_reference": "Digital Personal Data Protection Act, 2023, Section 8(5)"
+    },
+    {
+      "rule_id": "POL-US-HIPAA-001",
+      "rule_name": "HIPAA Security Rule 45 CFR Part 164 Safeguards for PHI",
+      "jurisdiction": "US_FED",
+      "framework": "HIPAA",
+      "rule_type": "VERIFIED_LEGAL_REQUIREMENT",
+      "severity": "CRITICAL",
+      "applicable_categories": ["healthcare"],
+      "description": "Protected Health Information (PHI) stored or processed in cloud environments must meet HIPAA Technical Safeguards (45 CFR § 164.312), including transmission and rest encryption, unique user identification, and audit controls.",
+      "conditions": {
+        "data_category": ["healthcare"],
+        "require_all_security": ["encryption_at_rest", "access_control", "audit_logging"]
+      },
+      "explanation_pass": "All required technical safeguards (encryption, access controls, audit logging) are configured for healthcare data.",
+      "explanation_fail": "Healthcare data (PHI) deployment lacks one or more required HIPAA technical safeguards (encryption at rest, access control, or audit logging).",
+      "remediation": "Enable AWS KMS customer-managed key encryption, strict IAM RBAC with MFA, and multi-region AWS CloudTrail logging.",
+      "reference_url": "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html",
+      "legal_reference": "45 CFR §§ 164.308, 164.312 (HIPAA Security Rule)"
+    },
+    {
+      "rule_id": "POL-FIN-PCI-001",
+      "rule_name": "Financial Data Storage & Cryptographic Protection Standard",
+      "jurisdiction": "GLOBAL_OTHER",
+      "framework": "PCI-DSS / ISO 27001",
+      "rule_type": "DEMONSTRATION_RULE",
+      "severity": "HIGH",
+      "applicable_categories": ["financial"],
+      "description": "Financial and payment card data stored in cloud services must be cryptographically protected at rest and accompanied by complete access and audit trails to prevent unauthorized ledger tampering.",
+      "conditions": {
+        "data_category": ["financial"],
+        "require_all_security": ["encryption_at_rest", "audit_logging"]
+      },
+      "explanation_pass": "Financial data is safeguarded with encryption at rest and audit logging.",
+      "explanation_fail": "Financial data is configured without rest encryption or audit logging, exposing records to regulatory penalties and compliance audit failure.",
+      "remediation": "Configure S3 bucket default encryption with AWS KMS (SSE-KMS) and activate CloudTrail S3 data events logging.",
+      "reference_url": "https://www.pcisecuritystandards.org/standards/pci_dss/",
+      "legal_reference": "PCI-DSS v4.0 Requirement 3.4 & 10.2 / Financial Industry Best Practices"
+    },
+    {
+      "rule_id": "POL-BACKUP-001",
+      "rule_name": "Secondary / Disaster Recovery Backup Sovereignty Alignment",
+      "jurisdiction": "GLOBAL_OTHER",
+      "framework": "Cross-Border Standard",
+      "rule_type": "SIMPLIFYING_ASSUMPTION",
+      "severity": "HIGH",
+      "applicable_categories": ["personal", "sensitive_personal", "financial", "healthcare"],
+      "description": "Disaster recovery and secondary backup storage regions must satisfy the same or stricter data sovereignty restrictions as the primary storage location.",
+      "conditions": {
+        "evaluate_backup": true
+      },
+      "explanation_pass": "Backup destination jurisdiction aligns with primary storage sovereignty requirements.",
+      "explanation_fail": "Disaster recovery backup region is located in a jurisdiction that introduces secondary cross-border compliance risk without verified safeguards.",
+      "remediation": "Select a backup AWS region within the same jurisdiction (e.g. ap-south-2 Hyderabad for ap-south-1 Mumbai, or eu-west-1 Dublin for eu-central-1 Frankfurt).",
+      "reference_url": "https://docs.aws.amazon.com/whitepapers/latest/cloud-data-residency/disaster-recovery-and-backups.html",
+      "legal_reference": "AWS Cloud Data Residency & Sovereignty Architectural Framework"
+    },
+    {
+      "rule_id": "POL-SEC-LOG-001",
+      "rule_name": "Operational Auditability and Non-Repudiation Logging",
+      "jurisdiction": "GLOBAL_OTHER",
+      "framework": "ISO/IEC 27001",
+      "rule_type": "DEMONSTRATION_RULE",
+      "severity": "MEDIUM",
+      "applicable_categories": ["personal", "sensitive_personal", "financial", "healthcare"],
+      "description": "Regulated cloud workloads must maintain continuous, immutable audit logging to support compliance verification, forensics, and data subject access requests.",
+      "conditions": {
+        "require_security": ["audit_logging"]
+      },
+      "explanation_pass": "Continuous audit logging is active for the deployment.",
+      "explanation_fail": "Audit logging is disabled, preventing non-repudiation and forensic incident response.",
+      "remediation": "Enable AWS CloudTrail across all regions and configure CloudWatch Log Groups with retention policies.",
+      "reference_url": "https://www.iso.org/standard/27001",
+      "legal_reference": "ISO/IEC 27001:2022 Control 8.15 (Logging)"
+    },
+    {
+      "rule_id": "POL-NONPERS-001",
+      "rule_name": "Non-Personal Data Sovereignty Exemption Baseline",
+      "jurisdiction": "GLOBAL_OTHER",
+      "framework": "Free Flow of Non-Personal Data",
+      "rule_type": "VERIFIED_LEGAL_REQUIREMENT",
+      "severity": "LOW",
+      "applicable_categories": ["non_personal"],
+      "description": "Non-personal technical data, public telemetry, and fully anonymized data sets are generally exempt from personal data residency restrictions (e.g., Regulation (EU) 2018/1807 on the free flow of non-personal data).",
+      "conditions": {
+        "data_category": ["non_personal"]
+      },
+      "explanation_pass": "Data is recognized as non-personal/telemetry, and is not subject to personal data localization restrictions.",
+      "explanation_fail": "Non-personal data rule evaluated.",
+      "remediation": "Ensure anonymization procedures are robust so data cannot be re-identified.",
+      "reference_url": "https://eur-lex.europa.eu/eli/reg/2018/1807/oj",
+      "legal_reference": "Regulation (EU) 2018/1807 on Free Flow of Non-Personal Data"
+    },
+    {
+      "rule_id": "POL-AMBIG-001",
+      "rule_name": "Ambiguous Jurisdiction & Incomplete Transfer Specification Review",
+      "jurisdiction": "GLOBAL_OTHER",
+      "framework": "Governance Review",
+      "rule_type": "SIMPLIFYING_ASSUMPTION",
+      "severity": "MEDIUM",
+      "applicable_categories": ["personal", "sensitive_personal", "financial", "healthcare"],
+      "description": "When data involves cross-border transfer but the transfer mechanism or recipient jurisdiction is unspecified or unverified, autonomous engines must flag the case for human legal review.",
+      "conditions": {
+        "cross_border": true,
+        "mechanism_unverified": true
+      },
+      "explanation_pass": "Transfer mechanism is documented and verified.",
+      "explanation_fail": "Cross-border data movement is indicated but the specific legal transfer mechanism remains unverified or undocumented.",
+      "remediation": "Conduct a formal Transfer Impact Assessment (TIA) and consult qualified legal counsel to select an approved transfer mechanism.",
+      "reference_url": "https://iapp.org/resources/article/transfer-impact-assessments/",
+      "legal_reference": "Standard Data Protection Governance Best Practice"
+    }
+  ]
+}
